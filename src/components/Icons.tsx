@@ -9,3 +9,4 @@ export const IconClose = () => (<svg {...base}><path d="M6 6l12 12M18 6 6 18" />
 export const IconFlame = () => (<svg {...base} fill="currentColor" stroke="none"><path d="M12 2c.5 3.500-1.500 5-3 6.800C7.600 10.400 7 11.700 7 13.500 7 17 9.200 20 12 20s5-3 5-6.500c0-2.300-1-3.800-2-5-.3 1.300-.9 2.100-1.800 2.500C13.600 8.500 13 5.200 12 2Z" /></svg>);
 export const IconCheck = () => (<svg {...base}><path d="m5 12.5 4.500 4.500L19 7.500" /></svg>);
 export const IconSpark = () => (<svg {...base}><path d="M12 3v4M12 17v4M3 12h4M17 12h4" /><path d="m12 8 1.500 3.500L17 13l-3.500 1.500L12 18l-1.500-3.500L7 13l3.500-1.500Z" /></svg>);
+export const IconMute = () => (<svg {...base}><path d="M11 5 6 9H3v6h3l5 4V5Z" /><path d="m16 9 5 6M21 9l-5 6" /></svg>);

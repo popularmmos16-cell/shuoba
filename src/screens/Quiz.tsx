@@ -12,7 +12,7 @@ export function Quiz({ title, rounds, onClose, onRetry }: { title: string; round
   const r = rounds[Math.min(i, rounds.length - 1)];
 
   useEffect(() => {
-    if (!done) speakZh(r.say);
+    if (!done && r.say) speakZh(r.say);
   }, [i]);
 
   const choose = (n: number) => {
@@ -45,11 +45,15 @@ export function Quiz({ title, rounds, onClose, onRetry }: { title: string; round
         <>
           <div class="flash q" key={i}>
             <small class="eyebrow">{title}</small>
-            <button class="big-play" aria-label="Play audio" onClick={() => speakZh(r.say)}><IconSound /></button>
+            {r.say ? (
+              <button class="big-play" aria-label="Play audio" onClick={() => speakZh(r.say!)}><IconSound /></button>
+            ) : (
+              <div class={`stem ${r.stem?.size ?? 'md'}`}>{r.stem?.text}</div>
+            )}
             <p class="q-prompt">{r.prompt}</p>
             {picked !== null && (
               <div class="reveal">
-                <div class="hanzi">{r.reveal.hanzi}</div>
+                {r.reveal.hanzi && <div class="hanzi">{r.reveal.hanzi}</div>}
                 <Pinyin text={r.reveal.py} />
                 {r.reveal.en && <p class="en">{r.reveal.en}</p>}
               </div>
@@ -62,7 +66,7 @@ export function Quiz({ title, rounds, onClose, onRetry }: { title: string; round
                 class={`opt ${picked !== null && n === r.answer ? 'right' : ''} ${picked === n && n !== r.answer ? 'wrong' : ''}`}
                 onClick={() => choose(n)}
               >
-                <b>{o.main}</b>
+                {o.py ? <Pinyin text={o.main} /> : <b class={o.big ? 'hz' : ''}>{o.main}</b>}
                 {o.sub && <small>{o.sub}</small>}
               </button>
             ))}

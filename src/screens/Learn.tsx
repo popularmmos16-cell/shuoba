@@ -3,9 +3,11 @@ import { PHRASES } from '../phrases';
 import { Pinyin } from '../components/Pinyin';
 import { IconClose, IconSound, IconCheck } from '../components/Icons';
 import { speakZh } from '../speak';
+import { useStore } from '../store';
 
 // Preview of the review UI. It does not schedule or save anything yet (that comes with the FSRS stage).
 export function Learn({ onClose }: { onClose: () => void }) {
+  const { quiet } = useStore();
   const [i, setI] = useState(0);
   const [shown, setShown] = useState(false);
   const done = i >= PHRASES.length;
@@ -40,9 +42,11 @@ export function Learn({ onClose }: { onClose: () => void }) {
               <div class="reveal">
                 <Pinyin text={p.py} />
                 <p class="en">{p.en}</p>
-                <button class="round" aria-label="Play audio" onClick={(e) => { e.stopPropagation(); speakZh(p.hanzi); }}>
-                  <IconSound />
-                </button>
+                {!quiet && (
+                  <button class="round" aria-label="Play audio" onClick={(e) => { e.stopPropagation(); speakZh(p.hanzi); }}>
+                    <IconSound />
+                  </button>
+                )}
               </div>
             ) : (
               <p class="tap-hint">Tap to reveal</p>

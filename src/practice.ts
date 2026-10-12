@@ -1,14 +1,15 @@
 import { PHRASES } from './phrases';
 
 export interface Round {
-  say: string; // text sent to speech
+  say?: string; // text sent to speech; rounds without it are silent
+  stem?: { text: string; size: 'xl' | 'md' }; // what is shown instead of the play button
   prompt: string;
-  options: { main: string; sub?: string }[];
+  options: { main: string; sub?: string; py?: boolean; big?: boolean }[];
   answer: number;
-  reveal: { hanzi: string; py: string; en?: string };
+  reveal: { hanzi?: string; py: string; en?: string };
 }
 
-const shuffle = <T,>(a: T[]): T[] => {
+export const shuffle = <T,>(a: T[]): T[] => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -56,5 +57,62 @@ export function listenRounds(): Round[] {
       answer: options.indexOf(p),
       reveal: { hanzi: p.hanzi, py: p.py },
     };
+  });
+}
+
+const distractors = (p: (typeof PHRASES)[number]) => shuffle(PHRASES.filter((x) => x !== p)).slice(0, 2);
+
+// Silent: see the characters, pick the meaning
+export function readRounds(): Round[] {
+  return shuffle(PHRASES).map((p) => {
+    const options = shuffle([p, ...distractors(p)]);
+    return {
+      stem: { text: p.hanzi, size: 'md' as const },
+      prompt: 'What does it mean?',
+      options: options.map((o) => ({ main: o.en })),
+      answer: options.indexOf(p),
+      reveal: { py: p.py },
+    };
+  });
+}
+
+// Silent: see the meaning, pick the Chinese
+export function recallRounds(): Round[] {
+  return shuffle(PHRASES).map((p) => {
+    const options = shuffle([p, ...distractors(p)]);
+    return {
+      stem: { text: p.en, size: 'md' as const },
+      prompt: 'Which one says this?',
+      options: options.map((o) => ({ main: o.hanzi, big: true })),
+      answer: options.indexOf(p),
+      reveal: { py: p.py },
+    };
+  });
+}
+
+// Silent: see a character, pick its pinyin (the tone marks are the point)
+export function pinyinRounds(n = 10): Round[] {
+  const pool = TONE_SETS.flatMap((s) => [0, 1, 2, 3].map((t) => ({ s, t })));
+  return shuffle(pool)
+    .slice(0, n)
+    .map(({ s, t }) => ({
+      stem: { text: s.chars[t], size: 'xl' as const },
+      prompt: 'Which pinyin is it?',
+      options: s.py.map((py) => ({ main: py, py: true })),
+      answer: t,
+      reveal: { py: s.py[t], en: s.en[t] },
+    }));
+}
+
+// Silent: put the pieces of a sentence in order
+export interface BuildRound {
+  phrase: (typeof PHRASES)[number];
+  tiles: string[];
+}
+export function buildRounds(): BuildRound[] {
+  return shuffle(PHRASES).map((phrase) => {
+    let tiles = shuffle(phrase.words);
+    for (let k = 0; k < 10 && tiles.join('') === phrase.hanzi; k++) tiles = shuffle(phrase.words);
+    return { phrase, tiles };
   });
 }

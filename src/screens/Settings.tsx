@@ -1,5 +1,6 @@
 import { update, useStore } from '../store';
 import { VoiceTest } from '../VoiceTest';
+import { QuietToggle } from '../components/QuietToggle';
 
 const GOALS = [10, 15, 20, 30];
 
@@ -17,6 +18,8 @@ export function Settings() {
           ))}
         </div>
       </section>
+
+      <QuietToggle />
 
       <section class="card rise" style="--i:2">
         <b>Reminders</b>

@@ -1,6 +1,7 @@
 import { Ring } from '../components/Ring';
 import { Pinyin } from '../components/Pinyin';
-import { IconFlame, IconPlay } from '../components/Icons';
+import { IconFlame, IconMute, IconPlay, IconSound } from '../components/Icons';
+import { setQuiet } from '../components/QuietToggle';
 import { dateKey, streakOf, useStore } from '../store';
 import { phraseOfTheDay } from '../phrases';
 import { speakZh } from '../speak';
@@ -42,11 +43,18 @@ export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () =>
           <div class="hello">{zh}</div>
           <small>{en}</small>
         </div>
+        <button class={`chip mute ${s.quiet ? 'on' : ''}`} aria-label={s.quiet ? 'Turn sound on' : 'Turn sound off (quiet mode)'} onClick={() => setQuiet(!s.quiet)}>
+          {s.quiet ? <IconMute /> : <IconSound />}
+        </button>
         <div class="chip streak" title="Day streak">
           <IconFlame />
           <b>{streak}</b>
         </div>
       </header>
+
+      {s.quiet && (
+        <p class="quiet-banner rise" style="--i:1">Quiet mode: sound is off. Tap the speaker to turn it back on.</p>
+      )}
 
       <section class="hero rise" style="--i:1">
         <div class="hero-text">
@@ -82,7 +90,7 @@ export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () =>
 
       <button class="card extra-teaser rise" style="--i:4" onClick={onExtra}>
         <span class="glyph">练</span>
-        <span class="mode-text"><b>Got extra time?</b><small>Optional bonus practice: tones, listening and more</small></span>
+        <span class="mode-text"><b>Got extra time?</b><small>Optional bonus practice, including silent options</small></span>
       </button>
 
       <section class="card phrase rise" style="--i:5">
@@ -90,9 +98,11 @@ export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () =>
         <div class="hanzi">{phrase.hanzi}</div>
         <Pinyin text={phrase.py} />
         <p class="en">{phrase.en}</p>
-        <button class="round" aria-label="Play audio" onClick={() => speakZh(phrase.hanzi)}>
-          <IconPlay />
-        </button>
+        {!s.quiet && (
+          <button class="round" aria-label="Play audio" onClick={() => speakZh(phrase.hanzi)}>
+            <IconPlay />
+          </button>
+        )}
       </section>
     </main>
   );

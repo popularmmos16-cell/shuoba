@@ -2,11 +2,12 @@ import { useEffect, useState } from 'preact/hooks';
 
 export interface State {
   goalMin: number;
+  quiet: boolean;
   minutesByDate: Record<string, number>;
 }
 
 const KEY = 'shuoba.state.v1';
-const DEFAULT: State = { goalMin: 20, minutesByDate: {} };
+const DEFAULT: State = { goalMin: 20, quiet: false, minutesByDate: {} };
 
 export const dateKey = (d = new Date()) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -52,3 +53,5 @@ export function streakOf(s: State): number {
   }
   return n;
 }
+
+export const isQuiet = () => state.quiet;
