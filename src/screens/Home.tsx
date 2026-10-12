@@ -94,7 +94,7 @@ export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () =>
       </section>
 
       <section class="tiles rise" style="--i:3">
-        <div class="card tile"><b>{learned}</b><small>of {PHRASES.length} phrases learned</small></div>
+        <div class="card tile"><b>{learned}</b><small>of {PHRASES.length} learned</small></div>
         <div class="card tile"><b>{streak}</b><small>day streak</small></div>
         <div class="card tile"><b>{due}</b><small>due now</small></div>
       </section>

@@ -3,6 +3,7 @@ import { dateKey, update, useStore } from '../store';
 import { exportData, importData } from '../db';
 import { VoiceTest } from '../VoiceTest';
 import { QuietToggle } from '../components/QuietToggle';
+import { Credits } from '../components/Credits';
 
 const GOALS = [10, 15, 20, 30];
 const NEWS = [4, 6, 8, 12];
@@ -83,6 +84,8 @@ export function Settings() {
         <input ref={fileRef} type="file" accept="application/json,.json" hidden onChange={onFile} />
         {msg && <small>{msg}</small>}
       </section>
+
+      <Credits />
 
       <h2 class="rise" style="--i:3">Audio check</h2>
       <VoiceTest />

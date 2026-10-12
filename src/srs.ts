@@ -63,6 +63,31 @@ export function unseenPhrases(cards: CardRow[]): Phrase[] {
   return PHRASES.filter((p) => !seen.has(p.id));
 }
 
+const hanziOf = (s: string) => [...s].filter((c) => c >= '\u4e00' && c <= '\u9fff');
+
+// Pick the next items to teach: stay in the earliest unfinished unit, mix words with sentences, and only
+// bring in a sentence once its characters have been taught (or the unit has no words left to teach first).
+export function nextNew(cards: CardRow[], count: number): Phrase[] {
+  const unseen = unseenPhrases(cards);
+  if (!unseen.length || count <= 0) return [];
+  const pool = unseen.filter((p) => p.unit === unseen[0].unit);
+  const seen = new Set(cards.map((c) => c.phraseId));
+  const covered = new Set(PHRASES.filter((p) => seen.has(p.id)).flatMap((p) => hanziOf(p.hanzi)));
+  const out: Phrase[] = [];
+  const take = (p: Phrase) => {
+    out.push(p);
+    hanziOf(p.hanzi).forEach((c) => covered.add(c));
+  };
+  const wordsLeft = () => pool.some((p) => p.kind === 'word' && !out.includes(p));
+  const ready = (p: Phrase) => hanziOf(p.hanzi).every((c) => covered.has(c)) || !wordsLeft();
+
+  let quota = Math.ceil(count / 2);
+  for (const p of pool) if (p.kind === 'word' && quota > 0 && out.length < count) { take(p); quota--; }
+  for (const p of pool) if (p.kind === 'phrase' && out.length < count && ready(p)) take(p);
+  for (const p of pool) if (!out.includes(p) && out.length < count && (p.kind === 'word' || ready(p))) take(p);
+  return out;
+}
+
 export function newAllowanceToday(cards: CardRow[], perDay: number): number {
   const today = dateKey();
   const done = cards.filter((c) => c.kind === 'read' && dateKey(new Date(c.introduced)) === today).length;
@@ -71,6 +96,6 @@ export function newAllowanceToday(cards: CardRow[], perDay: number): number {
 
 export function buildQueue(cards: CardRow[], quiet: boolean, newCount: number): Item[] {
   const reviews: Item[] = dueCards(cards, quiet).slice(0, 40).map((row) => ({ kind: 'card', row }));
-  const intros: Item[] = unseenPhrases(cards).slice(0, newCount).map((phrase) => ({ kind: 'intro', phrase }));
+  const intros: Item[] = nextNew(cards, newCount).map((phrase) => ({ kind: 'intro', phrase }));
   return [...reviews, ...intros];
 }

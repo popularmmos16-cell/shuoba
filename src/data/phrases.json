@@ -7,7 +7,9 @@
   "words": [
    "你好",
    "吗？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p02",
@@ -17,7 +19,9 @@
   "words": [
    "多少",
    "钱？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p03",
@@ -29,7 +33,9 @@
    "想",
    "喝",
    "咖啡。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p04",
@@ -41,7 +47,9 @@
    "一起",
    "吃饭",
    "吧。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p05",
@@ -54,7 +62,9 @@
    "厕所",
    "在",
    "哪里？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p06",
@@ -64,7 +74,9 @@
   "words": [
    "谢谢，",
    "不客气。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p07",
@@ -76,7 +88,9 @@
    "叫",
    "什么",
    "名字？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p08",
@@ -87,7 +101,9 @@
    "我",
    "叫",
    "小明。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p09",
@@ -99,7 +115,9 @@
    "是",
    "新加坡",
    "人。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p10",
@@ -111,7 +129,9 @@
    "高兴",
    "认识",
    "你。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p11",
@@ -122,7 +142,9 @@
    "我",
    "不",
    "明白。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p12",
@@ -134,7 +156,9 @@
    "再",
    "说",
    "一遍。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p13",
@@ -144,7 +168,9 @@
   "words": [
    "现在",
    "几点？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p14",
@@ -156,7 +182,9 @@
    "想",
    "点",
    "菜。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p15",
@@ -167,7 +195,9 @@
    "鸡饭",
    "多少",
    "钱？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p16",
@@ -179,7 +209,9 @@
    "要",
    "一杯",
    "茶。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p17",
@@ -189,7 +221,9 @@
   "words": [
    "不要",
    "辣。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p18",
@@ -200,7 +234,9 @@
    "太",
    "贵",
    "了。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p19",
@@ -212,7 +248,9 @@
    "便宜",
    "一点",
    "吗？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p20",
@@ -223,7 +261,9 @@
    "地铁站",
    "在",
    "哪里？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p21",
@@ -235,7 +275,9 @@
    "要",
    "去",
    "机场。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p22",
@@ -247,7 +289,9 @@
    "这",
    "是",
    "什么？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p23",
@@ -258,7 +302,9 @@
    "我",
    "喜欢",
    "这个。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p24",
@@ -271,7 +317,9 @@
    "说",
    "英语",
    "吗？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p25",
@@ -283,7 +331,9 @@
    "在",
    "学",
    "中文。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p26",
@@ -296,7 +346,9 @@
    "不",
    "太",
    "好。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p27",
@@ -306,7 +358,9 @@
   "words": [
    "明天",
    "见！"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p28",
@@ -318,7 +372,9 @@
    "天气",
    "很",
    "热。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p29",
@@ -330,7 +386,9 @@
    "吃饭",
    "了",
    "吗？"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p30",
@@ -341,7 +399,9 @@
    "我",
    "有点",
    "累。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p31",
@@ -351,7 +411,9 @@
   "words": [
    "对",
    "不起。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
  },
  {
   "id": "p32",
@@ -361,6 +423,4812 @@
   "words": [
    "没",
    "关系。"
-  ]
+  ],
+  "kind": "phrase",
+  "unit": 0
+ },
+ {
+  "id": "p33",
+  "hanzi": "我",
+  "py": "wǒ",
+  "en": "I; me",
+  "words": [
+   "我"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p34",
+  "hanzi": "你",
+  "py": "nǐ",
+  "en": "you",
+  "words": [
+   "你"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p35",
+  "hanzi": "他",
+  "py": "tā",
+  "en": "he; him",
+  "words": [
+   "他"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p36",
+  "hanzi": "她",
+  "py": "tā",
+  "en": "she; her",
+  "words": [
+   "她"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p37",
+  "hanzi": "我们",
+  "py": "wǒ men",
+  "en": "we; us",
+  "words": [
+   "我们"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p38",
+  "hanzi": "你们",
+  "py": "nǐ men",
+  "en": "you (plural)",
+  "words": [
+   "你们"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p39",
+  "hanzi": "他们",
+  "py": "tā men",
+  "en": "they; them",
+  "words": [
+   "他们"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p40",
+  "hanzi": "是",
+  "py": "shì",
+  "en": "to be",
+  "words": [
+   "是"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p41",
+  "hanzi": "人",
+  "py": "rén",
+  "en": "person",
+  "words": [
+   "人"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p42",
+  "hanzi": "朋友",
+  "py": "péng you",
+  "en": "friend",
+  "words": [
+   "朋友"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p43",
+  "hanzi": "老师",
+  "py": "lǎo shī",
+  "en": "teacher",
+  "words": [
+   "老师"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p44",
+  "hanzi": "学生",
+  "py": "xué sheng",
+  "en": "student",
+  "words": [
+   "学生"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p45",
+  "hanzi": "同事",
+  "py": "tóng shì",
+  "en": "colleague",
+  "words": [
+   "同事"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 2
+ },
+ {
+  "id": "p46",
+  "hanzi": "的",
+  "py": "de",
+  "en": "’s; of",
+  "words": [
+   "的"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p47",
+  "hanzi": "先生",
+  "py": "xiān sheng",
+  "en": "Mr.; husband",
+  "words": [
+   "先生"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p48",
+  "hanzi": "小姐",
+  "py": "xiǎo jie",
+  "en": "Miss; Ms.",
+  "words": [
+   "小姐"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p49",
+  "hanzi": "位",
+  "py": "wèi",
+  "en": "(polite word for people)",
+  "words": [
+   "位"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 2
+ },
+ {
+  "id": "p50",
+  "hanzi": "中国",
+  "py": "zhōng guó",
+  "en": "China",
+  "words": [
+   "中国"
+  ],
+  "kind": "word",
+  "unit": 1,
+  "hsk": 1
+ },
+ {
+  "id": "p51",
+  "hanzi": "我是学生。",
+  "py": "wǒ shì xué sheng",
+  "en": "I’m a student.",
+  "words": [
+   "我",
+   "是",
+   "学生。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p52",
+  "hanzi": "你是老师吗？",
+  "py": "nǐ shì lǎo shī ma",
+  "en": "Are you a teacher?",
+  "words": [
+   "你",
+   "是",
+   "老师",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p53",
+  "hanzi": "他是我的朋友。",
+  "py": "tā shì wǒ de péng you",
+  "en": "He is my friend.",
+  "words": [
+   "他",
+   "是",
+   "我",
+   "的",
+   "朋友。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p54",
+  "hanzi": "她是我的老师。",
+  "py": "tā shì wǒ de lǎo shī",
+  "en": "She is my teacher.",
+  "words": [
+   "她",
+   "是",
+   "我",
+   "的",
+   "老师。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p55",
+  "hanzi": "我们是同事。",
+  "py": "wǒ men shì tóng shì",
+  "en": "We are colleagues.",
+  "words": [
+   "我们",
+   "是",
+   "同事。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p56",
+  "hanzi": "你们是学生吗？",
+  "py": "nǐ men shì xué sheng ma",
+  "en": "Are you all students?",
+  "words": [
+   "你们",
+   "是",
+   "学生",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p57",
+  "hanzi": "他们是我的朋友。",
+  "py": "tā men shì wǒ de péng you",
+  "en": "They are my friends.",
+  "words": [
+   "他们",
+   "是",
+   "我",
+   "的",
+   "朋友。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p58",
+  "hanzi": "他不是新加坡人。",
+  "py": "tā bú shì xīn jiā pō rén",
+  "en": "He isn’t Singaporean.",
+  "words": [
+   "他",
+   "不是",
+   "新加坡人。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p59",
+  "hanzi": "我是中国人。",
+  "py": "wǒ shì zhōng guó rén",
+  "en": "I’m Chinese.",
+  "words": [
+   "我",
+   "是",
+   "中国",
+   "人。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p60",
+  "hanzi": "你是哪里人？",
+  "py": "nǐ shì nǎ lǐ rén",
+  "en": "Where are you from?",
+  "words": [
+   "你",
+   "是",
+   "哪里",
+   "人？"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p61",
+  "hanzi": "这位是李先生。",
+  "py": "zhè wèi shì lǐ xiān shēng",
+  "en": "This is Mr. Li.",
+  "words": [
+   "这位",
+   "是",
+   "李先生。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p62",
+  "hanzi": "这位是王小姐。",
+  "py": "zhè wèi shì wáng xiǎo jiě",
+  "en": "This is Ms. Wang.",
+  "words": [
+   "这位",
+   "是",
+   "王小姐。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p63",
+  "hanzi": "她是我的好朋友。",
+  "py": "tā shì wǒ de hǎo péng you",
+  "en": "She is my good friend.",
+  "words": [
+   "她",
+   "是",
+   "我",
+   "的",
+   "好",
+   "朋友。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p64",
+  "hanzi": "你好，我是小王。",
+  "py": "nǐ hǎo wǒ shì xiǎo wáng",
+  "en": "Hello, I’m Xiao Wang.",
+  "words": [
+   "你好，",
+   "我",
+   "是",
+   "小",
+   "王。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p65",
+  "hanzi": "他是我们的老师。",
+  "py": "tā shì wǒ men de lǎo shī",
+  "en": "He is our teacher.",
+  "words": [
+   "他",
+   "是",
+   "我们",
+   "的",
+   "老师。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p66",
+  "hanzi": "这是我的同事。",
+  "py": "zhè shì wǒ de tóng shì",
+  "en": "This is my colleague.",
+  "words": [
+   "这",
+   "是",
+   "我",
+   "的",
+   "同事。"
+  ],
+  "kind": "phrase",
+  "unit": 1
+ },
+ {
+  "id": "p67",
+  "hanzi": "一",
+  "py": "yī",
+  "en": "one",
+  "words": [
+   "一"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p68",
+  "hanzi": "二",
+  "py": "èr",
+  "en": "two",
+  "words": [
+   "二"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p69",
+  "hanzi": "三",
+  "py": "sān",
+  "en": "three",
+  "words": [
+   "三"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p70",
+  "hanzi": "四",
+  "py": "sì",
+  "en": "four",
+  "words": [
+   "四"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p71",
+  "hanzi": "五",
+  "py": "wǔ",
+  "en": "five",
+  "words": [
+   "五"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p72",
+  "hanzi": "六",
+  "py": "liù",
+  "en": "six",
+  "words": [
+   "六"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p73",
+  "hanzi": "七",
+  "py": "qī",
+  "en": "seven",
+  "words": [
+   "七"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p74",
+  "hanzi": "八",
+  "py": "bā",
+  "en": "eight",
+  "words": [
+   "八"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p75",
+  "hanzi": "九",
+  "py": "jiǔ",
+  "en": "nine",
+  "words": [
+   "九"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p76",
+  "hanzi": "十",
+  "py": "shí",
+  "en": "ten",
+  "words": [
+   "十"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p77",
+  "hanzi": "百",
+  "py": "bǎi",
+  "en": "hundred",
+  "words": [
+   "百"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p78",
+  "hanzi": "零",
+  "py": "líng",
+  "en": "zero",
+  "words": [
+   "零"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p79",
+  "hanzi": "几",
+  "py": "jǐ",
+  "en": "how many; which (number)",
+  "words": [
+   "几"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p80",
+  "hanzi": "块",
+  "py": "kuài",
+  "en": "dollar (spoken)",
+  "words": [
+   "块"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p81",
+  "hanzi": "个",
+  "py": "gè",
+  "en": "(general counting word)",
+  "words": [
+   "个"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p82",
+  "hanzi": "两",
+  "py": "liǎng",
+  "en": "two (before a counting word)",
+  "words": [
+   "两"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p83",
+  "hanzi": "有",
+  "py": "yǒu",
+  "en": "to have",
+  "words": [
+   "有"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p84",
+  "hanzi": "那",
+  "py": "nà",
+  "en": "that",
+  "words": [
+   "那"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p85",
+  "hanzi": "杯",
+  "py": "bēi",
+  "en": "cup; glass",
+  "words": [
+   "杯"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p86",
+  "hanzi": "一共",
+  "py": "yí gòng",
+  "en": "altogether",
+  "words": [
+   "一共"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 2
+ },
+ {
+  "id": "p87",
+  "hanzi": "电话",
+  "py": "diàn huà",
+  "en": "phone; phone number",
+  "words": [
+   "电话"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p88",
+  "hanzi": "今年",
+  "py": "jīn nián",
+  "en": "this year",
+  "words": [
+   "今年"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p89",
+  "hanzi": "岁",
+  "py": "suì",
+  "en": "years old",
+  "words": [
+   "岁"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p90",
+  "hanzi": "只",
+  "py": "zhǐ",
+  "en": "only",
+  "words": [
+   "只"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 2
+ },
+ {
+  "id": "p91",
+  "hanzi": "给",
+  "py": "gěi",
+  "en": "to give",
+  "words": [
+   "给"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p92",
+  "hanzi": "家",
+  "py": "jiā",
+  "en": "home; family",
+  "words": [
+   "家"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p93",
+  "hanzi": "起床",
+  "py": "qǐ chuáng",
+  "en": "to get up",
+  "words": [
+   "起床"
+  ],
+  "kind": "word",
+  "unit": 2,
+  "hsk": 1
+ },
+ {
+  "id": "p94",
+  "hanzi": "我有三个朋友。",
+  "py": "wǒ yǒu sān gè péng you",
+  "en": "I have three friends.",
+  "words": [
+   "我",
+   "有",
+   "三个",
+   "朋友。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p95",
+  "hanzi": "这个五块钱。",
+  "py": "zhè ge wǔ kuài qián",
+  "en": "This one is five dollars.",
+  "words": [
+   "这个",
+   "五块",
+   "钱。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p96",
+  "hanzi": "那个十块钱。",
+  "py": "nà ge shí kuài qián",
+  "en": "That one is ten dollars.",
+  "words": [
+   "那个",
+   "十块钱。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p97",
+  "hanzi": "一杯咖啡四块五。",
+  "py": "yì bēi kā fēi sì kuài wǔ",
+  "en": "A cup of coffee is four fifty.",
+  "words": [
+   "一杯",
+   "咖啡",
+   "四块",
+   "五。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p98",
+  "hanzi": "两杯茶多少钱？",
+  "py": "liǎng bēi chá duō shǎo qián",
+  "en": "How much for two cups of tea?",
+  "words": [
+   "两杯",
+   "茶",
+   "多少钱？"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p99",
+  "hanzi": "我要两个。",
+  "py": "wǒ yào liǎng gè",
+  "en": "I’d like two.",
+  "words": [
+   "我",
+   "要",
+   "两个。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p100",
+  "hanzi": "一共二十块。",
+  "py": "yí gòng èr shí kuài",
+  "en": "That’s twenty dollars altogether.",
+  "words": [
+   "一共",
+   "二十块。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p101",
+  "hanzi": "我的电话是九八七六五四三二。",
+  "py": "wǒ de diàn huà shì jiǔ bā qī liù wǔ sì sān èr",
+  "en": "My phone number is 9876 5432.",
+  "words": [
+   "我",
+   "的",
+   "电话",
+   "是",
+   "九",
+   "八七",
+   "六",
+   "五四三",
+   "二。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p102",
+  "hanzi": "我今年二十五岁。",
+  "py": "wǒ jīn nián èr shí wǔ suì",
+  "en": "I’m 25 years old this year.",
+  "words": [
+   "我",
+   "今年",
+   "二十五岁。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p103",
+  "hanzi": "你今年多大？",
+  "py": "nǐ jīn nián duō dà",
+  "en": "How old are you this year?",
+  "words": [
+   "你",
+   "今年",
+   "多",
+   "大？"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p104",
+  "hanzi": "一百块太贵了。",
+  "py": "yì bǎi kuài tài guì le",
+  "en": "A hundred dollars is too expensive.",
+  "words": [
+   "一百块",
+   "太贵",
+   "了。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p105",
+  "hanzi": "我只有十块钱。",
+  "py": "wǒ zhǐ yǒu shí kuài qián",
+  "en": "I only have ten dollars.",
+  "words": [
+   "我",
+   "只有",
+   "十块钱。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p106",
+  "hanzi": "请给我三个。",
+  "py": "qǐng gěi wǒ sān gè",
+  "en": "Please give me three.",
+  "words": [
+   "请",
+   "给",
+   "我",
+   "三个。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p107",
+  "hanzi": "我家有四个人。",
+  "py": "wǒ jiā yǒu sì gè rén",
+  "en": "There are four people in my family.",
+  "words": [
+   "我家",
+   "有",
+   "四",
+   "个人。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p108",
+  "hanzi": "九点见。",
+  "py": "jiǔ diǎn jiàn",
+  "en": "See you at nine.",
+  "words": [
+   "九点",
+   "见。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p109",
+  "hanzi": "我六点起床。",
+  "py": "wǒ liù diǎn qǐ chuáng",
+  "en": "I get up at six.",
+  "words": [
+   "我",
+   "六点",
+   "起床。"
+  ],
+  "kind": "phrase",
+  "unit": 2
+ },
+ {
+  "id": "p110",
+  "hanzi": "吃",
+  "py": "chī",
+  "en": "to eat",
+  "words": [
+   "吃"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p111",
+  "hanzi": "喝",
+  "py": "hē",
+  "en": "to drink",
+  "words": [
+   "喝"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p112",
+  "hanzi": "饭",
+  "py": "fàn",
+  "en": "meal; rice",
+  "words": [
+   "饭"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p113",
+  "hanzi": "面",
+  "py": "miàn",
+  "en": "noodles",
+  "words": [
+   "面"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 2
+ },
+ {
+  "id": "p114",
+  "hanzi": "水",
+  "py": "shuǐ",
+  "en": "water",
+  "words": [
+   "水"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p115",
+  "hanzi": "茶",
+  "py": "chá",
+  "en": "tea",
+  "words": [
+   "茶"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p116",
+  "hanzi": "咖啡",
+  "py": "kā fēi",
+  "en": "coffee",
+  "words": [
+   "咖啡"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 3
+ },
+ {
+  "id": "p117",
+  "hanzi": "好吃",
+  "py": "hǎo chī",
+  "en": "tasty",
+  "words": [
+   "好吃"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p118",
+  "hanzi": "菜",
+  "py": "cài",
+  "en": "dish; vegetable",
+  "words": [
+   "菜"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p119",
+  "hanzi": "汤",
+  "py": "tāng",
+  "en": "soup",
+  "words": [
+   "汤"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 3
+ },
+ {
+  "id": "p120",
+  "hanzi": "鸡",
+  "py": "jī",
+  "en": "chicken",
+  "words": [
+   "鸡"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 2
+ },
+ {
+  "id": "p121",
+  "hanzi": "鱼",
+  "py": "yú",
+  "en": "fish",
+  "words": [
+   "鱼"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 2
+ },
+ {
+  "id": "p122",
+  "hanzi": "肉",
+  "py": "ròu",
+  "en": "meat",
+  "words": [
+   "肉"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p123",
+  "hanzi": "辣",
+  "py": "là",
+  "en": "spicy",
+  "words": [
+   "辣"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 4
+ },
+ {
+  "id": "p124",
+  "hanzi": "甜",
+  "py": "tián",
+  "en": "sweet",
+  "words": [
+   "甜"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 3
+ },
+ {
+  "id": "p125",
+  "hanzi": "咸",
+  "py": "xián",
+  "en": "salty",
+  "words": [
+   "咸"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 4
+ },
+ {
+  "id": "p126",
+  "hanzi": "饿",
+  "py": "è",
+  "en": "hungry",
+  "words": [
+   "饿"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p127",
+  "hanzi": "渴",
+  "py": "kě",
+  "en": "thirsty",
+  "words": [
+   "渴"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p128",
+  "hanzi": "碗",
+  "py": "wǎn",
+  "en": "bowl",
+  "words": [
+   "碗"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 2
+ },
+ {
+  "id": "p129",
+  "hanzi": "糖",
+  "py": "táng",
+  "en": "sugar",
+  "words": [
+   "糖"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 3
+ },
+ {
+  "id": "p130",
+  "hanzi": "这里",
+  "py": "zhè lǐ",
+  "en": "here",
+  "words": [
+   "这里"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p131",
+  "hanzi": "来",
+  "py": "lái",
+  "en": "to come",
+  "words": [
+   "来"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 1
+ },
+ {
+  "id": "p132",
+  "hanzi": "买单",
+  "py": "mǎi dān",
+  "en": "to pay the bill",
+  "words": [
+   "买单"
+  ],
+  "kind": "word",
+  "unit": 3
+ },
+ {
+  "id": "p133",
+  "hanzi": "打包",
+  "py": "dǎ bāo",
+  "en": "to take away",
+  "words": [
+   "打包"
+  ],
+  "kind": "word",
+  "unit": 3,
+  "hsk": 5
+ },
+ {
+  "id": "p134",
+  "hanzi": "刷卡",
+  "py": "shuā kǎ",
+  "en": "to pay by card",
+  "words": [
+   "刷卡"
+  ],
+  "kind": "word",
+  "unit": 3
+ },
+ {
+  "id": "p135",
+  "hanzi": "我想吃面。",
+  "py": "wǒ xiǎng chī miàn",
+  "en": "I’d like to eat noodles.",
+  "words": [
+   "我",
+   "想",
+   "吃",
+   "面。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p136",
+  "hanzi": "你想吃什么？",
+  "py": "nǐ xiǎng chī shén me",
+  "en": "What would you like to eat?",
+  "words": [
+   "你",
+   "想",
+   "吃",
+   "什么？"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p137",
+  "hanzi": "你想喝什么？",
+  "py": "nǐ xiǎng hē shén me",
+  "en": "What would you like to drink?",
+  "words": [
+   "你",
+   "想",
+   "喝",
+   "什么？"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p138",
+  "hanzi": "我要一碗面。",
+  "py": "wǒ yào yì wǎn miàn",
+  "en": "I’d like a bowl of noodles.",
+  "words": [
+   "我",
+   "要",
+   "一碗",
+   "面。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p139",
+  "hanzi": "我要一杯咖啡，不要糖。",
+  "py": "wǒ yào yì bēi kā fēi bú yào táng",
+  "en": "I’d like a coffee, no sugar.",
+  "words": [
+   "我",
+   "要",
+   "一杯",
+   "咖啡，",
+   "不要",
+   "糖。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p140",
+  "hanzi": "这个菜很好吃。",
+  "py": "zhè ge cài hěn hǎo chī",
+  "en": "This dish is delicious.",
+  "words": [
+   "这个",
+   "菜",
+   "很",
+   "好吃。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p141",
+  "hanzi": "这个太辣了。",
+  "py": "zhè ge tài là le",
+  "en": "This is too spicy.",
+  "words": [
+   "这个",
+   "太",
+   "辣",
+   "了。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p142",
+  "hanzi": "我不吃肉。",
+  "py": "wǒ bù chī ròu",
+  "en": "I don’t eat meat.",
+  "words": [
+   "我",
+   "不吃",
+   "肉。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p143",
+  "hanzi": "我吃鱼，不吃鸡。",
+  "py": "wǒ chī yú bù chī jī",
+  "en": "I eat fish, not chicken.",
+  "words": [
+   "我",
+   "吃",
+   "鱼，",
+   "不吃",
+   "鸡。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p144",
+  "hanzi": "我饿了。",
+  "py": "wǒ è le",
+  "en": "I’m hungry.",
+  "words": [
+   "我",
+   "饿",
+   "了。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p145",
+  "hanzi": "我渴了。",
+  "py": "wǒ kě le",
+  "en": "I’m thirsty.",
+  "words": [
+   "我",
+   "渴",
+   "了。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p146",
+  "hanzi": "请给我一杯水。",
+  "py": "qǐng gěi wǒ yì bēi shuǐ",
+  "en": "Please give me a glass of water.",
+  "words": [
+   "请",
+   "给",
+   "我",
+   "一杯",
+   "水。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p147",
+  "hanzi": "这里的鸡饭很好吃。",
+  "py": "zhè lǐ de jī fàn hěn hǎo chī",
+  "en": "The chicken rice here is delicious.",
+  "words": [
+   "这里",
+   "的",
+   "鸡",
+   "饭",
+   "很",
+   "好吃。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p148",
+  "hanzi": "我们吃什么？",
+  "py": "wǒ men chī shén me",
+  "en": "What shall we eat?",
+  "words": [
+   "我们",
+   "吃",
+   "什么？"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p149",
+  "hanzi": "你喜欢吃辣吗？",
+  "py": "nǐ xǐ huan chī là ma",
+  "en": "Do you like spicy food?",
+  "words": [
+   "你",
+   "喜欢",
+   "吃",
+   "辣",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p150",
+  "hanzi": "我喜欢甜的。",
+  "py": "wǒ xǐ huan tián de",
+  "en": "I like sweet things.",
+  "words": [
+   "我",
+   "喜欢",
+   "甜",
+   "的。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p151",
+  "hanzi": "我不喝咖啡，我喝茶。",
+  "py": "wǒ bù hē kā fēi wǒ hē chá",
+  "en": "I don’t drink coffee; I drink tea.",
+  "words": [
+   "我",
+   "不",
+   "喝",
+   "咖啡，",
+   "我",
+   "喝茶。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p152",
+  "hanzi": "这个汤太咸了。",
+  "py": "zhè ge tāng tài xián le",
+  "en": "This soup is too salty.",
+  "words": [
+   "这个",
+   "汤",
+   "太",
+   "咸",
+   "了。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p153",
+  "hanzi": "再来一碗饭。",
+  "py": "zài lái yì wǎn fàn",
+  "en": "One more bowl of rice, please.",
+  "words": [
+   "再",
+   "来",
+   "一碗",
+   "饭。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p154",
+  "hanzi": "买单。",
+  "py": "mǎi dān",
+  "en": "The bill, please.",
+  "words": [
+   "买单。"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p155",
+  "hanzi": "可以打包吗？",
+  "py": "kě yǐ dǎ bāo ma",
+  "en": "Can I take this away?",
+  "words": [
+   "可以",
+   "打包",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p156",
+  "hanzi": "这里可以刷卡吗？",
+  "py": "zhè lǐ kě yǐ shuā kǎ ma",
+  "en": "Can I pay by card here?",
+  "words": [
+   "这里",
+   "可以",
+   "刷卡",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 3
+ },
+ {
+  "id": "p157",
+  "hanzi": "去",
+  "py": "qù",
+  "en": "to go",
+  "words": [
+   "去"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p158",
+  "hanzi": "坐",
+  "py": "zuò",
+  "en": "to sit; to take (transport)",
+  "words": [
+   "坐"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p159",
+  "hanzi": "公共汽车",
+  "py": "gōng gòng qì chē",
+  "en": "bus",
+  "words": [
+   "公共汽车"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p160",
+  "hanzi": "出租车",
+  "py": "chū zū chē",
+  "en": "taxi",
+  "words": [
+   "出租车"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p161",
+  "hanzi": "左边",
+  "py": "zuǒ bian",
+  "en": "left side",
+  "words": [
+   "左边"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p162",
+  "hanzi": "右边",
+  "py": "yòu bian",
+  "en": "right side",
+  "words": [
+   "右边"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p163",
+  "hanzi": "前面",
+  "py": "qián miàn",
+  "en": "in front",
+  "words": [
+   "前面"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 3
+ },
+ {
+  "id": "p164",
+  "hanzi": "后面",
+  "py": "hòu mian",
+  "en": "behind",
+  "words": [
+   "后面"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 3
+ },
+ {
+  "id": "p165",
+  "hanzi": "走",
+  "py": "zǒu",
+  "en": "to walk",
+  "words": [
+   "走"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p166",
+  "hanzi": "远",
+  "py": "yuǎn",
+  "en": "far",
+  "words": [
+   "远"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p167",
+  "hanzi": "近",
+  "py": "jìn",
+  "en": "near",
+  "words": [
+   "近"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p168",
+  "hanzi": "到",
+  "py": "dào",
+  "en": "to arrive",
+  "words": [
+   "到"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p169",
+  "hanzi": "路",
+  "py": "lù",
+  "en": "road",
+  "words": [
+   "路"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p170",
+  "hanzi": "站",
+  "py": "zhàn",
+  "en": "station; stop",
+  "words": [
+   "站"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p171",
+  "hanzi": "车",
+  "py": "chē",
+  "en": "vehicle",
+  "words": [
+   "车"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p172",
+  "hanzi": "等",
+  "py": "děng",
+  "en": "to wait",
+  "words": [
+   "等"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p173",
+  "hanzi": "怎么",
+  "py": "zěn me",
+  "en": "how",
+  "words": [
+   "怎么"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p174",
+  "hanzi": "要",
+  "py": "yào",
+  "en": "to need; to want",
+  "words": [
+   "要"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p175",
+  "hanzi": "多久",
+  "py": "duō jiǔ",
+  "en": "how long",
+  "words": [
+   "多久"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p176",
+  "hanzi": "分钟",
+  "py": "fēn zhōng",
+  "en": "minute",
+  "words": [
+   "分钟"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p177",
+  "hanzi": "上班",
+  "py": "shàng bān",
+  "en": "to go to work",
+  "words": [
+   "上班"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p178",
+  "hanzi": "一直",
+  "py": "yì zhí",
+  "en": "straight on; always",
+  "words": [
+   "一直"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p179",
+  "hanzi": "往",
+  "py": "wǎng",
+  "en": "towards",
+  "words": [
+   "往"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p180",
+  "hanzi": "转",
+  "py": "zhuǎn",
+  "en": "to turn",
+  "words": [
+   "转"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 3
+ },
+ {
+  "id": "p181",
+  "hanzi": "然后",
+  "py": "rán hòu",
+  "en": "then",
+  "words": [
+   "然后"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p182",
+  "hanzi": "银行",
+  "py": "yín háng",
+  "en": "bank",
+  "words": [
+   "银行"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 2
+ },
+ {
+  "id": "p183",
+  "hanzi": "就",
+  "py": "jiù",
+  "en": "just; right",
+  "words": [
+   "就"
+  ],
+  "kind": "word",
+  "unit": 4,
+  "hsk": 1
+ },
+ {
+  "id": "p184",
+  "hanzi": "一下",
+  "py": "yí xià",
+  "en": "a moment",
+  "words": [
+   "一下"
+  ],
+  "kind": "word",
+  "unit": 4
+ },
+ {
+  "id": "p185",
+  "hanzi": "我坐地铁去上班。",
+  "py": "wǒ zuò dì tiě qù shàng bān",
+  "en": "I take the MRT to work.",
+  "words": [
+   "我",
+   "坐",
+   "地铁",
+   "去",
+   "上班。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p186",
+  "hanzi": "你怎么去？",
+  "py": "nǐ zěn me qù",
+  "en": "How are you getting there?",
+  "words": [
+   "你",
+   "怎么",
+   "去？"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p187",
+  "hanzi": "我坐公共汽车去。",
+  "py": "wǒ zuò gōng gòng qì chē qù",
+  "en": "I’m going by bus.",
+  "words": [
+   "我",
+   "坐",
+   "公共汽车",
+   "去。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p188",
+  "hanzi": "我们坐出租车去吧。",
+  "py": "wǒ men zuò chū zū chē qù ba",
+  "en": "Let’s take a taxi.",
+  "words": [
+   "我们",
+   "坐",
+   "出租车",
+   "去",
+   "吧。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p189",
+  "hanzi": "去机场要多久？",
+  "py": "qù jī chǎng yào duō jiǔ",
+  "en": "How long does it take to get to the airport?",
+  "words": [
+   "去",
+   "机场",
+   "要",
+   "多久？"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p190",
+  "hanzi": "地铁站远不远？",
+  "py": "dì tiě zhàn yuǎn bu yuǎn",
+  "en": "Is the MRT station far?",
+  "words": [
+   "地铁站",
+   "远",
+   "不远？"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p191",
+  "hanzi": "不远，走五分钟。",
+  "py": "bù yuǎn zǒu wǔ fēn zhōng",
+  "en": "Not far, a five-minute walk.",
+  "words": [
+   "不远，",
+   "走",
+   "五分钟。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p192",
+  "hanzi": "一直往前走。",
+  "py": "yì zhí wǎng qián zǒu",
+  "en": "Go straight ahead.",
+  "words": [
+   "一直",
+   "往前走。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p193",
+  "hanzi": "前面往左转。",
+  "py": "qián miàn wǎng zuǒ zhuǎn",
+  "en": "Turn left ahead.",
+  "words": [
+   "前面",
+   "往",
+   "左",
+   "转。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p194",
+  "hanzi": "然后往右转。",
+  "py": "rán hòu wǎng yòu zhuǎn",
+  "en": "Then turn right.",
+  "words": [
+   "然后",
+   "往右",
+   "转。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p195",
+  "hanzi": "银行就在你右边。",
+  "py": "yín háng jiù zài nǐ yòu bian",
+  "en": "The bank is right on your right.",
+  "words": [
+   "银行",
+   "就",
+   "在",
+   "你",
+   "右边。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p196",
+  "hanzi": "银行在地铁站后面。",
+  "py": "yín háng zài dì tiě zhàn hòu mian",
+  "en": "The bank is behind the MRT station.",
+  "words": [
+   "银行",
+   "在",
+   "地铁站",
+   "后面。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p197",
+  "hanzi": "公共汽车站在哪里？",
+  "py": "gōng gòng qì chē zhàn zài nǎ lǐ",
+  "en": "Where is the bus stop?",
+  "words": [
+   "公共汽车",
+   "站",
+   "在",
+   "哪里？"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p198",
+  "hanzi": "我到了。",
+  "py": "wǒ dào le",
+  "en": "I’ve arrived.",
+  "words": [
+   "我",
+   "到",
+   "了。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p199",
+  "hanzi": "请等一下。",
+  "py": "qǐng děng yí xià",
+  "en": "Please wait a moment.",
+  "words": [
+   "请等一下。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p200",
+  "hanzi": "你在哪里？",
+  "py": "nǐ zài nǎ lǐ",
+  "en": "Where are you?",
+  "words": [
+   "你",
+   "在",
+   "哪里？"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p201",
+  "hanzi": "我在路上。",
+  "py": "wǒ zài lù shang",
+  "en": "I’m on my way.",
+  "words": [
+   "我",
+   "在",
+   "路上。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p202",
+  "hanzi": "我的车在前面。",
+  "py": "wǒ de chē zài qián miàn",
+  "en": "My car is up ahead.",
+  "words": [
+   "我",
+   "的",
+   "车",
+   "在",
+   "前面。"
+  ],
+  "kind": "phrase",
+  "unit": 4
+ },
+ {
+  "id": "p203",
+  "hanzi": "今天",
+  "py": "jīn tiān",
+  "en": "today",
+  "words": [
+   "今天"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p204",
+  "hanzi": "昨天",
+  "py": "zuó tiān",
+  "en": "yesterday",
+  "words": [
+   "昨天"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p205",
+  "hanzi": "早上",
+  "py": "zǎo shang",
+  "en": "morning",
+  "words": [
+   "早上"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p206",
+  "hanzi": "中午",
+  "py": "zhōng wǔ",
+  "en": "noon",
+  "words": [
+   "中午"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p207",
+  "hanzi": "晚上",
+  "py": "wǎn shang",
+  "en": "evening; night",
+  "words": [
+   "晚上"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p208",
+  "hanzi": "点",
+  "py": "diǎn",
+  "en": "o’clock",
+  "words": [
+   "点"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p209",
+  "hanzi": "半",
+  "py": "bàn",
+  "en": "half",
+  "words": [
+   "半"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p210",
+  "hanzi": "星期",
+  "py": "xīng qī",
+  "en": "week; day of the week",
+  "words": [
+   "星期"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p211",
+  "hanzi": "周末",
+  "py": "zhōu mò",
+  "en": "weekend",
+  "words": [
+   "周末"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 2
+ },
+ {
+  "id": "p212",
+  "hanzi": "号",
+  "py": "hào",
+  "en": "date; number",
+  "words": [
+   "号"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p213",
+  "hanzi": "每天",
+  "py": "měi tiān",
+  "en": "every day",
+  "words": [
+   "每天"
+  ],
+  "kind": "word",
+  "unit": 5
+ },
+ {
+  "id": "p214",
+  "hanzi": "工作",
+  "py": "gōng zuò",
+  "en": "to work; job",
+  "words": [
+   "工作"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p215",
+  "hanzi": "下班",
+  "py": "xià bān",
+  "en": "to finish work",
+  "words": [
+   "下班"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p216",
+  "hanzi": "睡觉",
+  "py": "shuì jiào",
+  "en": "to sleep",
+  "words": [
+   "睡觉"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p217",
+  "hanzi": "时间",
+  "py": "shí jiān",
+  "en": "time",
+  "words": [
+   "时间"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p218",
+  "hanzi": "忙",
+  "py": "máng",
+  "en": "busy",
+  "words": [
+   "忙"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p219",
+  "hanzi": "休息",
+  "py": "xiū xi",
+  "en": "to rest",
+  "words": [
+   "休息"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p220",
+  "hanzi": "没有",
+  "py": "méi yǒu",
+  "en": "not have",
+  "words": [
+   "没有"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p221",
+  "hanzi": "做",
+  "py": "zuò",
+  "en": "to do",
+  "words": [
+   "做"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p222",
+  "hanzi": "现在",
+  "py": "xiàn zài",
+  "en": "now",
+  "words": [
+   "现在"
+  ],
+  "kind": "word",
+  "unit": 5,
+  "hsk": 1
+ },
+ {
+  "id": "p223",
+  "hanzi": "今天几号？",
+  "py": "jīn tiān jǐ hào",
+  "en": "What’s the date today?",
+  "words": [
+   "今天",
+   "几号？"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p224",
+  "hanzi": "今天星期几？",
+  "py": "jīn tiān xīng qī jǐ",
+  "en": "What day is it today?",
+  "words": [
+   "今天",
+   "星期",
+   "几？"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p225",
+  "hanzi": "今天是星期三。",
+  "py": "jīn tiān shì xīng qī sān",
+  "en": "Today is Wednesday.",
+  "words": [
+   "今天",
+   "是",
+   "星期三。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p226",
+  "hanzi": "明天是周末。",
+  "py": "míng tiān shì zhōu mò",
+  "en": "Tomorrow is the weekend.",
+  "words": [
+   "明天",
+   "是",
+   "周末。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p227",
+  "hanzi": "我每天早上七点起床。",
+  "py": "wǒ měi tiān zǎo shang qī diǎn qǐ chuáng",
+  "en": "I get up at seven every morning.",
+  "words": [
+   "我",
+   "每天",
+   "早上",
+   "七点",
+   "起床。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p228",
+  "hanzi": "我八点半上班。",
+  "py": "wǒ bā diǎn bàn shàng bān",
+  "en": "I start work at half past eight.",
+  "words": [
+   "我",
+   "八点半",
+   "上班。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p229",
+  "hanzi": "你几点下班？",
+  "py": "nǐ jǐ diǎn xià bān",
+  "en": "What time do you finish work?",
+  "words": [
+   "你",
+   "几点",
+   "下班？"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p230",
+  "hanzi": "我六点下班。",
+  "py": "wǒ liù diǎn xià bān",
+  "en": "I finish work at six.",
+  "words": [
+   "我",
+   "六点",
+   "下班。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p231",
+  "hanzi": "中午我们一起吃饭吧。",
+  "py": "zhōng wǔ wǒ men yì qǐ chī fàn ba",
+  "en": "Let’s have lunch together at noon.",
+  "words": [
+   "中午",
+   "我们",
+   "一起",
+   "吃饭",
+   "吧。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p232",
+  "hanzi": "晚上你有时间吗？",
+  "py": "wǎn shang nǐ yǒu shí jiān ma",
+  "en": "Do you have time this evening?",
+  "words": [
+   "晚上",
+   "你",
+   "有",
+   "时间",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p233",
+  "hanzi": "我今天很忙。",
+  "py": "wǒ jīn tiān hěn máng",
+  "en": "I’m very busy today.",
+  "words": [
+   "我",
+   "今天",
+   "很",
+   "忙。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p234",
+  "hanzi": "我昨天没有工作。",
+  "py": "wǒ zuó tiān méi yǒu gōng zuò",
+  "en": "I didn’t work yesterday.",
+  "words": [
+   "我",
+   "昨天",
+   "没有",
+   "工作。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p235",
+  "hanzi": "周末你做什么？",
+  "py": "zhōu mò nǐ zuò shén me",
+  "en": "What do you do on weekends?",
+  "words": [
+   "周末",
+   "你",
+   "做",
+   "什么？"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p236",
+  "hanzi": "我周末在家休息。",
+  "py": "wǒ zhōu mò zài jiā xiū xi",
+  "en": "I rest at home on weekends.",
+  "words": [
+   "我",
+   "周末",
+   "在家",
+   "休息。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p237",
+  "hanzi": "我晚上十一点睡觉。",
+  "py": "wǒ wǎn shang shí yī diǎn shuì jiào",
+  "en": "I go to sleep at eleven at night.",
+  "words": [
+   "我",
+   "晚上",
+   "十一点",
+   "睡觉。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p238",
+  "hanzi": "现在是十点半。",
+  "py": "xiàn zài shì shí diǎn bàn",
+  "en": "It’s half past ten now.",
+  "words": [
+   "现在",
+   "是",
+   "十点",
+   "半。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p239",
+  "hanzi": "我们明天早上九点见。",
+  "py": "wǒ men míng tiān zǎo shang jiǔ diǎn jiàn",
+  "en": "See you tomorrow morning at nine.",
+  "words": [
+   "我们",
+   "明天",
+   "早上",
+   "九点",
+   "见。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p240",
+  "hanzi": "你每天学多久？",
+  "py": "nǐ měi tiān xué duō jiǔ",
+  "en": "How long do you study each day?",
+  "words": [
+   "你",
+   "每天",
+   "学",
+   "多久？"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p241",
+  "hanzi": "我每天学二十分钟中文。",
+  "py": "wǒ měi tiān xué èr shí fēn zhōng zhōng wén",
+  "en": "I study Chinese for twenty minutes every day.",
+  "words": [
+   "我",
+   "每天",
+   "学",
+   "二十分钟",
+   "中文。"
+  ],
+  "kind": "phrase",
+  "unit": 5
+ },
+ {
+  "id": "p242",
+  "hanzi": "爸爸",
+  "py": "bà ba",
+  "en": "dad",
+  "words": [
+   "爸爸"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p243",
+  "hanzi": "妈妈",
+  "py": "mā ma",
+  "en": "mum",
+  "words": [
+   "妈妈"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p244",
+  "hanzi": "哥哥",
+  "py": "gē ge",
+  "en": "older brother",
+  "words": [
+   "哥哥"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p245",
+  "hanzi": "姐姐",
+  "py": "jiě jie",
+  "en": "older sister",
+  "words": [
+   "姐姐"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p246",
+  "hanzi": "弟弟",
+  "py": "dì di",
+  "en": "younger brother",
+  "words": [
+   "弟弟"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p247",
+  "hanzi": "妹妹",
+  "py": "mèi mei",
+  "en": "younger sister",
+  "words": [
+   "妹妹"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p248",
+  "hanzi": "孩子",
+  "py": "hái zi",
+  "en": "child",
+  "words": [
+   "孩子"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p249",
+  "hanzi": "儿子",
+  "py": "ér zi",
+  "en": "son",
+  "words": [
+   "儿子"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p250",
+  "hanzi": "女儿",
+  "py": "nǚ ér",
+  "en": "daughter",
+  "words": [
+   "女儿"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p251",
+  "hanzi": "太太",
+  "py": "tài tai",
+  "en": "wife",
+  "words": [
+   "太太"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 2
+ },
+ {
+  "id": "p252",
+  "hanzi": "大",
+  "py": "dà",
+  "en": "big",
+  "words": [
+   "大"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p253",
+  "hanzi": "小",
+  "py": "xiǎo",
+  "en": "small",
+  "words": [
+   "小"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p254",
+  "hanzi": "高",
+  "py": "gāo",
+  "en": "tall",
+  "words": [
+   "高"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p255",
+  "hanzi": "漂亮",
+  "py": "piào liang",
+  "en": "pretty",
+  "words": [
+   "漂亮"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 2
+ },
+ {
+  "id": "p256",
+  "hanzi": "可爱",
+  "py": "kě ài",
+  "en": "cute",
+  "words": [
+   "可爱"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 2
+ },
+ {
+  "id": "p257",
+  "hanzi": "住",
+  "py": "zhù",
+  "en": "to live",
+  "words": [
+   "住"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p258",
+  "hanzi": "和",
+  "py": "hé",
+  "en": "and; with",
+  "words": [
+   "和"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p259",
+  "hanzi": "医生",
+  "py": "yī shēng",
+  "en": "doctor",
+  "words": [
+   "医生"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p260",
+  "hanzi": "都",
+  "py": "dōu",
+  "en": "all; both",
+  "words": [
+   "都"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p261",
+  "hanzi": "还",
+  "py": "hái",
+  "en": "still; also",
+  "words": [
+   "还"
+  ],
+  "kind": "word",
+  "unit": 6,
+  "hsk": 1
+ },
+ {
+  "id": "p262",
+  "hanzi": "这是我的家人。",
+  "py": "zhè shì wǒ de jiā rén",
+  "en": "These are my family.",
+  "words": [
+   "这",
+   "是",
+   "我",
+   "的",
+   "家人。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p263",
+  "hanzi": "我有一个哥哥和一个妹妹。",
+  "py": "wǒ yǒu yí ge gē ge hé yí ge mèi mei",
+  "en": "I have an older brother and a younger sister.",
+  "words": [
+   "我",
+   "有",
+   "一个",
+   "哥哥",
+   "和",
+   "一个",
+   "妹妹。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p264",
+  "hanzi": "我爸爸是医生。",
+  "py": "wǒ bà ba shì yī shēng",
+  "en": "My dad is a doctor.",
+  "words": [
+   "我",
+   "爸爸",
+   "是",
+   "医生。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p265",
+  "hanzi": "我妈妈在银行工作。",
+  "py": "wǒ mā ma zài yín háng gōng zuò",
+  "en": "My mum works at a bank.",
+  "words": [
+   "我",
+   "妈妈",
+   "在",
+   "银行",
+   "工作。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p266",
+  "hanzi": "你有孩子吗？",
+  "py": "nǐ yǒu hái zi ma",
+  "en": "Do you have children?",
+  "words": [
+   "你",
+   "有",
+   "孩子",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p267",
+  "hanzi": "我有两个孩子。",
+  "py": "wǒ yǒu liǎng gè hái zi",
+  "en": "I have two children.",
+  "words": [
+   "我",
+   "有",
+   "两个",
+   "孩子。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p268",
+  "hanzi": "我儿子今年五岁。",
+  "py": "wǒ ér zi jīn nián wǔ suì",
+  "en": "My son is five this year.",
+  "words": [
+   "我",
+   "儿子",
+   "今年",
+   "五岁。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p269",
+  "hanzi": "我女儿很可爱。",
+  "py": "wǒ nǚ ér hěn kě ài",
+  "en": "My daughter is very cute.",
+  "words": [
+   "我",
+   "女儿",
+   "很",
+   "可爱。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p270",
+  "hanzi": "我姐姐住在新加坡。",
+  "py": "wǒ jiě jie zhù zài xīn jiā pō",
+  "en": "My older sister lives in Singapore.",
+  "words": [
+   "我",
+   "姐姐",
+   "住",
+   "在",
+   "新加坡。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p271",
+  "hanzi": "我弟弟还是学生。",
+  "py": "wǒ dì di hái shi xué sheng",
+  "en": "My younger brother is still a student.",
+  "words": [
+   "我",
+   "弟弟",
+   "还是",
+   "学生。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p272",
+  "hanzi": "你的家人好吗？",
+  "py": "nǐ de jiā rén hǎo ma",
+  "en": "How is your family?",
+  "words": [
+   "你",
+   "的",
+   "家人",
+   "好",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p273",
+  "hanzi": "他们都很好。",
+  "py": "tā men dōu hěn hǎo",
+  "en": "They are all well.",
+  "words": [
+   "他们",
+   "都",
+   "很",
+   "好。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p274",
+  "hanzi": "我家很小。",
+  "py": "wǒ jiā hěn xiǎo",
+  "en": "My home is small.",
+  "words": [
+   "我家",
+   "很小。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p275",
+  "hanzi": "你家大吗？",
+  "py": "nǐ jiā dà ma",
+  "en": "Is your home big?",
+  "words": [
+   "你家",
+   "大",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p276",
+  "hanzi": "你妹妹很漂亮。",
+  "py": "nǐ mèi mei hěn piào liang",
+  "en": "Your younger sister is very pretty.",
+  "words": [
+   "你",
+   "妹妹",
+   "很",
+   "漂亮。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p277",
+  "hanzi": "他很高。",
+  "py": "tā hěn gāo",
+  "en": "He is tall.",
+  "words": [
+   "他",
+   "很",
+   "高。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p278",
+  "hanzi": "你太太做什么工作？",
+  "py": "nǐ tài tai zuò shén me gōng zuò",
+  "en": "What does your wife do?",
+  "words": [
+   "你",
+   "太太",
+   "做",
+   "什么",
+   "工作？"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p279",
+  "hanzi": "我先生是老师。",
+  "py": "wǒ xiān sheng shì lǎo shī",
+  "en": "My husband is a teacher.",
+  "words": [
+   "我",
+   "先生",
+   "是",
+   "老师。"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p280",
+  "hanzi": "你和家人住在一起吗？",
+  "py": "nǐ hé jiā rén zhù zài yì qǐ ma",
+  "en": "Do you live with your family?",
+  "words": [
+   "你",
+   "和",
+   "家人",
+   "住",
+   "在",
+   "一起",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 6
+ },
+ {
+  "id": "p281",
+  "hanzi": "买",
+  "py": "mǎi",
+  "en": "to buy",
+  "words": [
+   "买"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 1
+ },
+ {
+  "id": "p282",
+  "hanzi": "卖",
+  "py": "mài",
+  "en": "to sell",
+  "words": [
+   "卖"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p283",
+  "hanzi": "衣服",
+  "py": "yī fu",
+  "en": "clothes",
+  "words": [
+   "衣服"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 1
+ },
+ {
+  "id": "p284",
+  "hanzi": "鞋",
+  "py": "xié",
+  "en": "shoes",
+  "words": [
+   "鞋"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p285",
+  "hanzi": "颜色",
+  "py": "yán sè",
+  "en": "colour",
+  "words": [
+   "颜色"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p286",
+  "hanzi": "红色",
+  "py": "hóng sè",
+  "en": "red",
+  "words": [
+   "红色"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p287",
+  "hanzi": "白色",
+  "py": "bái sè",
+  "en": "white",
+  "words": [
+   "白色"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p288",
+  "hanzi": "黑色",
+  "py": "hēi sè",
+  "en": "black",
+  "words": [
+   "黑色"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p289",
+  "hanzi": "蓝色",
+  "py": "lán sè",
+  "en": "blue",
+  "words": [
+   "蓝色"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p290",
+  "hanzi": "试",
+  "py": "shì",
+  "en": "to try",
+  "words": [
+   "试"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 1
+ },
+ {
+  "id": "p291",
+  "hanzi": "合适",
+  "py": "hé shì",
+  "en": "suitable; fits",
+  "words": [
+   "合适"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p292",
+  "hanzi": "打折",
+  "py": "dǎ zhé",
+  "en": "to discount",
+  "words": [
+   "打折"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 4
+ },
+ {
+  "id": "p293",
+  "hanzi": "手机",
+  "py": "shǒu jī",
+  "en": "mobile phone",
+  "words": [
+   "手机"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 1
+ },
+ {
+  "id": "p294",
+  "hanzi": "商店",
+  "py": "shāng diàn",
+  "en": "shop",
+  "words": [
+   "商店"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 1
+ },
+ {
+  "id": "p295",
+  "hanzi": "超市",
+  "py": "chāo shì",
+  "en": "supermarket",
+  "words": [
+   "超市"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p296",
+  "hanzi": "看",
+  "py": "kàn",
+  "en": "to look; to watch",
+  "words": [
+   "看"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 1
+ },
+ {
+  "id": "p297",
+  "hanzi": "件",
+  "py": "jiàn",
+  "en": "(for clothes)",
+  "words": [
+   "件"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 2
+ },
+ {
+  "id": "p298",
+  "hanzi": "双",
+  "py": "shuāng",
+  "en": "pair",
+  "words": [
+   "双"
+  ],
+  "kind": "word",
+  "unit": 7,
+  "hsk": 3
+ },
+ {
+  "id": "p299",
+  "hanzi": "开门",
+  "py": "kāi mén",
+  "en": "to open (a shop)",
+  "words": [
+   "开门"
+  ],
+  "kind": "word",
+  "unit": 7
+ },
+ {
+  "id": "p300",
+  "hanzi": "关门",
+  "py": "guān mén",
+  "en": "to close (a shop)",
+  "words": [
+   "关门"
+  ],
+  "kind": "word",
+  "unit": 7
+ },
+ {
+  "id": "p301",
+  "hanzi": "我想买一件衣服。",
+  "py": "wǒ xiǎng mǎi yí jiàn yī fu",
+  "en": "I’d like to buy a piece of clothing.",
+  "words": [
+   "我",
+   "想",
+   "买",
+   "一件",
+   "衣服。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p302",
+  "hanzi": "这件衣服多少钱？",
+  "py": "zhè jiàn yī fu duō shǎo qián",
+  "en": "How much is this garment?",
+  "words": [
+   "这件",
+   "衣服",
+   "多少钱？"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p303",
+  "hanzi": "有没有大一点的？",
+  "py": "yǒu méi yǒu dà yì diǎn de",
+  "en": "Do you have a bigger one?",
+  "words": [
+   "有没有",
+   "大",
+   "一点",
+   "的？"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p304",
+  "hanzi": "有没有小一点的？",
+  "py": "yǒu méi yǒu xiǎo yì diǎn de",
+  "en": "Do you have a smaller one?",
+  "words": [
+   "有没有",
+   "小",
+   "一点",
+   "的？"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p305",
+  "hanzi": "我可以试一下吗？",
+  "py": "wǒ kě yǐ shì yí xià ma",
+  "en": "Can I try it on?",
+  "words": [
+   "我",
+   "可以",
+   "试",
+   "一下",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p306",
+  "hanzi": "很合适。",
+  "py": "hěn hé shì",
+  "en": "It fits well.",
+  "words": [
+   "很",
+   "合适。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p307",
+  "hanzi": "我喜欢红色。",
+  "py": "wǒ xǐ huan hóng sè",
+  "en": "I like red.",
+  "words": [
+   "我",
+   "喜欢",
+   "红色。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p308",
+  "hanzi": "你有蓝色的吗？",
+  "py": "nǐ yǒu lán sè de ma",
+  "en": "Do you have a blue one?",
+  "words": [
+   "你",
+   "有",
+   "蓝色",
+   "的",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p309",
+  "hanzi": "这双鞋太小了。",
+  "py": "zhè shuāng xié tài xiǎo le",
+  "en": "This pair of shoes is too small.",
+  "words": [
+   "这",
+   "双",
+   "鞋",
+   "太小",
+   "了。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p310",
+  "hanzi": "我要这个。",
+  "py": "wǒ yào zhè ge",
+  "en": "I’ll take this one.",
+  "words": [
+   "我",
+   "要",
+   "这个。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p311",
+  "hanzi": "打折吗？",
+  "py": "dǎ zhé ma",
+  "en": "Is there a discount?",
+  "words": [
+   "打折",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p312",
+  "hanzi": "我只看看。",
+  "py": "wǒ zhǐ kàn kan",
+  "en": "I’m just looking.",
+  "words": [
+   "我",
+   "只",
+   "看看。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p313",
+  "hanzi": "我想买手机。",
+  "py": "wǒ xiǎng mǎi shǒu jī",
+  "en": "I’d like to buy a mobile phone.",
+  "words": [
+   "我",
+   "想",
+   "买",
+   "手机。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p314",
+  "hanzi": "这个手机很贵。",
+  "py": "zhè ge shǒu jī hěn guì",
+  "en": "This phone is very expensive.",
+  "words": [
+   "这个",
+   "手机",
+   "很",
+   "贵。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p315",
+  "hanzi": "超市在哪里？",
+  "py": "chāo shì zài nǎ lǐ",
+  "en": "Where is the supermarket?",
+  "words": [
+   "超市",
+   "在",
+   "哪里？"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p316",
+  "hanzi": "我去超市买水。",
+  "py": "wǒ qù chāo shì mǎi shuǐ",
+  "en": "I’m going to the supermarket to buy water.",
+  "words": [
+   "我",
+   "去",
+   "超市",
+   "买",
+   "水。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p317",
+  "hanzi": "商店几点开门？",
+  "py": "shāng diàn jǐ diǎn kāi mén",
+  "en": "What time does the shop open?",
+  "words": [
+   "商店",
+   "几点",
+   "开门？"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p318",
+  "hanzi": "商店九点关门。",
+  "py": "shāng diàn jiǔ diǎn guān mén",
+  "en": "The shop closes at nine.",
+  "words": [
+   "商店",
+   "九点",
+   "关门。"
+  ],
+  "kind": "phrase",
+  "unit": 7
+ },
+ {
+  "id": "p319",
+  "hanzi": "高兴",
+  "py": "gāo xìng",
+  "en": "happy",
+  "words": [
+   "高兴"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p320",
+  "hanzi": "开心",
+  "py": "kāi xīn",
+  "en": "joyful",
+  "words": [
+   "开心"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 2
+ },
+ {
+  "id": "p321",
+  "hanzi": "冷",
+  "py": "lěng",
+  "en": "cold",
+  "words": [
+   "冷"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p322",
+  "hanzi": "热",
+  "py": "rè",
+  "en": "hot",
+  "words": [
+   "热"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p323",
+  "hanzi": "天气",
+  "py": "tiān qì",
+  "en": "weather",
+  "words": [
+   "天气"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p324",
+  "hanzi": "下雨",
+  "py": "xià yǔ",
+  "en": "to rain",
+  "words": [
+   "下雨"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p325",
+  "hanzi": "病",
+  "py": "bìng",
+  "en": "ill",
+  "words": [
+   "病"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p326",
+  "hanzi": "头疼",
+  "py": "tóu téng",
+  "en": "headache",
+  "words": [
+   "头疼"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 6
+ },
+ {
+  "id": "p327",
+  "hanzi": "药",
+  "py": "yào",
+  "en": "medicine",
+  "words": [
+   "药"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 2
+ },
+ {
+  "id": "p328",
+  "hanzi": "担心",
+  "py": "dān xīn",
+  "en": "to worry",
+  "words": [
+   "担心"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 4
+ },
+ {
+  "id": "p329",
+  "hanzi": "生气",
+  "py": "shēng qì",
+  "en": "angry",
+  "words": [
+   "生气"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p330",
+  "hanzi": "舒服",
+  "py": "shū fu",
+  "en": "comfortable",
+  "words": [
+   "舒服"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 2
+ },
+ {
+  "id": "p331",
+  "hanzi": "累",
+  "py": "lèi",
+  "en": "tired",
+  "words": [
+   "累"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p332",
+  "hanzi": "真",
+  "py": "zhēn",
+  "en": "really",
+  "words": [
+   "真"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p333",
+  "hanzi": "别",
+  "py": "bié",
+  "en": "don’t",
+  "words": [
+   "别"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p334",
+  "hanzi": "次",
+  "py": "cì",
+  "en": "time (occurrence)",
+  "words": [
+   "次"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p335",
+  "hanzi": "会",
+  "py": "huì",
+  "en": "will; can",
+  "words": [
+   "会"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p336",
+  "hanzi": "多",
+  "py": "duō",
+  "en": "many; more",
+  "words": [
+   "多"
+  ],
+  "kind": "word",
+  "unit": 8,
+  "hsk": 1
+ },
+ {
+  "id": "p337",
+  "hanzi": "我很高兴。",
+  "py": "wǒ hěn gāo xìng",
+  "en": "I’m very happy.",
+  "words": [
+   "我",
+   "很",
+   "高兴。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p338",
+  "hanzi": "我今天很开心。",
+  "py": "wǒ jīn tiān hěn kāi xīn",
+  "en": "I’m very happy today.",
+  "words": [
+   "我",
+   "今天",
+   "很",
+   "开心。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p339",
+  "hanzi": "你怎么了？",
+  "py": "nǐ zěn me le",
+  "en": "What’s wrong?",
+  "words": [
+   "你",
+   "怎么",
+   "了？"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p340",
+  "hanzi": "我不舒服。",
+  "py": "wǒ bù shū fu",
+  "en": "I don’t feel well.",
+  "words": [
+   "我",
+   "不",
+   "舒服。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p341",
+  "hanzi": "我头疼。",
+  "py": "wǒ tóu téng",
+  "en": "I have a headache.",
+  "words": [
+   "我",
+   "头疼。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p342",
+  "hanzi": "我想去看医生。",
+  "py": "wǒ xiǎng qù kàn yī shēng",
+  "en": "I’d like to see a doctor.",
+  "words": [
+   "我",
+   "想",
+   "去",
+   "看",
+   "医生。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p343",
+  "hanzi": "你要多喝水。",
+  "py": "nǐ yào duō hē shuǐ",
+  "en": "You should drink more water.",
+  "words": [
+   "你",
+   "要",
+   "多喝水。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p344",
+  "hanzi": "你要多休息。",
+  "py": "nǐ yào duō xiū xi",
+  "en": "You should rest more.",
+  "words": [
+   "你",
+   "要",
+   "多",
+   "休息。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p345",
+  "hanzi": "这个药一天吃三次。",
+  "py": "zhè ge yào yì tiān chī sān cì",
+  "en": "Take this medicine three times a day.",
+  "words": [
+   "这个",
+   "药",
+   "一天",
+   "吃",
+   "三次。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p346",
+  "hanzi": "今天很冷。",
+  "py": "jīn tiān hěn lěng",
+  "en": "It’s very cold today.",
+  "words": [
+   "今天",
+   "很",
+   "冷。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p347",
+  "hanzi": "今天下雨。",
+  "py": "jīn tiān xià yǔ",
+  "en": "It’s raining today.",
+  "words": [
+   "今天",
+   "下雨。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p348",
+  "hanzi": "明天会下雨吗？",
+  "py": "míng tiān huì xià yǔ ma",
+  "en": "Will it rain tomorrow?",
+  "words": [
+   "明天",
+   "会",
+   "下雨",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p349",
+  "hanzi": "别担心。",
+  "py": "bié dān xīn",
+  "en": "Don’t worry.",
+  "words": [
+   "别",
+   "担心。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p350",
+  "hanzi": "我有点担心。",
+  "py": "wǒ yǒu diǎn dān xīn",
+  "en": "I’m a bit worried.",
+  "words": [
+   "我",
+   "有点",
+   "担心。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p351",
+  "hanzi": "他很生气。",
+  "py": "tā hěn shēng qì",
+  "en": "He is very angry.",
+  "words": [
+   "他",
+   "很",
+   "生气。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p352",
+  "hanzi": "你累不累？",
+  "py": "nǐ lèi bu lèi",
+  "en": "Are you tired?",
+  "words": [
+   "你",
+   "累不累？"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p353",
+  "hanzi": "我不累。",
+  "py": "wǒ bú lèi",
+  "en": "I’m not tired.",
+  "words": [
+   "我",
+   "不",
+   "累。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p354",
+  "hanzi": "新加坡很热。",
+  "py": "xīn jiā pō hěn rè",
+  "en": "Singapore is very hot.",
+  "words": [
+   "新加坡",
+   "很",
+   "热。"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p355",
+  "hanzi": "天气真好！",
+  "py": "tiān qì zhēn hǎo",
+  "en": "The weather is really nice!",
+  "words": [
+   "天气",
+   "真",
+   "好！"
+  ],
+  "kind": "phrase",
+  "unit": 8
+ },
+ {
+  "id": "p356",
+  "hanzi": "说",
+  "py": "shuō",
+  "en": "to speak",
+  "words": [
+   "说"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p357",
+  "hanzi": "听",
+  "py": "tīng",
+  "en": "to listen",
+  "words": [
+   "听"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p358",
+  "hanzi": "懂",
+  "py": "dǒng",
+  "en": "to understand",
+  "words": [
+   "懂"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 2
+ },
+ {
+  "id": "p359",
+  "hanzi": "慢",
+  "py": "màn",
+  "en": "slow",
+  "words": [
+   "慢"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p360",
+  "hanzi": "快",
+  "py": "kuài",
+  "en": "fast",
+  "words": [
+   "快"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p361",
+  "hanzi": "帮",
+  "py": "bāng",
+  "en": "to help",
+  "words": [
+   "帮"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p362",
+  "hanzi": "问题",
+  "py": "wèn tí",
+  "en": "question; problem",
+  "words": [
+   "问题"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 2
+ },
+ {
+  "id": "p363",
+  "hanzi": "知道",
+  "py": "zhī dào",
+  "en": "to know",
+  "words": [
+   "知道"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p364",
+  "hanzi": "觉得",
+  "py": "jué de",
+  "en": "to feel; to think",
+  "words": [
+   "觉得"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p365",
+  "hanzi": "学",
+  "py": "xué",
+  "en": "to learn",
+  "words": [
+   "学"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p366",
+  "hanzi": "英语",
+  "py": "yīng yǔ",
+  "en": "English",
+  "words": [
+   "英语"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 2
+ },
+ {
+  "id": "p367",
+  "hanzi": "用",
+  "py": "yòng",
+  "en": "to use",
+  "words": [
+   "用"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p368",
+  "hanzi": "意思",
+  "py": "yì si",
+  "en": "meaning",
+  "words": [
+   "意思"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 2
+ },
+ {
+  "id": "p369",
+  "hanzi": "写",
+  "py": "xiě",
+  "en": "to write",
+  "words": [
+   "写"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p370",
+  "hanzi": "字",
+  "py": "zì",
+  "en": "character",
+  "words": [
+   "字"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p371",
+  "hanzi": "电视",
+  "py": "diàn shì",
+  "en": "television",
+  "words": [
+   "电视"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p372",
+  "hanzi": "开始",
+  "py": "kāi shǐ",
+  "en": "to begin",
+  "words": [
+   "开始"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 3
+ },
+ {
+  "id": "p373",
+  "hanzi": "什么时候",
+  "py": "shén me shí hou",
+  "en": "when",
+  "words": [
+   "什么时候"
+  ],
+  "kind": "word",
+  "unit": 9
+ },
+ {
+  "id": "p374",
+  "hanzi": "空",
+  "py": "kōng",
+  "en": "free (time)",
+  "words": [
+   "空"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 3
+ },
+ {
+  "id": "p375",
+  "hanzi": "电影",
+  "py": "diàn yǐng",
+  "en": "film",
+  "words": [
+   "电影"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p376",
+  "hanzi": "旅游",
+  "py": "lǚ yóu",
+  "en": "to travel",
+  "words": [
+   "旅游"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 2
+ },
+ {
+  "id": "p377",
+  "hanzi": "过",
+  "py": "guò",
+  "en": "(experienced)",
+  "words": [
+   "过"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p378",
+  "hanzi": "能",
+  "py": "néng",
+  "en": "can; able to",
+  "words": [
+   "能"
+  ],
+  "kind": "word",
+  "unit": 9,
+  "hsk": 1
+ },
+ {
+  "id": "p379",
+  "hanzi": "我听不懂。",
+  "py": "wǒ tīng bu dǒng",
+  "en": "I don’t understand (what I hear).",
+  "words": [
+   "我",
+   "听不懂。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p380",
+  "hanzi": "请说慢一点。",
+  "py": "qǐng shuō màn yì diǎn",
+  "en": "Please speak more slowly.",
+  "words": [
+   "请",
+   "说",
+   "慢",
+   "一点。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p381",
+  "hanzi": "这个用中文怎么说？",
+  "py": "zhè ge yòng zhōng wén zěn me shuō",
+  "en": "How do you say this in Chinese?",
+  "words": [
+   "这个",
+   "用",
+   "中文",
+   "怎么",
+   "说？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p382",
+  "hanzi": "这是什么意思？",
+  "py": "zhè shì shén me yì si",
+  "en": "What does this mean?",
+  "words": [
+   "这",
+   "是",
+   "什么",
+   "意思？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p383",
+  "hanzi": "你能帮我吗？",
+  "py": "nǐ néng bāng wǒ ma",
+  "en": "Can you help me?",
+  "words": [
+   "你",
+   "能",
+   "帮",
+   "我",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p384",
+  "hanzi": "请帮我一下。",
+  "py": "qǐng bāng wǒ yí xià",
+  "en": "Please help me.",
+  "words": [
+   "请",
+   "帮",
+   "我",
+   "一下。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p385",
+  "hanzi": "我有一个问题。",
+  "py": "wǒ yǒu yí ge wèn tí",
+  "en": "I have a question.",
+  "words": [
+   "我",
+   "有",
+   "一个",
+   "问题。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p386",
+  "hanzi": "我不知道。",
+  "py": "wǒ bù zhī dào",
+  "en": "I don’t know.",
+  "words": [
+   "我",
+   "不",
+   "知道。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p387",
+  "hanzi": "我知道了。",
+  "py": "wǒ zhī dào le",
+  "en": "Got it.",
+  "words": [
+   "我",
+   "知道",
+   "了。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p388",
+  "hanzi": "我觉得很好。",
+  "py": "wǒ jué de hěn hǎo",
+  "en": "I think it’s good.",
+  "words": [
+   "我",
+   "觉得",
+   "很",
+   "好。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p389",
+  "hanzi": "我想学中文。",
+  "py": "wǒ xiǎng xué zhōng wén",
+  "en": "I want to learn Chinese.",
+  "words": [
+   "我",
+   "想",
+   "学",
+   "中文。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p390",
+  "hanzi": "我每天听中文。",
+  "py": "wǒ měi tiān tīng zhōng wén",
+  "en": "I listen to Chinese every day.",
+  "words": [
+   "我",
+   "每天",
+   "听",
+   "中文。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p391",
+  "hanzi": "我喜欢看中文电视。",
+  "py": "wǒ xǐ huan kàn zhōng wén diàn shì",
+  "en": "I like watching Chinese TV.",
+  "words": [
+   "我",
+   "喜欢",
+   "看",
+   "中文",
+   "电视。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p392",
+  "hanzi": "你会写这个字吗？",
+  "py": "nǐ huì xiě zhè ge zì ma",
+  "en": "Can you write this character?",
+  "words": [
+   "你",
+   "会",
+   "写",
+   "这个",
+   "字",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p393",
+  "hanzi": "我会说一点中文。",
+  "py": "wǒ huì shuō yì diǎn zhōng wén",
+  "en": "I can speak a little Chinese.",
+  "words": [
+   "我会",
+   "说",
+   "一点",
+   "中文。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p394",
+  "hanzi": "你能再说一次吗？",
+  "py": "nǐ néng zài shuō yí cì ma",
+  "en": "Can you say that once more?",
+  "words": [
+   "你",
+   "能",
+   "再说",
+   "一次",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p395",
+  "hanzi": "你说什么？",
+  "py": "nǐ shuō shén me",
+  "en": "What did you say?",
+  "words": [
+   "你",
+   "说",
+   "什么？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p396",
+  "hanzi": "没问题。",
+  "py": "méi wèn tí",
+  "en": "No problem.",
+  "words": [
+   "没",
+   "问题。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p397",
+  "hanzi": "好的，谢谢你。",
+  "py": "hǎo de xiè xie nǐ",
+  "en": "OK, thank you.",
+  "words": [
+   "好",
+   "的，",
+   "谢谢",
+   "你。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p398",
+  "hanzi": "我们开始吧。",
+  "py": "wǒ men kāi shǐ ba",
+  "en": "Let’s begin.",
+  "words": [
+   "我们",
+   "开始",
+   "吧。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p399",
+  "hanzi": "我们明天再说。",
+  "py": "wǒ men míng tiān zài shuō",
+  "en": "Let’s talk tomorrow.",
+  "words": [
+   "我们",
+   "明天",
+   "再说。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p400",
+  "hanzi": "你什么时候有空？",
+  "py": "nǐ shén me shí hou yǒu kòng",
+  "en": "When are you free?",
+  "words": [
+   "你",
+   "什么时候",
+   "有空？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p401",
+  "hanzi": "周末我想去朋友家。",
+  "py": "zhōu mò wǒ xiǎng qù péng you jiā",
+  "en": "This weekend I’d like to go to a friend’s home.",
+  "words": [
+   "周末",
+   "我",
+   "想",
+   "去",
+   "朋友",
+   "家。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p402",
+  "hanzi": "我们一起去看电影吧。",
+  "py": "wǒ men yì qǐ qù kàn diàn yǐng ba",
+  "en": "Let’s go and watch a film together.",
+  "words": [
+   "我们",
+   "一起",
+   "去",
+   "看",
+   "电影",
+   "吧。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p403",
+  "hanzi": "你喜欢看电影吗？",
+  "py": "nǐ xǐ huan kàn diàn yǐng ma",
+  "en": "Do you like watching films?",
+  "words": [
+   "你",
+   "喜欢",
+   "看",
+   "电影",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p404",
+  "hanzi": "我想去中国旅游。",
+  "py": "wǒ xiǎng qù zhōng guó lǚ yóu",
+  "en": "I’d like to travel to China.",
+  "words": [
+   "我",
+   "想",
+   "去",
+   "中国",
+   "旅游。"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p405",
+  "hanzi": "你去过中国吗？",
+  "py": "nǐ qù guò zhōng guó ma",
+  "en": "Have you been to China?",
+  "words": [
+   "你",
+   "去过",
+   "中国",
+   "吗？"
+  ],
+  "kind": "phrase",
+  "unit": 9
+ },
+ {
+  "id": "p406",
+  "hanzi": "我还没去过。",
+  "py": "wǒ hái méi qù guò",
+  "en": "I haven’t been yet.",
+  "words": [
+   "我",
+   "还",
+   "没",
+   "去过。"
+  ],
+  "kind": "phrase",
+  "unit": 9
  }
 ]

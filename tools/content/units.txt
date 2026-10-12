@@ -1,0 +1,395 @@
+# Original curriculum for Shuōba. Format:  W hanzi|gloss   (a word)   /   S sentence|English   (a sentence)
+# Optional third field on any line: py=...  to override the generated pinyin.
+# Words come first in each unit; sentences only use words taught earlier (checked by build-content.py).
+
+= People
+W 我|I; me
+W 你|you
+W 他|he; him
+W 她|she; her
+W 我们|we; us
+W 你们|you (plural)
+W 他们|they; them
+W 是|to be
+W 人|person
+W 朋友|friend
+W 老师|teacher
+W 学生|student
+W 同事|colleague
+W 的|’s; of
+W 先生|Mr.; husband
+W 小姐|Miss; Ms.
+W 位|(polite word for people)
+W 中国|China
+S 我是学生。|I’m a student.
+S 你是老师吗？|Are you a teacher?
+S 他是我的朋友。|He is my friend.
+S 她是我的老师。|She is my teacher.
+S 我们是同事。|We are colleagues.
+S 你们是学生吗？|Are you all students?
+S 他们是我的朋友。|They are my friends.
+S 他不是新加坡人。|He isn’t Singaporean.
+S 我是中国人。|I’m Chinese.
+S 你是哪里人？|Where are you from?
+S 这位是李先生。|This is Mr. Li.
+S 这位是王小姐。|This is Ms. Wang.
+S 她是我的好朋友。|She is my good friend.
+S 你好，我是小王。|Hello, I’m Xiao Wang.
+S 他是我们的老师。|He is our teacher.
+S 这是我的同事。|This is my colleague.
+
+= Numbers and money
+W 一|one
+W 二|two
+W 三|three
+W 四|four
+W 五|five
+W 六|six
+W 七|seven
+W 八|eight
+W 九|nine
+W 十|ten
+W 百|hundred
+W 零|zero
+W 几|how many; which (number)
+W 块|dollar (spoken)
+W 个|(general counting word)
+W 两|two (before a counting word)
+W 有|to have
+W 那|that
+W 杯|cup; glass
+W 一共|altogether
+W 电话|phone; phone number
+W 今年|this year
+W 岁|years old
+W 只|only
+W 给|to give
+W 家|home; family
+W 起床|to get up
+S 我有三个朋友。|I have three friends.
+S 这个五块钱。|This one is five dollars.
+S 那个十块钱。|That one is ten dollars.
+S 一杯咖啡四块五。|A cup of coffee is four fifty.
+S 两杯茶多少钱？|How much for two cups of tea?
+S 我要两个。|I’d like two.
+S 一共二十块。|That’s twenty dollars altogether.
+S 我的电话是九八七六五四三二。|My phone number is 9876 5432.
+S 我今年二十五岁。|I’m 25 years old this year.
+S 你今年多大？|How old are you this year?
+S 一百块太贵了。|A hundred dollars is too expensive.
+S 我只有十块钱。|I only have ten dollars.
+S 请给我三个。|Please give me three.
+S 我家有四个人。|There are four people in my family.
+S 九点见。|See you at nine.
+S 我六点起床。|I get up at six.
+
+= Food and drink
+W 吃|to eat
+W 喝|to drink
+W 饭|meal; rice
+W 面|noodles
+W 水|water
+W 茶|tea
+W 咖啡|coffee
+W 好吃|tasty
+W 菜|dish; vegetable
+W 汤|soup
+W 鸡|chicken
+W 鱼|fish
+W 肉|meat
+W 辣|spicy
+W 甜|sweet
+W 咸|salty
+W 饿|hungry
+W 渴|thirsty
+W 碗|bowl
+W 糖|sugar
+W 这里|here
+W 来|to come
+W 买单|to pay the bill
+W 打包|to take away
+W 刷卡|to pay by card
+S 我想吃面。|I’d like to eat noodles.
+S 你想吃什么？|What would you like to eat?
+S 你想喝什么？|What would you like to drink?
+S 我要一碗面。|I’d like a bowl of noodles.
+S 我要一杯咖啡，不要糖。|I’d like a coffee, no sugar.
+S 这个菜很好吃。|This dish is delicious.
+S 这个太辣了。|This is too spicy.
+S 我不吃肉。|I don’t eat meat.
+S 我吃鱼，不吃鸡。|I eat fish, not chicken.
+S 我饿了。|I’m hungry.
+S 我渴了。|I’m thirsty.
+S 请给我一杯水。|Please give me a glass of water.
+S 这里的鸡饭很好吃。|The chicken rice here is delicious.
+S 我们吃什么？|What shall we eat?
+S 你喜欢吃辣吗？|Do you like spicy food?
+S 我喜欢甜的。|I like sweet things.
+S 我不喝咖啡，我喝茶。|I don’t drink coffee; I drink tea.
+S 这个汤太咸了。|This soup is too salty.
+S 再来一碗饭。|One more bowl of rice, please.
+S 买单。|The bill, please.
+S 可以打包吗？|Can I take this away?
+S 这里可以刷卡吗？|Can I pay by card here?
+
+= Getting around
+W 去|to go
+W 坐|to sit; to take (transport)
+W 公共汽车|bus
+W 出租车|taxi
+W 左边|left side
+W 右边|right side
+W 前面|in front
+W 后面|behind
+W 走|to walk
+W 远|far
+W 近|near
+W 到|to arrive
+W 路|road
+W 站|station; stop
+W 车|vehicle
+W 等|to wait
+W 怎么|how
+W 要|to need; to want
+W 多久|how long
+W 分钟|minute
+W 上班|to go to work
+W 一直|straight on; always
+W 往|towards
+W 转|to turn
+W 然后|then
+W 银行|bank
+W 就|just; right
+W 一下|a moment
+S 我坐地铁去上班。|I take the MRT to work.
+S 你怎么去？|How are you getting there?
+S 我坐公共汽车去。|I’m going by bus.
+S 我们坐出租车去吧。|Let’s take a taxi.
+S 去机场要多久？|How long does it take to get to the airport?
+S 地铁站远不远？|Is the MRT station far?
+S 不远，走五分钟。|Not far, a five-minute walk.
+S 一直往前走。|Go straight ahead.
+S 前面往左转。|Turn left ahead.
+S 然后往右转。|Then turn right.
+S 银行就在你右边。|The bank is right on your right.
+S 银行在地铁站后面。|The bank is behind the MRT station.
+S 公共汽车站在哪里？|Where is the bus stop?
+S 我到了。|I’ve arrived.
+S 请等一下。|Please wait a moment.
+S 你在哪里？|Where are you?
+S 我在路上。|I’m on my way.
+S 我的车在前面。|My car is up ahead.
+
+= Time and daily life
+W 今天|today
+W 昨天|yesterday
+W 早上|morning
+W 中午|noon
+W 晚上|evening; night
+W 点|o’clock
+W 半|half
+W 星期|week; day of the week
+W 周末|weekend
+W 号|date; number
+W 每天|every day
+W 工作|to work; job
+W 下班|to finish work
+W 睡觉|to sleep
+W 时间|time
+W 忙|busy
+W 休息|to rest
+W 没有|not have
+W 做|to do
+W 现在|now
+S 今天几号？|What’s the date today?
+S 今天星期几？|What day is it today?
+S 今天是星期三。|Today is Wednesday.
+S 明天是周末。|Tomorrow is the weekend.
+S 我每天早上七点起床。|I get up at seven every morning.
+S 我八点半上班。|I start work at half past eight.
+S 你几点下班？|What time do you finish work?
+S 我六点下班。|I finish work at six.
+S 中午我们一起吃饭吧。|Let’s have lunch together at noon.
+S 晚上你有时间吗？|Do you have time this evening?
+S 我今天很忙。|I’m very busy today.
+S 我昨天没有工作。|I didn’t work yesterday.
+S 周末你做什么？|What do you do on weekends?
+S 我周末在家休息。|I rest at home on weekends.
+S 我晚上十一点睡觉。|I go to sleep at eleven at night.
+S 现在是十点半。|It’s half past ten now.
+S 我们明天早上九点见。|See you tomorrow morning at nine.
+S 你每天学多久？|How long do you study each day?
+S 我每天学二十分钟中文。|I study Chinese for twenty minutes every day.
+
+= Family
+W 爸爸|dad
+W 妈妈|mum
+W 哥哥|older brother
+W 姐姐|older sister
+W 弟弟|younger brother
+W 妹妹|younger sister
+W 孩子|child
+W 儿子|son
+W 女儿|daughter
+W 太太|wife
+W 大|big
+W 小|small
+W 高|tall
+W 漂亮|pretty
+W 可爱|cute
+W 住|to live
+W 和|and; with
+W 医生|doctor
+W 都|all; both
+W 还|still; also
+S 这是我的家人。|These are my family.
+S 我有一个哥哥和一个妹妹。|I have an older brother and a younger sister.
+S 我爸爸是医生。|My dad is a doctor.
+S 我妈妈在银行工作。|My mum works at a bank.
+S 你有孩子吗？|Do you have children?
+S 我有两个孩子。|I have two children.
+S 我儿子今年五岁。|My son is five this year.
+S 我女儿很可爱。|My daughter is very cute.
+S 我姐姐住在新加坡。|My older sister lives in Singapore.
+S 我弟弟还是学生。|My younger brother is still a student.
+S 你的家人好吗？|How is your family?
+S 他们都很好。|They are all well.
+S 我家很小。|My home is small.
+S 你家大吗？|Is your home big?
+S 你妹妹很漂亮。|Your younger sister is very pretty.
+S 他很高。|He is tall.
+S 你太太做什么工作？|What does your wife do?
+S 我先生是老师。|My husband is a teacher.
+S 你和家人住在一起吗？|Do you live with your family?
+
+= Shopping
+W 买|to buy
+W 卖|to sell
+W 衣服|clothes
+W 鞋|shoes
+W 颜色|colour
+W 红色|red
+W 白色|white
+W 黑色|black
+W 蓝色|blue
+W 试|to try
+W 合适|suitable; fits
+W 打折|to discount
+W 手机|mobile phone
+W 商店|shop
+W 超市|supermarket
+W 看|to look; to watch
+W 件|(for clothes)
+W 双|pair
+W 开门|to open (a shop)
+W 关门|to close (a shop)
+S 我想买一件衣服。|I’d like to buy a piece of clothing.
+S 这件衣服多少钱？|How much is this garment?
+S 有没有大一点的？|Do you have a bigger one?
+S 有没有小一点的？|Do you have a smaller one?
+S 我可以试一下吗？|Can I try it on?
+S 很合适。|It fits well.
+S 我喜欢红色。|I like red.
+S 你有蓝色的吗？|Do you have a blue one?
+S 这双鞋太小了。|This pair of shoes is too small.
+S 我要这个。|I’ll take this one.
+S 打折吗？|Is there a discount?
+S 我只看看。|I’m just looking.
+S 我想买手机。|I’d like to buy a mobile phone.
+S 这个手机很贵。|This phone is very expensive.
+S 超市在哪里？|Where is the supermarket?
+S 我去超市买水。|I’m going to the supermarket to buy water.
+S 商店几点开门？|What time does the shop open?
+S 商店九点关门。|The shop closes at nine.
+
+= Feelings and health
+W 高兴|happy
+W 开心|joyful
+W 冷|cold
+W 热|hot
+W 天气|weather
+W 下雨|to rain
+W 病|ill
+W 头疼|headache
+W 药|medicine
+W 担心|to worry
+W 生气|angry
+W 舒服|comfortable
+W 累|tired
+W 真|really
+W 别|don’t
+W 次|time (occurrence)
+W 会|will; can
+W 多|many; more
+S 我很高兴。|I’m very happy.
+S 我今天很开心。|I’m very happy today.
+S 你怎么了？|What’s wrong?
+S 我不舒服。|I don’t feel well.
+S 我头疼。|I have a headache.
+S 我想去看医生。|I’d like to see a doctor.
+S 你要多喝水。|You should drink more water.
+S 你要多休息。|You should rest more.
+S 这个药一天吃三次。|Take this medicine three times a day.
+S 今天很冷。|It’s very cold today.
+S 今天下雨。|It’s raining today.
+S 明天会下雨吗？|Will it rain tomorrow?
+S 别担心。|Don’t worry.
+S 我有点担心。|I’m a bit worried.
+S 他很生气。|He is very angry.
+S 你累不累？|Are you tired?
+S 我不累。|I’m not tired.
+S 新加坡很热。|Singapore is very hot.
+S 天气真好！|The weather is really nice!
+
+= Everyday conversation
+W 说|to speak
+W 听|to listen
+W 懂|to understand
+W 慢|slow
+W 快|fast
+W 帮|to help
+W 问题|question; problem
+W 知道|to know
+W 觉得|to feel; to think
+W 学|to learn
+W 英语|English
+W 用|to use
+W 意思|meaning
+W 写|to write
+W 字|character
+W 电视|television
+W 开始|to begin
+W 什么时候|when
+W 空|free (time)
+W 电影|film
+W 旅游|to travel
+W 过|(experienced)
+W 能|can; able to
+S 我听不懂。|I don’t understand (what I hear).
+S 请说慢一点。|Please speak more slowly.
+S 这个用中文怎么说？|How do you say this in Chinese?
+S 这是什么意思？|What does this mean?
+S 你能帮我吗？|Can you help me?
+S 请帮我一下。|Please help me.
+S 我有一个问题。|I have a question.
+S 我不知道。|I don’t know.
+S 我知道了。|Got it.
+S 我觉得很好。|I think it’s good.
+S 我想学中文。|I want to learn Chinese.
+S 我每天听中文。|I listen to Chinese every day.
+S 我喜欢看中文电视。|I like watching Chinese TV.
+S 你会写这个字吗？|Can you write this character?
+S 我会说一点中文。|I can speak a little Chinese.
+S 你能再说一次吗？|Can you say that once more?
+S 你说什么？|What did you say?
+S 没问题。|No problem.
+S 好的，谢谢你。|OK, thank you.
+S 我们开始吧。|Let’s begin.
+S 我们明天再说。|Let’s talk tomorrow.
+S 你什么时候有空？|When are you free?
+S 周末我想去朋友家。|This weekend I’d like to go to a friend’s home.
+S 我们一起去看电影吧。|Let’s go and watch a film together.
+S 你喜欢看电影吗？|Do you like watching films?
+S 我想去中国旅游。|I’d like to travel to China.
+S 你去过中国吗？|Have you been to China?
+S 我还没去过。|I haven’t been yet.

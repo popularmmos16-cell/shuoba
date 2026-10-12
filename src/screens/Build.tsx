@@ -1,10 +1,11 @@
 import { useState } from 'preact/hooks';
 import { buildRounds } from '../practice';
+import type { Phrase } from '../phrases';
 import { Pinyin } from '../components/Pinyin';
 import { IconClose, IconCheck } from '../components/Icons';
 
-export function Build({ onClose, onRetry }: { onClose: () => void; onRetry: () => void }) {
-  const [rounds] = useState(buildRounds);
+export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () => void; onRetry: () => void }) {
+  const [rounds] = useState(() => buildRounds(pool));
   const [i, setI] = useState(0);
   const [placed, setPlaced] = useState<number[]>([]);
   const [result, setResult] = useState<boolean | null>(null);

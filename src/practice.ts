@@ -1,7 +1,9 @@
-import { PHRASES } from './phrases';
+import type { Phrase } from './phrases';
 import TONES from './data/tones.json';
 
 const ROUND_LEN = 10;
+export const MIN_POOL = 4; // enough to offer three answer choices
+const distractors = (pool: Phrase[], p: Phrase) => shuffle(pool.filter((x) => x !== p)).slice(0, 2);
 
 export interface Round {
   say?: string; // text sent to speech; rounds without it are silent
@@ -44,9 +46,9 @@ export function toneRounds(n = 10): Round[] {
     }));
 }
 
-export function listenRounds(): Round[] {
-  return shuffle(PHRASES).slice(0, ROUND_LEN).map((p) => {
-    const others = shuffle(PHRASES.filter((x) => x !== p)).slice(0, 2);
+export function listenRounds(pool: Phrase[]): Round[] {
+  return shuffle(pool).slice(0, ROUND_LEN).map((p) => {
+    const others = distractors(pool, p);
     const options = shuffle([p, ...others]);
     return {
       say: p.hanzi,
@@ -58,12 +60,11 @@ export function listenRounds(): Round[] {
   });
 }
 
-const distractors = (p: (typeof PHRASES)[number]) => shuffle(PHRASES.filter((x) => x !== p)).slice(0, 2);
 
 // Silent: see the characters, pick the meaning
-export function readRounds(): Round[] {
-  return shuffle(PHRASES).slice(0, ROUND_LEN).map((p) => {
-    const options = shuffle([p, ...distractors(p)]);
+export function readRounds(pool: Phrase[]): Round[] {
+  return shuffle(pool).slice(0, ROUND_LEN).map((p) => {
+    const options = shuffle([p, ...distractors(pool, p)]);
     return {
       stem: { text: p.hanzi, size: 'md' as const },
       prompt: 'What does it mean?',
@@ -75,9 +76,9 @@ export function readRounds(): Round[] {
 }
 
 // Silent: see the meaning, pick the Chinese
-export function recallRounds(): Round[] {
-  return shuffle(PHRASES).slice(0, ROUND_LEN).map((p) => {
-    const options = shuffle([p, ...distractors(p)]);
+export function recallRounds(pool: Phrase[]): Round[] {
+  return shuffle(pool).slice(0, ROUND_LEN).map((p) => {
+    const options = shuffle([p, ...distractors(pool, p)]);
     return {
       stem: { text: p.en, size: 'md' as const },
       prompt: 'Which one says this?',
@@ -104,11 +105,11 @@ export function pinyinRounds(n = 10): Round[] {
 
 // Silent: put the pieces of a sentence in order
 export interface BuildRound {
-  phrase: (typeof PHRASES)[number];
+  phrase: Phrase;
   tiles: string[];
 }
-export function buildRounds(): BuildRound[] {
-  return shuffle(PHRASES).slice(0, 8).map((phrase) => {
+export function buildRounds(pool: Phrase[]): BuildRound[] {
+  return shuffle(pool.filter((p) => p.words.length >= 2)).slice(0, 8).map((phrase) => {
     let tiles = shuffle(phrase.words);
     for (let k = 0; k < 10 && tiles.join('') === phrase.hanzi; k++) tiles = shuffle(phrase.words);
     return { phrase, tiles };

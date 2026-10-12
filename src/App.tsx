@@ -7,15 +7,18 @@ import { Practice, type Mode } from './screens/Practice';
 import { Quiz } from './screens/Quiz';
 import { Build } from './screens/Build';
 import type { Round } from './practice';
+import type { Phrase } from './phrases';
+import { PHRASE_BY_ID } from './phrases';
+import { useCards } from './db';
 import { listenRounds, pinyinRounds, readRounds, recallRounds, toneRounds } from './practice';
 import { IconChart, IconGear, IconHome, IconSpark } from './components/Icons';
 
-const ROUNDS: Partial<Record<Mode, () => Round[]>> = {
-  tones: toneRounds,
+const ROUNDS: Partial<Record<Mode, (pool: Phrase[]) => Round[]>> = {
+  tones: () => toneRounds(),
   listen: listenRounds,
   read: readRounds,
   recall: recallRounds,
-  pinyin: pinyinRounds,
+  pinyin: () => pinyinRounds(),
 };
 const TITLES: Record<Mode, string> = {
   tones: 'Tone ears',
@@ -38,13 +41,16 @@ const TABS: { id: Tab; label: string; icon: () => preact.JSX.Element }[] = [
 export function App() {
   const [tab, setTab] = useState<Tab>('home');
   const [learning, setLearning] = useState(false);
+  const { cards } = useCards();
+  // Extra practice only draws on items you have already started learning.
+  const pool = [...new Set(cards.map((c) => c.phraseId))].map((id) => PHRASE_BY_ID.get(id)!).filter(Boolean);
   const [quiz, setQuiz] = useState<{ mode: Mode; rounds: Round[]; run: number } | null>(null);
 
   const startQuiz = (mode: Mode) =>
-    setQuiz((q) => ({ mode, rounds: ROUNDS[mode]?.() ?? [], run: (q?.run ?? 0) + 1 }));
+    setQuiz((q) => ({ mode, rounds: ROUNDS[mode]?.(pool) ?? [], run: (q?.run ?? 0) + 1 }));
 
   if (learning) return <Learn onClose={() => setLearning(false)} />;
-  if (quiz?.mode === 'build') return <Build key={quiz.run} onClose={() => setQuiz(null)} onRetry={() => startQuiz('build')} />;
+  if (quiz?.mode === 'build') return <Build key={quiz.run} pool={pool} onClose={() => setQuiz(null)} onRetry={() => startQuiz('build')} />;
   if (quiz)
     return (
       <Quiz
@@ -60,7 +66,7 @@ export function App() {
     <>
       <div key={tab}>
         {tab === 'home' && <Home onStart={() => setLearning(true)} onExtra={() => setTab('practice')} />}
-        {tab === 'practice' && <Practice onPick={startQuiz} />}
+        {tab === 'practice' && <Practice onPick={startQuiz} poolSize={pool.length} />}
         {tab === 'progress' && <Progress />}
         {tab === 'settings' && <Settings />}
       </div>

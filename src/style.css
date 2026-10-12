@@ -227,3 +227,10 @@ label { display: block; }
 .badge.strong { background: color-mix(in srgb, var(--t3) 18%, var(--card)); color: var(--t3); }
 .badge.learned { background: color-mix(in srgb, var(--accent-2) 18%, var(--card)); color: var(--accent-text); }
 .badge.learning, .badge.relearning { color: var(--muted); }
+
+/* credits */
+.credits summary { cursor: pointer; list-style: none; }
+.credits summary::-webkit-details-marker { display: none; }
+.credits[open] summary { margin-bottom: 6px; }
+.crow { display: grid; gap: 2px; padding: 10px 0; border-top: 1px solid var(--line); }
+.credits a { color: var(--accent-text); font-weight: 600; }

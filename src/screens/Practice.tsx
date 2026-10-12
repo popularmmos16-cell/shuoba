@@ -1,5 +1,6 @@
 import { QuietToggle } from '../components/QuietToggle';
 import { useStore } from '../store';
+import { MIN_POOL } from '../practice';
 
 export type Mode = 'tones' | 'listen' | 'read' | 'pinyin' | 'recall' | 'build';
 
@@ -18,19 +19,20 @@ const SILENT: Entry[] = [
   { id: 'soon', glyph: '话', title: 'Short dialogues', blurb: 'Mini conversations using words you know.', time: 'Coming soon' },
 ];
 
-function Card({ e, i, locked, onPick }: { e: Entry; i: number; locked: boolean; onPick: (m: Mode) => void }) {
+function Card({ e, i, locked, label, onPick }: { e: Entry; i: number; locked: boolean; label: string; onPick: (m: Mode) => void }) {
   const off = locked || e.id === 'soon';
   return (
     <button class={`card mode rise ${off ? 'soon' : ''}`} style={`--i:${i}`} disabled={off} onClick={() => e.id !== 'soon' && onPick(e.id)}>
       <span class="glyph">{e.glyph}</span>
       <span class="mode-text"><b>{e.title}</b><small>{e.blurb}</small></span>
-      <span class="time">{locked ? 'Needs sound' : e.time}</span>
+      <span class="time">{locked ? label : e.time}</span>
     </button>
   );
 }
 
-export function Practice({ onPick }: { onPick: (m: Mode) => void }) {
+export function Practice({ onPick, poolSize }: { onPick: (m: Mode) => void; poolSize: number }) {
   const { quiet } = useStore();
+  const tooFew = poolSize < MIN_POOL;
   return (
     <main class="screen">
       <h1 class="page-title rise" style="--i:0">Extra practice</h1>
@@ -38,10 +40,13 @@ export function Practice({ onPick }: { onPick: (m: Mode) => void }) {
       <QuietToggle />
 
       <h2 class="rise" style="--i:2">Silent practice</h2>
-      {SILENT.map((e, n) => <Card e={e} i={n + 3} locked={false} onPick={onPick} />)}
+      {tooFew && <p class="intro rise" style="--i:3">Learn a few phrases in a session first. Extra practice uses the phrases you’ve started.</p>}
+      {SILENT.map((e, n) => <Card e={e} i={n + 3} locked={tooFew && e.id !== 'soon'} label="Learn a few first" onPick={onPick} />)}
 
       <h2 class="rise" style="--i:8">With sound</h2>
-      {SOUND.map((e, n) => <Card e={e} i={n + 9} locked={quiet} onPick={onPick} />)}
+      {SOUND.map((e, n) => (
+        <Card e={e} i={n + 9} locked={quiet || (tooFew && e.id === 'listen')} label={quiet ? 'Needs sound' : 'Learn a few first'} onPick={onPick} />
+      ))}
     </main>
   );
 }
