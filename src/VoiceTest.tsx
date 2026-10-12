@@ -60,6 +60,38 @@ export function VoiceTest() {
     }
   };
 
+  // Silent-switch experiments: which kinds of sound still play when the ringer is on silent?
+  const session = (type: string) => {
+    const as = (navigator as any).audioSession;
+    if (!as) return note('audioSession API not available on this device');
+    try {
+      as.type = type;
+      note(`audioSession.type = ${as.type}`);
+    } catch (e) {
+      note(`audioSession error: ${e}`);
+    }
+  };
+  const speakPlayback = () => {
+    session('playback');
+    speak('你好，很高兴认识你。', false);
+  };
+  const playElement = (src: string, label: string) => {
+    const a = new Audio(src);
+    a.onplaying = () => note(`${label}: playing`);
+    a.onended = () => note(`${label}: ended`);
+    a.onerror = () => note(`${label}: ERROR ${a.error?.message ?? a.error?.code}`);
+    a.play().catch((e) => note(`${label}: blocked (${e.name})`));
+  };
+  const beepWav = () => {
+    const rate = 22050, n = rate / 2, buf = new ArrayBuffer(44 + n * 2), v = new DataView(buf);
+    const w = (o: number, t: string) => [...t].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
+    w(0, 'RIFF'); v.setUint32(4, 36 + n * 2, true); w(8, 'WAVEfmt '); v.setUint32(16, 16, true);
+    v.setUint16(20, 1, true); v.setUint16(22, 1, true); v.setUint32(24, rate, true); v.setUint32(28, rate * 2, true);
+    v.setUint16(32, 2, true); v.setUint16(34, 16, true); w(36, 'data'); v.setUint32(40, n * 2, true);
+    for (let i = 0; i < n; i++) v.setInt16(44 + i * 2, Math.sin((2 * Math.PI * 440 * i) / rate) * 12000, true);
+    playElement(URL.createObjectURL(new Blob([buf], { type: 'audio/wav' })), 'audio element beep');
+  };
+
   const standalone = (navigator as any).standalone === true || matchMedia('(display-mode: standalone)').matches;
 
   return (
@@ -81,6 +113,17 @@ export function VoiceTest() {
         {log.map((l) => (
           <div><small>{l}</small></div>
         ))}
+      </div>
+
+      <div class="card">
+        <b>Silent-switch tests</b>
+        <p class="muted">Put the ringer on silent (orange showing), volume up, then tap each. Tell me which ones you hear.</p>
+        <div class="row">
+          <button onClick={() => speak('你好，很高兴认识你。', false)}>1 · Browser voice</button>
+          <button onClick={speakPlayback}>2 · Voice + playback mode</button>
+          <button onClick={beepWav}>3 · Audio element beep</button>
+          <button onClick={() => playElement('./audio/test-nihao.m4a', 'recorded clip')}>4 · Recorded speech clip</button>
+        </div>
       </div>
 
       {voices.length > 0 && (
