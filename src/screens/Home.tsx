@@ -14,7 +14,7 @@ function greeting(): [string, string] {
   return ['晚上好', 'Good evening'];
 }
 
-export function Home({ onStart }: { onStart: () => void }) {
+export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () => void }) {
   const s = useStore();
   const today = s.minutesByDate[dateKey()] ?? 0;
   const streak = streakOf(s);
@@ -80,7 +80,12 @@ export function Home({ onStart }: { onStart: () => void }) {
         <div class="card tile"><b>0%</b><small>everyday talk</small></div>
       </section>
 
-      <section class="card phrase rise" style="--i:4">
+      <button class="card extra-teaser rise" style="--i:4" onClick={onExtra}>
+        <span class="glyph">练</span>
+        <span class="mode-text"><b>Got extra time?</b><small>Optional bonus practice: tones, listening and more</small></span>
+      </button>
+
+      <section class="card phrase rise" style="--i:5">
         <small class="eyebrow">Phrase of the day</small>
         <div class="hanzi">{phrase.hanzi}</div>
         <Pinyin text={phrase.py} />

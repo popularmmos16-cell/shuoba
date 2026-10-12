@@ -15,8 +15,8 @@ export function Ring({ value, goal, size = 148 }: { value: number; goal: number;
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
         <defs>
           <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#ffd27a" />
-            <stop offset="100%" stop-color="#ff6a4d" />
+            <stop offset="0%" stop-color="#ffe08a" />
+            <stop offset="100%" stop-color="#ff9ad5" />
           </linearGradient>
         </defs>
         <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="rgba(255,255,255,.22)" stroke-width={stroke} />
