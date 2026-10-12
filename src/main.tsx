@@ -1,5 +1,5 @@
 import { render } from 'preact';
-import { VoiceTest } from './VoiceTest';
+import { App } from './App';
 import './style.css';
 
-render(<VoiceTest />, document.getElementById('app')!);
+render(<App />, document.getElementById('app')!);

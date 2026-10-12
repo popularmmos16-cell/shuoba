@@ -63,10 +63,7 @@ export function VoiceTest() {
   const standalone = (navigator as any).standalone === true || matchMedia('(display-mode: standalone)').matches;
 
   return (
-    <main>
-      <h1>Shuōba 说吧</h1>
-      <p class="sub">Stage 1: voice test</p>
-
+    <>
       <div class="card">
         <small>
           Installed to Home Screen: <b>{standalone ? 'yes' : 'no'}</b> · speech: <b>{supported ? 'available' : 'missing'}</b> ·
@@ -119,6 +116,6 @@ export function VoiceTest() {
           <div class="row"><button class="primary" onClick={() => speak(s.hanzi)}>▶ Play</button></div>
         </div>
       ))}
-    </main>
+    </>
   );
 }
