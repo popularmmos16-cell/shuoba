@@ -14,6 +14,8 @@ export function VoiceTest() {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [uri, setUri] = useState('');
   const [rate, setRate] = useState(0.85);
+  const [log, setLog] = useState<string[]>([]);
+  const note = (m: string) => setLog((l) => [`${new Date().toLocaleTimeString()} ${m}`, ...l].slice(0, 8));
   const supported = 'speechSynthesis' in window;
 
   useEffect(() => {
@@ -28,14 +30,34 @@ export function VoiceTest() {
     return () => speechSynthesis.removeEventListener('voiceschanged', load);
   }, []);
 
-  const speak = (text: string) => {
-    speechSynthesis.cancel();
+  const speak = (text: string, useVoice = true) => {
+    // cancel() right before speak() can silently drop the utterance on iOS, so only cancel when busy
+    if (speechSynthesis.speaking || speechSynthesis.pending) speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
     const v = voices.find((x) => x.voiceURI === uri);
-    if (v) u.voice = v;
-    u.lang = v?.lang ?? 'zh-CN';
+    if (useVoice && v) u.voice = v;
+    u.lang = (useVoice && v?.lang) || 'zh-CN';
     u.rate = rate;
+    u.volume = 1;
+    u.onstart = () => note(`start: ${useVoice && v ? v.name : 'default voice'}`);
+    u.onend = () => note('end');
+    u.onerror = (e) => note(`ERROR: ${e.error}`);
+    note('speak() called');
     speechSynthesis.speak(u);
+  };
+
+  const beep = () => {
+    try {
+      const ctx = new AudioContext();
+      const o = ctx.createOscillator();
+      o.connect(ctx.destination);
+      o.frequency.value = 440;
+      o.start();
+      o.stop(ctx.currentTime + 0.4);
+      note(`beep played (audio ${ctx.state})`);
+    } catch (e) {
+      note(`beep failed: ${e}`);
+    }
   };
 
   const standalone = (navigator as any).standalone === true || matchMedia('(display-mode: standalone)').matches;
@@ -50,6 +72,18 @@ export function VoiceTest() {
           Installed to Home Screen: <b>{standalone ? 'yes' : 'no'}</b> · speech: <b>{supported ? 'available' : 'missing'}</b> ·
           Chinese voices found: <b>{voices.length}</b>
         </small>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <button onClick={beep}>🔔 Beep test</button>
+          <button onClick={() => speak('你好', false)}>▶ 你好 (default voice)</button>
+          <button onClick={() => speak('hello')}>▶ English test</button>
+        </div>
+        <small>Check ringer is on (silent switch), volume up, and Silent Mode off. Log:</small>
+        {log.map((l) => (
+          <div><small>{l}</small></div>
+        ))}
       </div>
 
       {voices.length > 0 && (
