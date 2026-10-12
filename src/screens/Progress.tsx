@@ -1,5 +1,6 @@
 import { dateKey, fmtMin, streakOf, useStore } from '../store';
-import { useCards } from '../db';
+import { useCards, useWords } from '../db';
+import { WORDS } from '../vocab';
 import { PHRASES } from '../phrases';
 import { isStrong, learnedPhraseIds } from '../srs';
 import { State } from 'ts-fsrs';
@@ -7,6 +8,11 @@ import { State } from 'ts-fsrs';
 export function Progress() {
   const s = useStore();
   const { cards } = useCards();
+  const { words } = useWords();
+  const mastered = words.filter((w) => w.mastered).length;
+  const learning = words.length - mastered;
+  const byId = new Map(WORDS.map((w) => [w.id, w]));
+  const tricky = words.filter((w) => !w.mastered && w.misses > 0).sort((a, b) => b.misses - a.misses).slice(0, 5);
   const days = Array.from({ length: 14 }, (_, i) => {
     const d = new Date();
     d.setDate(d.getDate() - (13 - i));
@@ -37,6 +43,24 @@ export function Progress() {
         <div class="card tile"><b>{streakOf(s)}</b><small>day streak</small></div>
         <div class="card tile"><b>{learned.size}</b><small>phrases learned</small></div>
       </section>
+
+      <h2 class="rise" style="--i:3">Word practice</h2>
+      <section class="tiles rise" style="--i:3">
+        <div class="card tile"><b>{mastered}</b><small>mastered</small></div>
+        <div class="card tile"><b>{learning}</b><small>in progress</small></div>
+        <div class="card tile"><b>{WORDS.length - words.length}</b><small>to come</small></div>
+      </section>
+      {tricky.length > 0 && (
+        <section class="card plist rise" style="--i:3">
+          <b>Tricky words</b>
+          {tricky.map((w) => (
+            <div class="prow">
+              <div><div class="hanzi sm">{byId.get(w.id)?.hanzi}</div><small>{byId.get(w.id)?.en}</small></div>
+              <span class="badge">{w.misses} {w.misses === 1 ? 'miss' : 'misses'}</span>
+            </div>
+          ))}
+        </section>
+      )}
 
       <h2 class="rise" style="--i:3">Your phrases</h2>
       {rows.length === 0 ? (

@@ -2,7 +2,8 @@ import { Ring } from '../components/Ring';
 import { Pinyin } from '../components/Pinyin';
 import { IconFlame, IconMute, IconPlay, IconSound } from '../components/Icons';
 import { setQuiet } from '../components/QuietToggle';
-import { dateKey, fmtMin, streakOf, useStore } from '../store';
+import { dateKey, dayDone, fmtMin, streakOf, useStore } from '../store';
+import { useVocabPlan } from '../useVocab';
 import { phraseOfTheDay, PHRASES } from '../phrases';
 import { speakZh } from '../speak';
 import { useCards } from '../db';
@@ -18,8 +19,9 @@ function greeting(): [string, string] {
   return ['晚上好', 'Good evening'];
 }
 
-export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () => void }) {
+export function Home({ onStart, onWords, onExtra }: { onStart: () => void; onWords: () => void; onExtra: () => void }) {
   const s = useStore();
+  const vocab = useVocabPlan();
   const { cards } = useCards();
   const today = s.minutesByDate[dateKey()] ?? 0;
   const streak = streakOf(s);
@@ -37,7 +39,7 @@ export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () =>
   const week = DAYS.map((label, i) => {
     const d = new Date(now);
     d.setDate(now.getDate() - mondayOffset + i);
-    return { label, mins: s.minutesByDate[dateKey(d)] ?? 0, isToday: i === mondayOffset };
+    return { label, mins: s.minutesByDate[dateKey(d)] ?? 0, done: dayDone(s, dateKey(d)), isToday: i === mondayOffset };
   });
   const weekMinutes = week.reduce((n, d) => n + d.mins, 0);
   const left = Math.ceil(s.goalMin - today); // minutes still to go
@@ -70,13 +72,27 @@ export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () =>
         <div class="hero-text">
           <h1>Today’s practice</h1>
           <p>{left <= 0 ? 'Goal reached. Nice work!' : `${left} min to your daily goal`}</p>
-          <p class="hero-sub">{due} to review · {fresh} new</p>
+          <p class="hero-sub">{vocab.done ? 'Words done ✓' : `Words first: ${vocab.left} to type`} · {due} to review · {fresh} new</p>
         </div>
         <Ring value={today} goal={s.goalMin} />
         <button class="cta" onClick={onStart}>
           <IconPlay /> {due + fresh === 0 ? 'Learn more' : 'Start session'}
         </button>
       </section>
+
+      <button class={`card vocab-card rise ${vocab.done ? 'done' : ''}`} style="--i:2" onClick={onWords}>
+        <span class="glyph">词</span>
+        <span class="mode-text">
+          <b>Word practice <em class="req">required</em></b>
+          <small>
+            {vocab.mastered === vocab.total
+              ? 'All words mastered!'
+              : vocab.done
+                ? `Done for today ✓ · ${vocab.mastered} of ${vocab.total} words mastered`
+                : `${vocab.left} words to type · ${vocab.mastered} of ${vocab.total} mastered`}
+          </small>
+        </span>
+      </button>
 
       <section class="card week rise" style="--i:2">
         <div class="week-head">
@@ -85,7 +101,7 @@ export function Home({ onStart, onExtra }: { onStart: () => void; onExtra: () =>
         </div>
         <div class="week-days">
           {week.map((d) => (
-            <div class={`day ${d.mins > 0 ? 'done' : ''} ${d.isToday ? 'today' : ''}`}>
+            <div class={`day ${d.done ? 'done' : ''} ${d.isToday ? 'today' : ''}`}>
               <span class="dot" />
               <small>{d.label}</small>
             </div>

@@ -42,10 +42,11 @@ def numeric_to_marked(syl):
     return base[:idx] + VOW[base[idx]][t - 1] + base[idx + 1:]
 
 # --- dictionaries -----------------------------------------------------------------------------------------
-hsk_py, hsk_level = {}, {}
+hsk_py, hsk_level, hsk_freq = {}, {}, {}
 for w in HSK:
     s = w["simplified"]
     hsk_py.setdefault(s, [f["transcriptions"]["pinyin"].lower().split() for f in w["forms"]])
+    hsk_freq[s] = w["frequency"]  # lower = more common
     lv = [int(l.split("-")[1]) for l in w["level"] if l.startswith("new-")]
     if lv: hsk_level[s] = min(lv)
 
@@ -131,6 +132,7 @@ for raw in (ROOT / "tools/content/units.txt").read_text(encoding="utf8").splitli
     assert len(py.split()) == len(hanzi_only(hanzi)), (hanzi, py)
     it = {"id": f"p{n:02d}", "hanzi": hanzi, "py": py, "en": en, "words": chunks, "kind": "word" if kind == "W" else "phrase", "unit": unit}
     if kind == "W" and hanzi in hsk_level: it["hsk"] = hsk_level[hanzi]
+    if kind == "W" and hanzi in hsk_freq: it["freq"] = hsk_freq[hanzi]
     items.append(it)
 
 # --- graded-ness check: every chunk of a sentence should already be taught --------------------------------

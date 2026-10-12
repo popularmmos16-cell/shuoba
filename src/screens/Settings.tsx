@@ -7,6 +7,7 @@ import { Credits } from '../components/Credits';
 
 const GOALS = [10, 15, 20, 30];
 const NEWS = [4, 6, 8, 12];
+const TYPING = [3, 5, 8, 10];
 
 async function backupNow(): Promise<string> {
   const blob = new Blob([JSON.stringify(await exportData())], { type: 'application/json' });
@@ -54,6 +55,15 @@ export function Settings() {
         <div class="seg">
           {GOALS.map((g) => (
             <button class={s.goalMin === g ? 'on' : ''} onClick={() => update({ goalMin: g })}>{g} min</button>
+          ))}
+        </div>
+      </section>
+
+      <section class="card rise" style="--i:1">
+        <b>New words to type per day</b>
+        <div class="seg">
+          {TYPING.map((n) => (
+            <button class={s.typingNew === n ? 'on' : ''} onClick={() => update({ typingNew: n })}>{n}</button>
           ))}
         </div>
       </section>

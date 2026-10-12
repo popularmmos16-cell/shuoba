@@ -4,12 +4,14 @@ export interface State {
   goalMin: number;
   quiet: boolean;
   newPerDay: number;
+  typingNew: number; // new words per day in the typing exercise
+  vocabDone: Record<string, boolean>; // days the compulsory word practice was completed
   lastBackup?: number;
   minutesByDate: Record<string, number>;
 }
 
 const KEY = 'shuoba.state.v1';
-const DEFAULT: State = { goalMin: 20, quiet: false, newPerDay: 8, minutesByDate: {} };
+const DEFAULT: State = { goalMin: 20, quiet: false, newPerDay: 8, typingNew: 5, vocabDone: {}, minutesByDate: {} };
 
 export const dateKey = (d = new Date()) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -40,16 +42,24 @@ export function useStore(): State {
   useEffect(() => {
     const l = () => bump((n) => n + 1);
     listeners.add(l);
+    l(); // pick up any change made between render and subscription
     return () => void listeners.delete(l);
   }, []);
   return state;
 }
 
+// A day counts toward the streak once the compulsory word practice is done.
+export const dayDone = (s: State, k: string) => !!s.vocabDone[k];
+
+export function markVocabDone(k = dateKey()) {
+  if (!state.vocabDone[k]) update({ vocabDone: { ...state.vocabDone, [k]: true } });
+}
+
 export function streakOf(s: State): number {
   const d = new Date();
-  if (!s.minutesByDate[dateKey(d)]) d.setDate(d.getDate() - 1); // today not done yet: streak is still alive
+  if (!dayDone(s, dateKey(d))) d.setDate(d.getDate() - 1); // today not done yet: streak is still alive
   let n = 0;
-  while (s.minutesByDate[dateKey(d)]) {
+  while (dayDone(s, dateKey(d))) {
     n++;
     d.setDate(d.getDate() - 1);
   }

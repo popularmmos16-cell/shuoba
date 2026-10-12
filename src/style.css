@@ -234,3 +234,22 @@ label { display: block; }
 .credits[open] summary { margin-bottom: 6px; }
 .crow { display: grid; gap: 2px; padding: 10px 0; border-top: 1px solid var(--line); }
 .credits a { color: var(--accent-text); font-weight: 600; }
+
+/* word typing */
+.q-prompt.sm { font-size: 15px; font-weight: 500; color: var(--muted); margin-top: 10px; }
+.typebox { display: grid; gap: 10px; }
+.typebox input { height: 58px; border-radius: 16px; border: 2px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: 22px; padding: 0 16px; text-align: center; outline: none; width: 100%; }
+.typebox input:focus { border-color: var(--accent-2); }
+.tonerow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.tone { height: 48px; border-radius: 14px; background: var(--card); box-shadow: var(--shadow); font-weight: 800; font-size: 20px; }
+.feedback { margin-top: 12px; display: grid; justify-items: center; gap: 2px; padding: 14px 16px; border-radius: 18px; width: 100%; }
+.feedback.good { background: color-mix(in srgb, var(--t3) 14%, var(--card)); }
+.feedback.bad { background: color-mix(in srgb, var(--t1) 12%, var(--card)); }
+.feedback > b { font-size: 18px; }
+.feedback.good > b { color: var(--t3); } .feedback.bad > b { color: var(--t1); }
+.vocab-card { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; border: 0; }
+.vocab-card .glyph { width: 46px; height: 46px; font-size: 24px; border-radius: 14px; }
+.vocab-card.done { opacity: .75; }
+.req { font-style: normal; font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); background: var(--line); padding: 2px 7px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; }
+
+.plist > b { display: block; padding: 12px 0 4px; }

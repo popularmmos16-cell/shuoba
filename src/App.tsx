@@ -1,6 +1,8 @@
 import { useState } from 'preact/hooks';
 import { Home } from './screens/Home';
 import { Learn } from './screens/Learn';
+import { Vocab } from './screens/Vocab';
+import { useVocabPlan } from './useVocab';
 import { Progress } from './screens/Progress';
 import { Settings } from './screens/Settings';
 import { Practice, type Mode } from './screens/Practice';
@@ -40,7 +42,9 @@ const TABS: { id: Tab; label: string; icon: () => preact.JSX.Element }[] = [
 
 export function App() {
   const [tab, setTab] = useState<Tab>('home');
-  const [learning, setLearning] = useState(false);
+  // words are compulsory and come first; 'vocab+' continues into the phrase session when finished
+  const [screen, setScreen] = useState<null | 'vocab' | 'vocab+' | 'learn'>(null);
+  const vocab = useVocabPlan();
   const { cards } = useCards();
   // Extra practice only draws on items you have already started learning.
   const pool = [...new Set(cards.map((c) => c.phraseId))].map((id) => PHRASE_BY_ID.get(id)!).filter(Boolean);
@@ -49,7 +53,9 @@ export function App() {
   const startQuiz = (mode: Mode) =>
     setQuiz((q) => ({ mode, rounds: ROUNDS[mode]?.(pool) ?? [], run: (q?.run ?? 0) + 1 }));
 
-  if (learning) return <Learn onClose={() => setLearning(false)} />;
+  if (screen === 'vocab' || screen === 'vocab+')
+    return <Vocab onClose={() => setScreen(null)} onContinue={screen === 'vocab+' ? () => setScreen('learn') : undefined} />;
+  if (screen === 'learn') return <Learn onClose={() => setScreen(null)} />;
   if (quiz?.mode === 'build') return <Build key={quiz.run} pool={pool} onClose={() => setQuiz(null)} onRetry={() => startQuiz('build')} />;
   if (quiz)
     return (
@@ -65,7 +71,11 @@ export function App() {
   return (
     <>
       <div key={tab}>
-        {tab === 'home' && <Home onStart={() => setLearning(true)} onExtra={() => setTab('practice')} />}
+        {tab === 'home' && <Home
+            onStart={() => setScreen(vocab.done ? 'learn' : 'vocab+')}
+            onWords={() => setScreen('vocab')}
+            onExtra={() => setTab('practice')}
+          />}
         {tab === 'practice' && <Practice onPick={startQuiz} poolSize={pool.length} />}
         {tab === 'progress' && <Progress />}
         {tab === 'settings' && <Settings />}

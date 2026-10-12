@@ -9,6 +9,7 @@ export interface Phrase {
   kind: 'word' | 'phrase';
   unit: number; // 0 = the original survival phrases, then one unit per theme
   hsk?: number; // HSK 3.0 level, for words that are on the list
+  freq?: number; // frequency rank among HSK words (lower = more common)
 }
 
 // Original, hand-written phrases in learning order. Audio lives in public/audio/p/<id>.m4a.
