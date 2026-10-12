@@ -211,3 +211,19 @@ label { display: block; }
 .answerbar .piece { box-shadow: none; background: var(--line); }
 .piece:disabled { opacity: .25; box-shadow: none; }
 .cta.solid:disabled { opacity: .4; }
+
+/* review session */
+.hero-sub { font-weight: 700; margin-top: 4px; }
+.grades { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.g { height: 64px; border-radius: 16px; display: grid; align-content: center; gap: 0; background: var(--card); box-shadow: var(--shadow); line-height: 1.2; }
+.g b { font-size: 16px; }
+.g:disabled { opacity: .35; }
+.g1 b { color: var(--t1); } .g2 b { color: var(--t2); } .g3 b { color: var(--t3); } .g4 b { color: var(--t4); }
+.hanzi.sm { font-size: 22px; margin: 0; }
+.plist { padding: 6px 16px; }
+.prow { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.prow:last-child { border-bottom: 0; }
+.badge { font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; background: var(--line); }
+.badge.strong { background: color-mix(in srgb, var(--t3) 18%, var(--card)); color: var(--t3); }
+.badge.learned { background: color-mix(in srgb, var(--accent-2) 18%, var(--card)); color: var(--accent-text); }
+.badge.learning, .badge.relearning { color: var(--muted); }

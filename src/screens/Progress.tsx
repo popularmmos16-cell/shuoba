@@ -1,7 +1,12 @@
-import { dateKey, streakOf, useStore } from '../store';
+import { dateKey, fmtMin, streakOf, useStore } from '../store';
+import { useCards } from '../db';
+import { PHRASES } from '../phrases';
+import { isStrong, learnedPhraseIds } from '../srs';
+import { State } from 'ts-fsrs';
 
 export function Progress() {
   const s = useStore();
+  const { cards } = useCards();
   const days = Array.from({ length: 14 }, (_, i) => {
     const d = new Date();
     d.setDate(d.getDate() - (13 - i));
@@ -9,6 +14,9 @@ export function Progress() {
   });
   const max = Math.max(s.goalMin, ...days.map((d) => d.m));
   const total = Object.values(s.minutesByDate).reduce((a, b) => a + b, 0);
+  const learned = learnedPhraseIds(cards);
+  const started = new Map(cards.filter((c) => c.kind === 'read').map((c) => [c.phraseId, c]));
+  const rows = PHRASES.filter((p) => started.has(p.id)).reverse();
 
   return (
     <main class="screen">
@@ -25,14 +33,35 @@ export function Progress() {
         </div>
       </section>
       <section class="tiles rise" style="--i:2">
-        <div class="card tile"><b>{total}</b><small>total minutes</small></div>
+        <div class="card tile"><b>{fmtMin(total)}</b><small>total minutes</small></div>
         <div class="card tile"><b>{streakOf(s)}</b><small>day streak</small></div>
-        <div class="card tile"><b>0</b><small>words known</small></div>
+        <div class="card tile"><b>{learned.size}</b><small>phrases learned</small></div>
       </section>
-      <section class="card empty rise" style="--i:3">
-        <b>Your words will show up here</b>
-        <p>Once reviews are live, you’ll see every word and phrase you’ve learned, and how well each one is sticking.</p>
-      </section>
+
+      <h2 class="rise" style="--i:3">Your phrases</h2>
+      {rows.length === 0 ? (
+        <section class="card empty rise" style="--i:4">
+          <b>Nothing here yet</b>
+          <p>Start a session on the Today tab. Every phrase you learn shows up here, with how well it’s sticking.</p>
+        </section>
+      ) : (
+        <section class="card plist rise" style="--i:4">
+          {rows.map((p) => {
+            const c = started.get(p.id)!;
+            const label = isStrong(c) ? 'Strong' : learned.has(p.id) ? 'Learned' : c.state === State.Relearning ? 'Relearning' : 'Learning';
+            return (
+              <div class="prow">
+                <div>
+                  <div class="hanzi sm">{p.hanzi}</div>
+                  <small>{p.en}</small>
+                </div>
+                <span class={`badge ${label.toLowerCase()}`}>{label}</span>
+              </div>
+            );
+          })}
+        </section>
+      )}
+      <p class="muted" style="margin:10px 4px">{PHRASES.length - rows.length} more phrases to come.</p>
     </main>
   );
 }

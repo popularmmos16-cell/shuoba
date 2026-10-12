@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
+import { fmtMin } from '../store';
 
 export function Ring({ value, goal, size = 148 }: { value: number; goal: number; size?: number }) {
   const [shown, setShown] = useState(0);
@@ -27,7 +28,7 @@ export function Ring({ value, goal, size = 148 }: { value: number; goal: number;
         />
       </svg>
       <div class="ring-label">
-        <b>{value}</b>
+        <b>{fmtMin(value)}</b>
         <span>/ {goal} min</span>
       </div>
     </div>

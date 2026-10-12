@@ -1,4 +1,7 @@
 import { PHRASES } from './phrases';
+import TONES from './data/tones.json';
+
+const ROUND_LEN = 10;
 
 export interface Round {
   say?: string; // text sent to speech; rounds without it are silent
@@ -19,12 +22,7 @@ export const shuffle = <T,>(a: T[]): T[] => {
 };
 
 // Same syllable, four tones (tone 1 to 4 in order)
-const TONE_SETS = [
-  { chars: ['妈', '麻', '马', '骂'], py: ['mā', 'má', 'mǎ', 'mà'], en: ['mum', 'hemp', 'horse', 'scold'] },
-  { chars: ['八', '拔', '把', '爸'], py: ['bā', 'bá', 'bǎ', 'bà'], en: ['eight', 'pull out', 'handle', 'dad'] },
-  { chars: ['书', '熟', '属', '树'], py: ['shū', 'shú', 'shǔ', 'shù'], en: ['book', 'ripe', 'belong to', 'tree'] },
-  { chars: ['汤', '糖', '躺', '烫'], py: ['tāng', 'táng', 'tǎng', 'tàng'], en: ['soup', 'sugar', 'lie down', 'scalding'] },
-];
+const TONE_SETS = TONES;
 
 export const TONE_OPTIONS = [
   { main: '1st', sub: 'high, flat' },
@@ -47,7 +45,7 @@ export function toneRounds(n = 10): Round[] {
 }
 
 export function listenRounds(): Round[] {
-  return shuffle(PHRASES).map((p) => {
+  return shuffle(PHRASES).slice(0, ROUND_LEN).map((p) => {
     const others = shuffle(PHRASES.filter((x) => x !== p)).slice(0, 2);
     const options = shuffle([p, ...others]);
     return {
@@ -64,7 +62,7 @@ const distractors = (p: (typeof PHRASES)[number]) => shuffle(PHRASES.filter((x) 
 
 // Silent: see the characters, pick the meaning
 export function readRounds(): Round[] {
-  return shuffle(PHRASES).map((p) => {
+  return shuffle(PHRASES).slice(0, ROUND_LEN).map((p) => {
     const options = shuffle([p, ...distractors(p)]);
     return {
       stem: { text: p.hanzi, size: 'md' as const },
@@ -78,7 +76,7 @@ export function readRounds(): Round[] {
 
 // Silent: see the meaning, pick the Chinese
 export function recallRounds(): Round[] {
-  return shuffle(PHRASES).map((p) => {
+  return shuffle(PHRASES).slice(0, ROUND_LEN).map((p) => {
     const options = shuffle([p, ...distractors(p)]);
     return {
       stem: { text: p.en, size: 'md' as const },
@@ -110,7 +108,7 @@ export interface BuildRound {
   tiles: string[];
 }
 export function buildRounds(): BuildRound[] {
-  return shuffle(PHRASES).map((phrase) => {
+  return shuffle(PHRASES).slice(0, 8).map((phrase) => {
     let tiles = shuffle(phrase.words);
     for (let k = 0; k < 10 && tiles.join('') === phrase.hanzi; k++) tiles = shuffle(phrase.words);
     return { phrase, tiles };

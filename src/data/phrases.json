@@ -1,0 +1,366 @@
+[
+ {
+  "id": "p01",
+  "hanzi": "你好吗？",
+  "py": "nǐ hǎo ma",
+  "en": "How are you?",
+  "words": [
+   "你好",
+   "吗？"
+  ]
+ },
+ {
+  "id": "p02",
+  "hanzi": "多少钱？",
+  "py": "duō shǎo qián",
+  "en": "How much is it?",
+  "words": [
+   "多少",
+   "钱？"
+  ]
+ },
+ {
+  "id": "p03",
+  "hanzi": "我想喝咖啡。",
+  "py": "wǒ xiǎng hē kā fēi",
+  "en": "I’d like a coffee.",
+  "words": [
+   "我",
+   "想",
+   "喝",
+   "咖啡。"
+  ]
+ },
+ {
+  "id": "p04",
+  "hanzi": "我们一起吃饭吧。",
+  "py": "wǒ men yì qǐ chī fàn ba",
+  "en": "Let’s eat together.",
+  "words": [
+   "我们",
+   "一起",
+   "吃饭",
+   "吧。"
+  ]
+ },
+ {
+  "id": "p05",
+  "hanzi": "不好意思，请问厕所在哪里？",
+  "py": "bù hǎo yì si qǐng wèn cè suǒ zài nǎ lǐ",
+  "en": "Excuse me, where is the toilet?",
+  "words": [
+   "不好意思，",
+   "请问",
+   "厕所",
+   "在",
+   "哪里？"
+  ]
+ },
+ {
+  "id": "p06",
+  "hanzi": "谢谢，不客气。",
+  "py": "xiè xie bú kè qi",
+  "en": "Thank you. You’re welcome.",
+  "words": [
+   "谢谢，",
+   "不客气。"
+  ]
+ },
+ {
+  "id": "p07",
+  "hanzi": "你叫什么名字？",
+  "py": "nǐ jiào shén me míng zi",
+  "en": "What’s your name?",
+  "words": [
+   "你",
+   "叫",
+   "什么",
+   "名字？"
+  ]
+ },
+ {
+  "id": "p08",
+  "hanzi": "我叫小明。",
+  "py": "wǒ jiào xiǎo míng",
+  "en": "My name is Xiaoming.",
+  "words": [
+   "我",
+   "叫",
+   "小明。"
+  ]
+ },
+ {
+  "id": "p09",
+  "hanzi": "我是新加坡人。",
+  "py": "wǒ shì xīn jiā pō rén",
+  "en": "I’m Singaporean.",
+  "words": [
+   "我",
+   "是",
+   "新加坡",
+   "人。"
+  ]
+ },
+ {
+  "id": "p10",
+  "hanzi": "很高兴认识你。",
+  "py": "hěn gāo xìng rèn shi nǐ",
+  "en": "Nice to meet you.",
+  "words": [
+   "很",
+   "高兴",
+   "认识",
+   "你。"
+  ]
+ },
+ {
+  "id": "p11",
+  "hanzi": "我不明白。",
+  "py": "wǒ bù míng bai",
+  "en": "I don’t understand.",
+  "words": [
+   "我",
+   "不",
+   "明白。"
+  ]
+ },
+ {
+  "id": "p12",
+  "hanzi": "请再说一遍。",
+  "py": "qǐng zài shuō yí biàn",
+  "en": "Please say it again.",
+  "words": [
+   "请",
+   "再",
+   "说",
+   "一遍。"
+  ]
+ },
+ {
+  "id": "p13",
+  "hanzi": "现在几点？",
+  "py": "xiàn zài jǐ diǎn",
+  "en": "What time is it now?",
+  "words": [
+   "现在",
+   "几点？"
+  ]
+ },
+ {
+  "id": "p14",
+  "hanzi": "我想点菜。",
+  "py": "wǒ xiǎng diǎn cài",
+  "en": "I’d like to order.",
+  "words": [
+   "我",
+   "想",
+   "点",
+   "菜。"
+  ]
+ },
+ {
+  "id": "p15",
+  "hanzi": "鸡饭多少钱？",
+  "py": "jī fàn duō shǎo qián",
+  "en": "How much is the chicken rice?",
+  "words": [
+   "鸡饭",
+   "多少",
+   "钱？"
+  ]
+ },
+ {
+  "id": "p16",
+  "hanzi": "我要一杯茶。",
+  "py": "wǒ yào yì bēi chá",
+  "en": "I’d like a cup of tea.",
+  "words": [
+   "我",
+   "要",
+   "一杯",
+   "茶。"
+  ]
+ },
+ {
+  "id": "p17",
+  "hanzi": "不要辣。",
+  "py": "bú yào là",
+  "en": "No spicy, please.",
+  "words": [
+   "不要",
+   "辣。"
+  ]
+ },
+ {
+  "id": "p18",
+  "hanzi": "太贵了。",
+  "py": "tài guì le",
+  "en": "That’s too expensive.",
+  "words": [
+   "太",
+   "贵",
+   "了。"
+  ]
+ },
+ {
+  "id": "p19",
+  "hanzi": "可以便宜一点吗？",
+  "py": "kě yǐ pián yi yì diǎn ma",
+  "en": "Can it be a bit cheaper?",
+  "words": [
+   "可以",
+   "便宜",
+   "一点",
+   "吗？"
+  ]
+ },
+ {
+  "id": "p20",
+  "hanzi": "地铁站在哪里？",
+  "py": "dì tiě zhàn zài nǎ lǐ",
+  "en": "Where is the MRT station?",
+  "words": [
+   "地铁站",
+   "在",
+   "哪里？"
+  ]
+ },
+ {
+  "id": "p21",
+  "hanzi": "我要去机场。",
+  "py": "wǒ yào qù jī chǎng",
+  "en": "I want to go to the airport.",
+  "words": [
+   "我",
+   "要",
+   "去",
+   "机场。"
+  ]
+ },
+ {
+  "id": "p22",
+  "hanzi": "请问，这是什么？",
+  "py": "qǐng wèn zhè shì shén me",
+  "en": "Excuse me, what is this?",
+  "words": [
+   "请问，",
+   "这",
+   "是",
+   "什么？"
+  ]
+ },
+ {
+  "id": "p23",
+  "hanzi": "我喜欢这个。",
+  "py": "wǒ xǐ huan zhè ge",
+  "en": "I like this one.",
+  "words": [
+   "我",
+   "喜欢",
+   "这个。"
+  ]
+ },
+ {
+  "id": "p24",
+  "hanzi": "你会说英语吗？",
+  "py": "nǐ huì shuō yīng yǔ ma",
+  "en": "Can you speak English?",
+  "words": [
+   "你",
+   "会",
+   "说",
+   "英语",
+   "吗？"
+  ]
+ },
+ {
+  "id": "p25",
+  "hanzi": "我在学中文。",
+  "py": "wǒ zài xué zhōng wén",
+  "en": "I’m learning Chinese.",
+  "words": [
+   "我",
+   "在",
+   "学",
+   "中文。"
+  ]
+ },
+ {
+  "id": "p26",
+  "hanzi": "我的中文不太好。",
+  "py": "wǒ de zhōng wén bú tài hǎo",
+  "en": "My Chinese isn’t very good.",
+  "words": [
+   "我的",
+   "中文",
+   "不",
+   "太",
+   "好。"
+  ]
+ },
+ {
+  "id": "p27",
+  "hanzi": "明天见！",
+  "py": "míng tiān jiàn",
+  "en": "See you tomorrow!",
+  "words": [
+   "明天",
+   "见！"
+  ]
+ },
+ {
+  "id": "p28",
+  "hanzi": "今天天气很热。",
+  "py": "jīn tiān tiān qì hěn rè",
+  "en": "The weather is hot today.",
+  "words": [
+   "今天",
+   "天气",
+   "很",
+   "热。"
+  ]
+ },
+ {
+  "id": "p29",
+  "hanzi": "你吃饭了吗？",
+  "py": "nǐ chī fàn le ma",
+  "en": "Have you eaten yet?",
+  "words": [
+   "你",
+   "吃饭",
+   "了",
+   "吗？"
+  ]
+ },
+ {
+  "id": "p30",
+  "hanzi": "我有点累。",
+  "py": "wǒ yǒu diǎn lèi",
+  "en": "I’m a bit tired.",
+  "words": [
+   "我",
+   "有点",
+   "累。"
+  ]
+ },
+ {
+  "id": "p31",
+  "hanzi": "对不起。",
+  "py": "duì bu qǐ",
+  "en": "Sorry.",
+  "words": [
+   "对",
+   "不起。"
+  ]
+ },
+ {
+  "id": "p32",
+  "hanzi": "没关系。",
+  "py": "méi guān xi",
+  "en": "It’s okay. No problem.",
+  "words": [
+   "没",
+   "关系。"
+  ]
+ }
+]

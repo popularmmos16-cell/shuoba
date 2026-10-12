@@ -1,0 +1,76 @@
+import { createEmptyCard, fsrs, generatorParameters, Rating, State, type Grade } from 'ts-fsrs';
+import type { CardRow, LogRow } from './db';
+import { dateKey } from './store';
+import { PHRASES, type Phrase } from './phrases';
+
+const scheduler = fsrs(generatorParameters({ enable_fuzz: true }));
+
+export const GRADES: { grade: Grade; label: string }[] = [
+  { grade: Rating.Again, label: 'Again' },
+  { grade: Rating.Hard, label: 'Hard' },
+  { grade: Rating.Good, label: 'Good' },
+  { grade: Rating.Easy, label: 'Easy' },
+];
+
+export type Item = { kind: 'intro'; phrase: Phrase } | { kind: 'card'; row: CardRow };
+
+export function newRows(phrase: Phrase, now = new Date()): CardRow[] {
+  return (['read', 'listen'] as const).map((kind) => ({
+    ...createEmptyCard(now),
+    id: `${phrase.id}:${kind}`,
+    phraseId: phrase.id,
+    kind,
+    introduced: now.getTime(),
+  }));
+}
+
+export function intervalLabel(due: Date, now = new Date()): string {
+  const min = (due.getTime() - now.getTime()) / 60_000;
+  if (min < 1) return '<1m';
+  if (min < 60) return `${Math.round(min)}m`;
+  if (min < 1440) return `${Math.round(min / 60)}h`;
+  const d = min / 1440;
+  return d < 30 ? `${Math.round(d)}d` : `${Math.round(d / 30)}mo`;
+}
+
+export function previews(row: CardRow, now = new Date()) {
+  const rec = scheduler.repeat(row, now);
+  return GRADES.map(({ grade, label }) => ({ grade, label, hint: intervalLabel(rec[grade].card.due, now) }));
+}
+
+export function rate(row: CardRow, grade: Grade, now = new Date()): { next: CardRow; log: LogRow } {
+  const { card } = scheduler.next(row, now, grade);
+  return { next: { ...row, ...card }, log: { cardId: row.id, rating: grade, ts: now.getTime() } };
+}
+
+// "Learned": the reading card has graduated out of the learning steps.
+export function learnedPhraseIds(cards: CardRow[]): Set<string> {
+  return new Set(cards.filter((c) => c.kind === 'read' && c.state === State.Review).map((c) => c.phraseId));
+}
+
+// "Strong": the memory is predicted to last 3+ weeks (FSRS stability, in days).
+export const STRONG_DAYS = 21;
+export const isStrong = (c: CardRow) => c.state === State.Review && c.stability >= STRONG_DAYS;
+
+export function dueCards(cards: CardRow[], quiet: boolean, now = new Date()): CardRow[] {
+  return cards
+    .filter((c) => c.due <= now && !(quiet && c.kind === 'listen')) // listening cards wait until sound is back
+    .sort((a, b) => a.due.getTime() - b.due.getTime());
+}
+
+export function unseenPhrases(cards: CardRow[]): Phrase[] {
+  const seen = new Set(cards.map((c) => c.phraseId));
+  return PHRASES.filter((p) => !seen.has(p.id));
+}
+
+export function newAllowanceToday(cards: CardRow[], perDay: number): number {
+  const today = dateKey();
+  const done = cards.filter((c) => c.kind === 'read' && dateKey(new Date(c.introduced)) === today).length;
+  return Math.max(0, perDay - done);
+}
+
+export function buildQueue(cards: CardRow[], quiet: boolean, newCount: number): Item[] {
+  const reviews: Item[] = dueCards(cards, quiet).slice(0, 40).map((row) => ({ kind: 'card', row }));
+  const intros: Item[] = unseenPhrases(cards).slice(0, newCount).map((phrase) => ({ kind: 'intro', phrase }));
+  return [...reviews, ...intros];
+}
