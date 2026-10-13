@@ -51,8 +51,14 @@ export function useStore(): State {
 // A day counts toward the streak once the compulsory word practice is done.
 export const dayDone = (s: State, k: string) => !!s.vocabDone[k];
 
+let doneHook: ((date: string) => void) | null = null;
+export const setDoneHook = (fn: (date: string) => void) => (doneHook = fn);
+
 export function markVocabDone(k = dateKey()) {
-  if (!state.vocabDone[k]) update({ vocabDone: { ...state.vocabDone, [k]: true } });
+  if (!state.vocabDone[k]) {
+    update({ vocabDone: { ...state.vocabDone, [k]: true } });
+    doneHook?.(k);
+  }
 }
 
 export function streakOf(s: State): number {

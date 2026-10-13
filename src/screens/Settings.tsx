@@ -4,6 +4,7 @@ import { exportData, importData } from '../db';
 import { VoiceTest } from '../VoiceTest';
 import { QuietToggle } from '../components/QuietToggle';
 import { Credits } from '../components/Credits';
+import { disableReminders, enableReminders, isStandalone, pushConfigured, pushSupported, remindersOn, sendTestReminder } from '../push';
 
 const GOALS = [10, 15, 20, 30];
 const NEWS = [4, 6, 8, 12];
@@ -32,6 +33,9 @@ async function backupNow(): Promise<string> {
 export function Settings() {
   const s = useStore();
   const [msg, setMsg] = useState('');
+  const [remind, setRemind] = useState(remindersOn());
+  const [rmsg, setRmsg] = useState('');
+  const [busy, setBusy] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const onFile = async (e: Event) => {
@@ -80,8 +84,63 @@ export function Settings() {
       <QuietToggle />
 
       <section class="card rise" style="--i:2">
-        <b>Reminders</b>
-        <p class="muted">Daily reminder at 12:00 (Singapore time). Coming in a later stage.</p>
+        <b>Daily reminder</b>
+        <p class="muted">A notification at 12:00 noon (Singapore time). It’s skipped on days you’ve already done your words.</p>
+        {!pushConfigured() ? (
+          <small>Reminders aren’t set up in this build yet.</small>
+        ) : !pushSupported() ? (
+          <small>This browser can’t receive notifications.</small>
+        ) : !isStandalone() ? (
+          <small>First add Shuōba to your Home Screen (Share → Add to Home Screen) and open it from there. iPhone only allows notifications for installed apps.</small>
+        ) : (
+          <div class="row">
+            {!remind ? (
+              <button
+                class="primary"
+                disabled={busy}
+                onClick={async () => {
+                  setBusy(true);
+                  const r = await enableReminders();
+                  setBusy(false);
+                  setRemind(r.ok);
+                  setRmsg(
+                    r.ok
+                      ? 'Reminders are on. Tap “Send a test” to check one arrives.'
+                      : r.why === 'denied'
+                        ? 'Notifications are blocked. Turn them on in Settings → Notifications → Shuōba, then try again.'
+                        : 'Could not turn reminders on. Check your connection and try again.',
+                  );
+                }}
+              >
+                Enable reminders
+              </button>
+            ) : (
+              <>
+                <button
+                  disabled={busy}
+                  onClick={async () => {
+                    setBusy(true);
+                    const ok = await sendTestReminder();
+                    setBusy(false);
+                    setRmsg(ok ? 'Test sent. It should appear in a few seconds.' : 'The test did not go through. Try again, or turn reminders off and on.');
+                  }}
+                >
+                  Send a test
+                </button>
+                <button
+                  onClick={async () => {
+                    await disableReminders();
+                    setRemind(false);
+                    setRmsg('Reminders are off.');
+                  }}
+                >
+                  Turn off
+                </button>
+              </>
+            )}
+          </div>
+        )}
+        {rmsg && <small>{rmsg}</small>}
       </section>
 
       <section class="card rise" style="--i:2">

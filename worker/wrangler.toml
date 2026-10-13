@@ -1,0 +1,19 @@
+name = "shuoba-push"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+preview_urls = false
+
+# 12:00 noon in Singapore (UTC+8, no daylight saving) is 04:00 UTC
+[triggers]
+crons = ["0 4 * * *"]
+
+[[kv_namespaces]]
+binding = "SUBS"
+id = "23532deb3ae84a148d0a3bc57e27282b"
+
+# Public values only. The private signing key is a secret (VAPID_PRIVATE_JWK), never in this file.
+[vars]
+ALLOWED_ORIGIN = "https://popularmmos16-cell.github.io"
+SUBJECT = "https://github.com/popularmmos16-cell/shuoba"
+VAPID_PUBLIC = "BCspir1itbqhEq4_2a5sXa10S0fe2nRLhkxoKFz5CUnrqROvpP5leUygauC7bRGF7VyWuv-1Mz07ZnLL8KLknvE"
