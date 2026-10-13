@@ -110,8 +110,28 @@ export interface BuildRound {
 }
 export function buildRounds(pool: Phrase[]): BuildRound[] {
   return shuffle(pool.filter((p) => p.words.length >= 2)).slice(0, 8).map((phrase) => {
-    let tiles = shuffle(phrase.words);
-    for (let k = 0; k < 10 && tiles.join('') === phrase.hanzi; k++) tiles = shuffle(phrase.words);
-    return { phrase, tiles };
+    return { phrase, tiles: scramble(phrase.words) };
   });
+}
+
+// Shuffled tiles that are guaranteed not to already be in the right order (when there is any other order).
+export function scramble(words: string[]): string[] {
+  let tiles = shuffle(words);
+  if (tiles.join('') === words.join('') && new Set(words).size > 1) {
+    const swap = tiles.findIndex((w, i) => i > 0 && w !== tiles[0]);
+    [tiles[0], tiles[swap]] = [tiles[swap], tiles[0]];
+  }
+  return tiles;
+}
+
+// Wrong answers for "what does this mean?": other items of the same kind and a similar length,
+// never one with the same English as the right answer.
+export function pickDistractors(all: Phrase[], target: Phrase, n: number): Phrase[] {
+  const len = (p: Phrase) => [...p.hanzi].length;
+  return all
+    .filter((p) => p.id !== target.id && p.kind === target.kind && p.en !== target.en)
+    .map((p) => ({ p, score: Math.abs(len(p) - len(target)) + Math.random() * 3 }))
+    .sort((a, b) => a.score - b.score)
+    .slice(0, n)
+    .map((x) => x.p);
 }

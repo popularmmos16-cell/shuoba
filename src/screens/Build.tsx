@@ -3,25 +3,25 @@ import { buildRounds } from '../practice';
 import type { Phrase } from '../phrases';
 import { Pinyin } from '../components/Pinyin';
 import { IconClose, IconCheck } from '../components/Icons';
+import { AnswerBar, Bank, useAssemble } from '../components/Assemble';
 
 export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () => void; onRetry: () => void }) {
   const [rounds] = useState(() => buildRounds(pool));
   const [i, setI] = useState(0);
-  const [placed, setPlaced] = useState<number[]>([]);
   const [result, setResult] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
   const done = i >= rounds.length;
   const r = rounds[Math.min(i, rounds.length - 1)];
+  const a = useAssemble(r.tiles, r.phrase.hanzi);
 
-  const add = (n: number) => result === null && setPlaced((p) => [...p, n]);
-  const remove = (n: number) => result === null && setPlaced((p) => p.filter((x) => x !== n));
   const check = () => {
-    const ok = placed.map((n) => r.tiles[n]).join('') === r.phrase.hanzi;
+    const ok = a.isCorrect();
+    a.lock();
     setResult(ok);
     if (ok) setScore((s) => s + 1);
   };
   const next = () => {
-    setPlaced([]);
+    a.reset();
     setResult(null);
     setI((n) => n + 1);
   };
@@ -47,12 +47,7 @@ export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () 
           <div class="flash q" key={i}>
             <small class="eyebrow">Build the sentence</small>
             <p class="q-prompt">{r.phrase.en}</p>
-            <div class={`answerbar ${result === true ? 'right' : result === false ? 'wrong' : ''}`}>
-              {placed.length === 0 && <small>Tap the pieces in order</small>}
-              {placed.map((n) => (
-                <button class="piece" onClick={() => remove(n)}>{r.tiles[n]}</button>
-              ))}
-            </div>
+            <AnswerBar a={a} tiles={r.tiles} result={result} />
             {result !== null && (
               <div class="reveal">
                 {!result && <div class="hanzi">{r.phrase.hanzi}</div>}
@@ -61,14 +56,10 @@ export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () 
             )}
           </div>
 
-          <div class="bank">
-            {r.tiles.map((t, n) => (
-              <button class="piece" disabled={placed.includes(n)} onClick={() => add(n)}>{t}</button>
-            ))}
-          </div>
+          <Bank a={a} tiles={r.tiles} />
 
           {result === null ? (
-            <button class="cta solid" disabled={placed.length !== r.tiles.length} onClick={check}>Check</button>
+            <button class="cta solid" disabled={!a.complete} onClick={check}>Check</button>
           ) : (
             <button class="cta solid" onClick={next}>{i === rounds.length - 1 ? 'Finish' : 'Next'}</button>
           )}

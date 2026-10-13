@@ -5,6 +5,7 @@ export interface State {
   quiet: boolean;
   newPerDay: number;
   typingNew: number; // new words per day in the typing exercise
+  tourSeen?: boolean; // phrase-session walkthrough dismissed
   vocabDone: Record<string, boolean>; // days the compulsory word practice was completed
   lastBackup?: number;
   minutesByDate: Record<string, number>;

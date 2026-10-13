@@ -1,18 +1,32 @@
 import { createEmptyCard, fsrs, generatorParameters, Rating, State, type Grade } from 'ts-fsrs';
+import { pickDistractors, scramble, shuffle } from './practice';
 import type { CardRow, LogRow } from './db';
 import { dateKey } from './store';
-import { PHRASES, type Phrase } from './phrases';
+import { PHRASE_BY_ID, PHRASES, type Phrase } from './phrases';
 
 const scheduler = fsrs(generatorParameters({ enable_fuzz: true }));
 
-export const GRADES: { grade: Grade; label: string }[] = [
-  { grade: Rating.Again, label: 'Again' },
-  { grade: Rating.Hard, label: 'Hard' },
-  { grade: Rating.Good, label: 'Good' },
-  { grade: Rating.Easy, label: 'Easy' },
-];
+export type Exercise = 'choose' | 'build';
+export type Item =
+  | { kind: 'intro'; phrase: Phrase }
+  | { kind: 'card'; row: CardRow; ex: Exercise; choices?: Phrase[]; tiles?: string[] };
 
-export type Item = { kind: 'intro'; phrase: Phrase } | { kind: 'card'; row: CardRow };
+// Questions mark themselves: no self-rating. A miss is "Again", a very slow right answer is "Hard", else "Good".
+export const SLOW_SECONDS = 20;
+export const gradeFor = (correct: boolean, seconds: number): Grade =>
+  !correct ? Rating.Again : seconds > SLOW_SECONDS ? Rating.Hard : Rating.Good;
+
+// Recognition first (pick the meaning). Once a card has graduated out of the short learning steps into
+// long-term review, switch to producing it (build the sentence). A card that was just missed goes back to the
+// easy kind (a lapse also drops it out of Review, and a retry is always multiple choice).
+
+export function makeCard(row: CardRow, retry = false): Item {
+  const phrase = PHRASE_BY_ID.get(row.phraseId)!;
+  if (!retry && row.state === State.Review && phrase.words.length >= 2) {
+    return { kind: 'card', row, ex: 'build', tiles: scramble(phrase.words) };
+  }
+  return { kind: 'card', row, ex: 'choose', choices: shuffle([phrase, ...pickDistractors(PHRASES, phrase, 2)]) };
+}
 
 export function newRows(phrase: Phrase, now = new Date()): CardRow[] {
   return (['read', 'listen'] as const).map((kind) => ({
@@ -33,9 +47,9 @@ export function intervalLabel(due: Date, now = new Date()): string {
   return d < 30 ? `${Math.round(d)}d` : `${Math.round(d / 30)}mo`;
 }
 
-export function previews(row: CardRow, now = new Date()) {
-  const rec = scheduler.repeat(row, now);
-  return GRADES.map(({ grade, label }) => ({ grade, label, hint: intervalLabel(rec[grade].card.due, now) }));
+// "Back in 3 days": what the schedule will be if answered this way, for showing after the answer.
+export function nextLabel(row: CardRow, grade: Grade, now = new Date()): string {
+  return intervalLabel(scheduler.next(row, now, grade).card.due, now);
 }
 
 export function rate(row: CardRow, grade: Grade, now = new Date()): { next: CardRow; log: LogRow } {
@@ -95,7 +109,7 @@ export function newAllowanceToday(cards: CardRow[], perDay: number): number {
 }
 
 export function buildQueue(cards: CardRow[], quiet: boolean, newCount: number): Item[] {
-  const reviews: Item[] = dueCards(cards, quiet).slice(0, 40).map((row) => ({ kind: 'card', row }));
+  const reviews: Item[] = dueCards(cards, quiet).slice(0, 40).map((row) => makeCard(row));
   const intros: Item[] = nextNew(cards, newCount).map((phrase) => ({ kind: 'intro', phrase }));
   return [...reviews, ...intros];
 }
