@@ -1,48 +1,67 @@
 #!/usr/bin/env python3
-"""Generate the app's audio clips with Piper (voice: zh_CN-chaowen-medium, trained on a CC0 dataset).
+"""Generate the app's audio clips with the macOS Tingting voice (zh_CN) and `say`.
 
 Why files and not the browser's speech engine: iOS mutes speechSynthesis when the ringer is on silent,
 but plays <audio> elements. Output is public/audio/p/<phrase id>.m4a and public/audio/t/<hex codepoint>.m4a.
-Existing clips are skipped unless --force is given, so adding content only renders the new items.
 
-One-time setup (macOS; afconvert makes the .m4a), in a scratch folder:
-  python3 -m venv venv && venv/bin/pip install "piper-tts[zh]"
-  curl -L -O https://huggingface.co/rhasspy/piper-voices/resolve/main/zh/zh_CN/chaowen/medium/zh_CN-chaowen-medium.onnx
-  curl -L -O https://huggingface.co/rhasspy/piper-voices/resolve/main/zh/zh_CN/chaowen/medium/zh_CN-chaowen-medium.onnx.json
-  # piper wants its g2pW model in ./g2pW (if its own download fails on SSL, extract g2pw.tar.gz there yourself)
-Run from that folder, with the venv's python (the model is loaded once, so this is fast):
-  PIPER_MODEL=zh_CN-chaowen-medium.onnx venv/bin/python /path/to/shuoba/tools/gen-audio.py [--force]
+Why Tingting and not Piper (used before): Piper's small Chinese voice mangled isolated words, which made
+listening questions unanswerable. Each clip is also padded with a little silence at the start (iOS clips the
+first few milliseconds of short audio, which swallowed the initial consonant), peak-normalised, and encoded
+at a higher bitrate. Words and single syllables are spoken slower than sentences.
+
+Needs macOS (say, afconvert). A clip is re-rendered when it is missing or older than this script, so editing
+the script (voice, speed, padding) refreshes everything and an interrupted run simply resumes. --force redoes all.
+  python3 tools/gen-audio.py [--force]
 """
-import json, os, subprocess, sys, tempfile, wave
+import array, json, subprocess, sys, tempfile, wave
 from pathlib import Path
-from piper import PiperVoice, SynthesisConfig
 
 ROOT = Path(__file__).resolve().parent.parent
 force = "--force" in sys.argv
+VOICE = "Tingting"
+LEAD, TAIL, PEAK = 0.18, 0.12, 0.89  # seconds of silence before/after; target peak (about -1 dBFS)
 
+# (text, output, words per minute)
 jobs = []
 for p in json.load(open(ROOT / "src/data/phrases.json")):
-    jobs.append((p["hanzi"], ROOT / f"public/audio/p/{p['id']}.m4a"))
+    jobs.append((p["hanzi"], ROOT / f"public/audio/p/{p['id']}.m4a", 135 if p["kind"] == "word" else 160))
 for s in json.load(open(ROOT / "src/data/tones.json")):
     for ch in s["chars"]:
-        jobs.append((ch, ROOT / f"public/audio/t/{ord(ch):x}.m4a"))
+        jobs.append((ch, ROOT / f"public/audio/t/{ord(ch):x}.m4a", 120))
 
-todo = [(t, o) for t, o in jobs if force or not o.exists()]
+stale = lambda o: not o.exists() or o.stat().st_mtime < Path(__file__).stat().st_mtime
+todo = [j for j in jobs if force or stale(j[1])]
 print(f"{len(todo)} clips to render ({len(jobs) - len(todo)} already exist)", flush=True)
-if not todo:
-    sys.exit(0)
 
-voice = PiperVoice.load(os.environ["PIPER_MODEL"])
-cfg = SynthesisConfig(volume=0.7)  # leaves headroom: full-scale output clips
+def polish(src: Path, dst: Path):
+    with wave.open(str(src), "rb") as w:
+        rate, ch = w.getframerate(), w.getnchannels()
+        pcm = array.array("h", w.readframes(w.getnframes()))
+    peak = max((abs(x) for x in pcm), default=1) or 1
+    gain = PEAK * 32767 / peak
+    pcm = array.array("h", (max(-32768, min(32767, int(x * gain))) for x in pcm))
+    pad = lambda s: array.array("h", [0] * int(rate * s) * ch)
+    out = pad(LEAD) + pcm + pad(TAIL)
+    with wave.open(str(dst), "wb") as w:
+        w.setnchannels(ch); w.setsampwidth(2); w.setframerate(rate)
+        w.writeframes(out.tobytes())
 
 with tempfile.TemporaryDirectory() as d:
-    for i, (text, out) in enumerate(todo, 1):
+    d = Path(d)
+    for i, (text, out, wpm) in enumerate(todo, 1):
         out.parent.mkdir(parents=True, exist_ok=True)
-        wav = Path(d) / "a.wav"
-        with wave.open(str(wav), "wb") as w:
-            voice.synthesize_wav(text, w, syn_config=cfg)
+        for attempt in range(3):  # `say` very occasionally hangs, so never wait on it forever
+            try:
+                subprocess.run(["say", "-v", VOICE, "-r", str(wpm), "-o", str(d / "a.aiff"), text], check=True, timeout=20)
+                break
+            except subprocess.TimeoutExpired:
+                print(f"say timed out on {text!r}, retrying", flush=True)
+        else:
+            sys.exit(f"giving up on {text!r}")
+        subprocess.run(["afconvert", "-f", "WAVE", "-d", "LEI16@44100", str(d / "a.aiff"), str(d / "a.wav")], check=True)
+        polish(d / "a.wav", d / "b.wav")
         tmp = out.with_suffix(".tmp.m4a")
-        subprocess.run(["afconvert", "-f", "m4af", "-d", "aac", "-b", "48000", str(wav), str(tmp)], check=True)
+        subprocess.run(["afconvert", "-f", "m4af", "-d", "aac", "-b", "64000", str(d / "b.wav"), str(tmp)], check=True)
         tmp.replace(out)  # only complete files ever appear under the final name
-        if i % 25 == 0 or i == len(todo):
+        if i % 50 == 0 or i == len(todo):
             print(f"{i}/{len(todo)}  {out.name}  {text}", flush=True)
