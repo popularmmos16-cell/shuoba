@@ -43,22 +43,29 @@ export function Practice({ onPick, onGame, poolSize }: { onPick: (m: Mode) => vo
       <p class="intro rise" style="--i:1">Totally optional. For days when you have a bit more time. It never affects your streak or daily goal.</p>
       <QuietToggle />
 
-      <h2 class="rise" style="--i:2">Games</h2>
-      {GAMES.map((g, n) => (
-        <button class="card mode rise" style={`--i:${n + 3}`} onClick={() => onGame(g.id)}>
-          <span class="glyph">{g.glyph}</span>
-          <span class="mode-text"><b>{g.title}</b><small>{g.blurb}{s.gameBest[g.id] ? ` Best: ${s.gameBest[g.id]}.` : ''}</small></span>
-          <span class="time">{g.id === today ? (s.gamesPlayed[dateKey()] ? 'Today ✓' : 'Today') : 'Play'}</span>
-        </button>
-      ))}
+      <h2 class="rise" style="--i:2">Games <small>{GAMES.length} to play</small></h2>
+      <div class="gamegrid">
+        {GAMES.map((g, n) => {
+          const isToday = g.id === today;
+          const best = s.gameBest[g.id];
+          return (
+            <button class={`gtile rise ${isToday ? 'today' : ''}`} style={`--i:${Math.min(n, 8) + 3}`} onClick={() => onGame(g.id)}>
+              <span class="glyph">{g.glyph}</span>
+              <b>{g.title}</b>
+              <small>{g.blurb}</small>
+              <span class="gtag">{isToday ? (s.gamesPlayed[dateKey()] ? 'Today ✓' : 'Today · bonus XP') : best ? `Best ${best}` : 'New'}</span>
+            </button>
+          );
+        })}
+      </div>
 
-      <h2 class="rise" style="--i:6">Silent practice</h2>
+      <h2 class="rise" style="--i:3">Silent practice</h2>
       {tooFew && <p class="intro rise" style="--i:3">Learn a few phrases in a session first. Extra practice uses the phrases you’ve started.</p>}
-      {SILENT.map((e, n) => <Card e={e} i={n + 7} locked={tooFew && e.id !== 'soon'} label="Locked" onPick={onPick} />)}
+      {SILENT.map((e, n) => <Card e={e} i={n + 4} locked={tooFew && e.id !== 'soon'} label="Locked" onPick={onPick} />)}
 
-      <h2 class="rise" style="--i:12">With sound</h2>
+      <h2 class="rise" style="--i:3">With sound</h2>
       {SOUND.map((e, n) => (
-        <Card e={e} i={n + 13} locked={quiet || (tooFew && e.id === 'listen')} label={quiet ? 'Needs sound' : 'Locked'} onPick={onPick} />
+        <Card e={e} i={n + 4} locked={quiet || (tooFew && e.id === 'listen')} label={quiet ? 'Needs sound' : 'Locked'} onPick={onPick} />
       ))}
     </main>
   );

@@ -223,12 +223,24 @@ export function applyFreezes() {
 export const xpToday = () => getState().xpByDate[dateKey()] ?? 0;
 
 // ---- daily games ----
-export type GameId = 'match' | 'rain' | 'boss';
-export const GAMES: { id: GameId; glyph: string; title: string; blurb: string }[] = [
+export const GAMES = [
   { id: 'match', glyph: '配', title: 'Memory Match', blurb: 'Flip cards to pair each Chinese word with its meaning.' },
   { id: 'rain', glyph: '雨', title: 'Word Rain', blurb: 'Words fall from the sky. Tap the meaning before they land.' },
   { id: 'boss', glyph: '怪', title: 'Boss Battle', blurb: 'Answer to hit the boss. Every mistake costs a heart.' },
-];
+  { id: 'blitz', glyph: '速', title: 'Speed Blitz', blurb: '40 seconds on the clock. Right answers add time, wrong ones cost it.' },
+  { id: 'sudden', glyph: '命', title: 'Sudden Death', blurb: 'One life. How long can your streak last?' },
+  { id: 'ladder', glyph: '梯', title: 'Ladder Climb', blurb: 'Climb eight rungs. A wrong answer slides you down one.' },
+  { id: 'duel', glyph: '赛', title: 'Robot Race', blurb: 'Race a robot to the finish. Quick, correct answers pull ahead.' },
+  { id: 'bomb', glyph: '弹', title: 'Bomb Defuse', blurb: 'Answer before the fuse burns out. It gets shorter each time.' },
+  { id: 'tf', glyph: '对', title: 'True or False', blurb: 'Does this word really mean that? Decide fast.' },
+  { id: 'listen', glyph: '听', title: 'Sound Match', blurb: 'Hear a word, then tap the right characters.' },
+  { id: 'tones', glyph: '调', title: 'Tone Sprint', blurb: 'See a character, name its tone. Twelve in a row to win.' },
+  { id: 'gap', glyph: '缺', title: 'Missing Piece', blurb: 'A sentence with a hole in it. Pick the piece that fits.' },
+  { id: 'sprint', glyph: '句', title: 'Sentence Sprint', blurb: 'Rebuild sentences against the clock.' },
+  { id: 'echo', glyph: '回', title: 'Echo Chain', blurb: 'Watch the words light up, then repeat the order from memory.' },
+  { id: 'typer', glyph: '打', title: 'Pinyin Typer', blurb: 'See the character and type its pinyin. Tone numbers work.' },
+] as const;
+export type GameId = (typeof GAMES)[number]['id'];
 // A different game each day, in a fixed cycle
 export const gameOfToday = () => GAMES[dayNumber() % GAMES.length];
 export const DAILY_GAME_XP = 40;

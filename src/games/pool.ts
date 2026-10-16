@@ -1,6 +1,7 @@
 import { WORDS } from '../vocab';
 import { PHRASE_BY_ID, type Phrase } from '../phrases';
 import { getCards, getWords } from '../db';
+import { shuffle } from '../practice';
 
 // What the games draw from: words you have started, topped up with the most common words when you have few,
 // plus any sentences you have met.
@@ -22,3 +23,17 @@ export function sentencePool(): Phrase[] {
 
 // "I; me" -> "I", "(general counting word)" -> the whole thing. A short label for a card.
 export const shortGloss = (p: Phrase) => p.en.split(';')[0].replace(/\s*\([^)]*\)\s*/g, ' ').trim() || p.en;
+
+// Deals items in a shuffled order and reshuffles when they run out, never repeating until everything has been seen.
+export function deal<T>(items: T[]): () => T {
+  let rest: T[] = [];
+  let last: T | undefined;
+  return () => {
+    if (!rest.length) {
+      rest = shuffle(items);
+      if (rest.length > 1 && rest[rest.length - 1] === last) [rest[0], rest[rest.length - 1]] = [rest[rest.length - 1], rest[0]];
+    }
+    last = rest.pop()!;
+    return last;
+  };
+}

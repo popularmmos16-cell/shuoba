@@ -15,9 +15,7 @@ import { useCards } from './db';
 import { listenRounds, pinyinRounds, readRounds, recallRounds, toneRounds } from './practice';
 import { Toaster } from './components/Game';
 import { applyFreezes, checkProgress, type GameId } from './game';
-import { Match } from './games/Match';
-import { Rain } from './games/Rain';
-import { Boss } from './games/Boss';
+import { Game } from './games';
 import { IconChart, IconGear, IconHome, IconSpark } from './components/Icons';
 
 const ROUNDS: Partial<Record<Mode, (pool: Phrase[]) => Round[]>> = {
@@ -71,9 +69,7 @@ export function App() {
     return (
       <>
         <Toaster />
-        {game.id === 'match' ? <Match key={game.run} onClose={close} onAgain={again} />
-          : game.id === 'rain' ? <Rain key={game.run} onClose={close} onAgain={again} />
-          : <Boss key={game.run} onClose={close} onAgain={again} />}
+        <Game key={game.run} id={game.id} onClose={close} onAgain={again} />
       </>
     );
   }

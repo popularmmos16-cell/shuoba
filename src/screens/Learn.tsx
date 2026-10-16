@@ -89,7 +89,14 @@ export function Learn({ onClose }: { onClose: () => void }) {
     last.current = now;
   };
 
-  const advance = (rest: Item[]) => setQueue(rest);
+  // Clear the last answer in the same update that swaps the question, otherwise the new question
+  // renders for a frame with the old "Not quite" feedback still showing (the effect below is too late).
+  const advance = (rest: Item[]) => {
+    setPicked(null);
+    setResult(null);
+    asm.reset();
+    setQueue(rest);
+  };
 
   const learnIt = () => {
     if (cur?.kind !== 'intro') return;
