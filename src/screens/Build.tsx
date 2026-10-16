@@ -1,12 +1,15 @@
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { buildRounds } from '../practice';
 import type { Phrase } from '../phrases';
 import { Pinyin } from '../components/Pinyin';
 import { IconClose, IconCheck } from '../components/Icons';
+import { ComboChip } from '../components/Game';
+import { answer, startSession } from '../game';
 import { AnswerBar, Bank, useAssemble } from '../components/Assemble';
 
 export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () => void; onRetry: () => void }) {
   const [rounds] = useState(() => buildRounds(pool));
+  useEffect(startSession, []);
   const [i, setI] = useState(0);
   const [result, setResult] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
@@ -19,6 +22,7 @@ export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () 
     a.lock();
     setResult(ok);
     if (ok) setScore((s) => s + 1);
+    answer(ok, 5);
   };
   const next = () => {
     a.reset();
@@ -31,6 +35,7 @@ export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () 
       <header class="learn-top">
         <button class="icon-btn" aria-label="Close" onClick={onClose}><IconClose /></button>
         <div class="bar"><i style={{ width: `${(Math.min(i, rounds.length) / rounds.length) * 100}%` }} /></div>
+        <ComboChip />
         <small>{Math.min(i, rounds.length)}/{rounds.length}</small>
       </header>
 

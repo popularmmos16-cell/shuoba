@@ -76,6 +76,9 @@ export function useWords() {
   return { words, loaded };
 }
 
+export const getWords = () => words;
+export const getCards = () => cards;
+
 export async function saveWord(row: WordRow) {
   words = [...words.filter((w) => w.id !== row.id), row];
   emit();

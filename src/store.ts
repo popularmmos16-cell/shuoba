@@ -9,10 +9,27 @@ export interface State {
   vocabDone: Record<string, boolean>; // days the compulsory word practice was completed
   lastBackup?: number;
   minutesByDate: Record<string, number>;
+  // game layer (see game.ts)
+  xp: number;
+  xpByDate: Record<string, number>;
+  freezes: number; // streak freezes in the bank
+  frozen: Record<string, boolean>; // missed days a freeze has covered
+  freezeGiven?: string; // day a freeze was last earned
+  badges: Record<string, string>; // badge id -> day earned
+  totals: { right: number; quests: number; bestCombo: number; perfect: number; games?: number };
+  gamesPlayed: Record<string, boolean>; // days today's game was beaten
+  gameBest: Record<string, number>; // best score per game
+  day: { k: string; right: number; best: number; learned: number; claimed: string[] };
 }
 
 const KEY = 'shuoba.state.v1';
-const DEFAULT: State = { goalMin: 20, quiet: false, newPerDay: 8, typingNew: 5, vocabDone: {}, minutesByDate: {} };
+const DEFAULT: State = {
+  goalMin: 20, quiet: false, newPerDay: 8, typingNew: 5, vocabDone: {}, minutesByDate: {},
+  xp: 0, xpByDate: {}, freezes: 0, frozen: {}, badges: {},
+  totals: { right: 0, quests: 0, bestCombo: 0, perfect: 0, games: 0 },
+  gamesPlayed: {}, gameBest: {},
+  day: { k: '', right: 0, best: 0, learned: 0, claimed: [] },
+};
 
 export const dateKey = (d = new Date()) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -51,6 +68,8 @@ export function useStore(): State {
 
 // A day counts toward the streak once the compulsory word practice is done.
 export const dayDone = (s: State, k: string) => !!s.vocabDone[k];
+// A day keeps the streak if the words were done, or a streak freeze covered it.
+export const dayKept = (s: State, k: string) => dayDone(s, k) || !!s.frozen[k];
 
 let doneHook: ((date: string) => void) | null = null;
 export const setDoneHook = (fn: (date: string) => void) => (doneHook = fn);
@@ -64,10 +83,10 @@ export function markVocabDone(k = dateKey()) {
 
 export function streakOf(s: State): number {
   const d = new Date();
-  if (!dayDone(s, dateKey(d))) d.setDate(d.getDate() - 1); // today not done yet: streak is still alive
+  if (!dayKept(s, dateKey(d))) d.setDate(d.getDate() - 1); // today not done yet: streak is still alive
   let n = 0;
-  while (dayDone(s, dateKey(d))) {
-    n++;
+  while (dayKept(s, dateKey(d))) {
+    if (dayDone(s, dateKey(d))) n++; // a frozen day holds the streak but does not add to it
     d.setDate(d.getDate() - 1);
   }
   return n;

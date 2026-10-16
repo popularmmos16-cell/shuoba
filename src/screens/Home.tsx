@@ -3,6 +3,8 @@ import { Pinyin } from '../components/Pinyin';
 import { IconFlame, IconMute, IconPlay, IconSound } from '../components/Icons';
 import { setQuiet } from '../components/QuietToggle';
 import { dateKey, dayDone, fmtMin, streakOf, useStore } from '../store';
+import { Quests, XpBar } from '../components/Game';
+import { DAILY_GAME_XP, gameOfToday, levelOf, xpToday, type GameId } from '../game';
 import { useVocabPlan } from '../useVocab';
 import { phraseOfTheDay, PHRASES } from '../phrases';
 import { speakZh } from '../speak';
@@ -19,13 +21,15 @@ function greeting(): [string, string] {
   return ['晚上好', 'Good evening'];
 }
 
-export function Home({ onStart, onWords, onExtra }: { onStart: () => void; onWords: () => void; onExtra: () => void }) {
+export function Home({ onStart, onWords, onExtra, onGame }: { onStart: () => void; onWords: () => void; onExtra: () => void; onGame: (id: GameId) => void }) {
   const s = useStore();
   const vocab = useVocabPlan();
   const { cards } = useCards();
   const today = s.minutesByDate[dateKey()] ?? 0;
   const streak = streakOf(s);
   const [zh, en] = greeting();
+  const game = gameOfToday();
+  const gamePlayed = !!s.gamesPlayed[dateKey()];
   const phrase = phraseOfTheDay();
 
   const due = dueCards(cards, s.quiet).length;
@@ -39,7 +43,7 @@ export function Home({ onStart, onWords, onExtra }: { onStart: () => void; onWor
   const week = DAYS.map((label, i) => {
     const d = new Date(now);
     d.setDate(now.getDate() - mondayOffset + i);
-    return { label, mins: s.minutesByDate[dateKey(d)] ?? 0, done: dayDone(s, dateKey(d)), isToday: i === mondayOffset };
+    return { label, mins: s.minutesByDate[dateKey(d)] ?? 0, done: dayDone(s, dateKey(d)), frozen: !!s.frozen[dateKey(d)], isToday: i === mondayOffset };
   });
   const weekMinutes = week.reduce((n, d) => n + d.mins, 0);
   const left = Math.ceil(s.goalMin - today); // minutes still to go
@@ -55,9 +59,11 @@ export function Home({ onStart, onWords, onExtra }: { onStart: () => void; onWor
         <button class={`chip mute ${s.quiet ? 'on' : ''}`} aria-label={s.quiet ? 'Turn sound on' : 'Turn sound off (quiet mode)'} onClick={() => setQuiet(!s.quiet)}>
           {s.quiet ? <IconMute /> : <IconSound />}
         </button>
-        <div class="chip streak" title="Day streak">
+        <div class="chip level" title="Level">Lv {levelOf(s.xp)}</div>
+        <div class="chip streak" title={`Day streak. ${s.freezes} streak freeze${s.freezes === 1 ? '' : 's'} banked`}>
           <IconFlame />
           <b>{streak}</b>
+          {s.freezes > 0 && <span class="ice">❄{s.freezes}</span>}
         </div>
       </header>
 
@@ -68,16 +74,37 @@ export function Home({ onStart, onWords, onExtra }: { onStart: () => void; onWor
         <p class="quiet-banner rise" style="--i:1">Back up your progress: Settings → Backup. It takes five seconds.</p>
       )}
 
+      {!vocab.done && streak > 0 && new Date().getHours() >= 17 && (
+        <p class="quiet-banner risk rise" style="--i:1">Your {streak}-day streak ends at midnight. Finish your words to keep it.</p>
+      )}
+
       <section class="hero rise" style="--i:1">
         <div class="hero-text">
           <h1>Today’s practice</h1>
           <p>{left <= 0 ? 'Goal reached. Nice work!' : `${left} min to your daily goal`}</p>
-          <p class="hero-sub">{vocab.done ? 'Words done ✓' : `Words first: ${vocab.left} to type`} · {due} to review · {fresh} new</p>
         </div>
-        <Ring value={today} goal={s.goalMin} />
+        <Ring value={today} goal={s.goalMin} size={116} />
+        <div class="hero-chips">
+          <span class={vocab.done ? 'ok' : ''}>{vocab.done ? 'Words done ✓' : `${vocab.left} words to type`}</span>
+          <span>{due} to review</span>
+          <span>{fresh} new</span>
+        </div>
         <button class="cta" onClick={onStart}>
           <IconPlay /> {due + fresh === 0 ? 'Learn more' : 'Start session'}
         </button>
+      </section>
+
+      <button class={`card game-card rise ${gamePlayed ? 'played' : ''}`} style="--i:2" onClick={() => onGame(game.id)}>
+        <span class="glyph">{game.glyph}</span>
+        <span class="mode-text">
+          <b>Today’s game: {game.title} <em class="req">{gamePlayed ? 'won ✓' : `+${DAILY_GAME_XP} XP`}</em></b>
+          <small>{gamePlayed ? 'Beaten today. Play again for fun, or come back tomorrow for a new one.' : game.blurb}</small>
+        </span>
+      </button>
+
+      <section class="card level-card rise" style="--i:2">
+        <XpBar xp={s.xp} />
+        <small class="xp-today">{xpToday() > 0 ? `+${xpToday()} XP today` : 'Earn XP with every right answer'}</small>
       </section>
 
       <button class={`card vocab-card rise ${vocab.done ? 'done' : ''}`} style="--i:2" onClick={onWords}>
@@ -94,6 +121,8 @@ export function Home({ onStart, onWords, onExtra }: { onStart: () => void; onWor
         </span>
       </button>
 
+      <div class="rise" style="--i:2"><Quests /></div>
+
       <section class="card week rise" style="--i:2">
         <div class="week-head">
           <b>This week</b>
@@ -101,7 +130,7 @@ export function Home({ onStart, onWords, onExtra }: { onStart: () => void; onWor
         </div>
         <div class="week-days">
           {week.map((d) => (
-            <div class={`day ${d.done ? 'done' : ''} ${d.isToday ? 'today' : ''}`}>
+            <div class={`day ${d.done ? 'done' : ''} ${d.frozen ? 'frozen' : ''} ${d.isToday ? 'today' : ''}`}>
               <span class="dot" />
               <small>{d.label}</small>
             </div>

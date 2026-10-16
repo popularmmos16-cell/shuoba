@@ -4,6 +4,7 @@ import { WORDS } from '../vocab';
 import { PHRASES } from '../phrases';
 import { isStrong, learnedPhraseIds } from '../srs';
 import { State } from 'ts-fsrs';
+import { BadgeGrid, XpBar } from '../components/Game';
 
 export function Progress() {
   const s = useStore();
@@ -38,6 +39,8 @@ export function Progress() {
           ))}
         </div>
       </section>
+      <section class="card rise" style="--i:2"><XpBar xp={s.xp} /></section>
+      <div class="rise" style="--i:2"><BadgeGrid /></div>
       <section class="tiles rise" style="--i:2">
         <div class="card tile"><b>{fmtMin(total)}</b><small>total minutes</small></div>
         <div class="card tile"><b>{streakOf(s)}</b><small>day streak</small></div>

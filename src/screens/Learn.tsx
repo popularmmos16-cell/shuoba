@@ -4,6 +4,8 @@ import { Pinyin } from '../components/Pinyin';
 import { AnswerBar, Bank, useAssemble } from '../components/Assemble';
 import { IconClose, IconSound, IconCheck } from '../components/Icons';
 import { speakZh } from '../speak';
+import { Confetti, ComboChip, Reward } from '../components/Game';
+import { answer, finishSession, learnedOne, startSession } from '../game';
 import { addStudy, dateKey, update, useStore } from '../store';
 import { saveCards, useCards, type CardRow } from '../db';
 import { buildQueue, gradeFor, makeCard, newAllowanceToday, newRows, nextLabel, rate, unseenPhrases, type Item } from '../srs';
@@ -11,7 +13,7 @@ import { buildQueue, gradeFor, makeCard, newAllowanceToday, newRows, nextLabel, 
 const REQUEUE_WITHIN_MIN = 20; // a card due again soon comes back later in this same session
 const TEACH_BATCH = 3; // teach this many new phrases, then test them straight away
 
-interface Result { correct: boolean; label: string }
+interface Result { correct: boolean; label: string; gain: number }
 
 const TOUR = [
   ['Learn', 'See a new phrase in pieces, with pinyin and meaning. Tap the speaker to hear it.'],
@@ -48,6 +50,9 @@ export function Learn({ onClose }: { onClose: () => void }) {
   const [result, setResult] = useState<Result | null>(null);
   const requeue = useRef<{ next: CardRow; correct: boolean } | null>(null); // what to schedule once Continue is tapped
   const pending = useRef<Item[]>([]); // tests for phrases taught in this batch, queued once the batch is done
+  const [bonus, setBonus] = useState(0);
+  const rewarded = useRef(false);
+  useEffect(startSession, []);
   const last = useRef(Date.now());
   const shownAt = useRef(Date.now());
 
@@ -87,6 +92,7 @@ export function Learn({ onClose }: { onClose: () => void }) {
   const learnIt = () => {
     if (cur?.kind !== 'intro') return;
     tick();
+    learnedOne();
     const rows = newRows(cur.phrase);
     saveCards(rows);
     rows.filter((r) => !(s.quiet && r.kind === 'listen')).forEach((row) => pending.current.push(makeCard(row)));
@@ -110,7 +116,7 @@ export function Learn({ onClose }: { onClose: () => void }) {
     const grade = gradeFor(correct, seconds);
     const { next, log } = rate(cur.row, grade);
     saveCards([next], [log]);
-    setResult({ correct, label: nextLabel(cur.row, grade) });
+    setResult({ correct, label: nextLabel(cur.row, grade), gain: answer(correct, 8) });
     setStats((x) => ({ ...x, reviews: x.reviews + 1 }));
     // the answer is heard again right after answering, which helps it stick (a listening card was just heard)
     if (!isListen) speakZh(phrase!.hanzi);
@@ -150,6 +156,15 @@ export function Learn({ onClose }: { onClose: () => void }) {
     pending.current = [];
   };
 
+  const finished = queue !== null && !cur && stats.reviews + stats.intros > 0;
+  useEffect(() => {
+    if (finished && !rewarded.current) {
+      rewarded.current = true;
+      setBonus(finishSession('phrases'));
+    }
+    if (!finished) rewarded.current = false;
+  }, [finished]);
+
   const left = (queue?.length ?? 0) + pending.current.length;
   const progress = done + left === 0 ? 1 : done / (done + left);
   const minutes = Math.round(s.minutesByDate[dateKey()] ?? 0);
@@ -161,6 +176,7 @@ export function Learn({ onClose }: { onClose: () => void }) {
       <header class="learn-top">
         <button class="icon-btn" aria-label="Close" onClick={onClose}><IconClose /></button>
         <div class="bar"><i style={{ width: `${(cur ? progress : 1) * 100}%` }} /></div>
+        <ComboChip />
         <small>{left}</small>
       </header>
 
@@ -168,6 +184,7 @@ export function Learn({ onClose }: { onClose: () => void }) {
         <Tour onGo={() => update({ tourSeen: true })} />
       ) : !cur ? (
         <div class="finish rise">
+          {finished && <Confetti />}
           <div class="seal big"><IconCheck /></div>
           <h1>{stats.reviews + stats.intros === 0 ? 'All caught up' : 'Session complete'}</h1>
           <p>
@@ -175,6 +192,7 @@ export function Learn({ onClose }: { onClose: () => void }) {
               ? 'Nothing is due right now. Come back later, or learn a few more phrases.'
               : `${stats.intros} new · ${stats.reviews} answered · ${minutes} min today.`}
           </p>
+          {finished && <Reward bonus={bonus} />}
           {more > 0 && <button class="cta solid" onClick={keepGoing}>Learn 5 more phrases</button>}
           <button class={more > 0 ? 'ghost' : 'cta solid'} onClick={onClose}>Back to Today</button>
         </div>
@@ -228,7 +246,7 @@ export function Learn({ onClose }: { onClose: () => void }) {
 
             {result && (
               <div class={`feedback ${result.correct ? 'good' : 'bad'}`}>
-                <b>{result.correct ? 'Correct!' : 'Not quite. Here’s the answer:'}</b>
+                <b>{result.correct ? <>Correct! <span class="gain">+{result.gain} XP</span></> : 'Not quite. Here’s the answer:'}</b>
                 <div class="hanzi">{phrase!.hanzi}</div>
                 <Pinyin text={phrase!.py} />
                 <p class="en">{phrase!.en}</p>
