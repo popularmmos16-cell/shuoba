@@ -49,6 +49,8 @@ export function Learn({ onClose }: { onClose: () => void }) {
   const [picked, setPicked] = useState<number | null>(null);
   const [result, setResult] = useState<Result | null>(null);
   const requeue = useRef<{ next: CardRow; correct: boolean } | null>(null); // what to schedule once Continue is tapped
+  const retried = useRef(new Set<string>()); // cards already given their one retry this session
+  const reasked = useRef(new Set<string>()); // cards already brought back once for a short learning step
   const pending = useRef<Item[]>([]); // tests for phrases taught in this batch, queued once the batch is done
   const [bonus, setBonus] = useState(0);
   const rewarded = useRef(false);
@@ -66,7 +68,7 @@ export function Learn({ onClose }: { onClose: () => void }) {
 
   const cur = queue?.[0];
   const phrase = cur ? (cur.kind === 'intro' ? cur.phrase : PHRASE_BY_ID.get(cur.row.phraseId)!) : undefined;
-  const isListen = cur?.kind === 'card' && cur.row.kind === 'listen';
+  const isListen = cur?.kind === 'card' && cur.row.kind === 'listen' && cur.ex !== 'recall'; // a recall question is silent until answered
   const tiles = cur?.kind === 'card' && cur.ex === 'build' ? cur.tiles! : [];
   const asm = useAssemble(tiles, phrase?.hanzi ?? '');
   const key = cur ? `${cur.kind}-${phrase!.id}-${cur.kind === 'card' ? cur.row.kind + cur.ex : ''}-${queue!.length}-${done}` : '';
@@ -112,6 +114,13 @@ export function Learn({ onClose }: { onClose: () => void }) {
   const finish = (correct: boolean) => {
     if (cur?.kind !== 'card' || result) return;
     tick();
+    if (cur.retry) {
+      // a retry is practice: it is not scored, so it cannot add a second lapse
+      setResult({ correct, label: '', gain: answer(correct, 3) });
+      if (!isListen) speakZh(phrase!.hanzi);
+      requeue.current = { next: cur.row, correct };
+      return;
+    }
     const seconds = (Date.now() - shownAt.current) / 1000;
     const grade = gradeFor(correct, seconds);
     const { next, log } = rate(cur.row, grade);
@@ -142,8 +151,18 @@ export function Learn({ onClose }: { onClose: () => void }) {
     const { next, correct } = requeue.current;
     requeue.current = null;
     const rest = queue!.slice(1);
-    const soon = (next.due.getTime() - Date.now()) / 60_000 <= REQUEUE_WITHIN_MIN;
-    if (soon || !correct) rest.splice(Math.min(3, rest.length), 0, makeCard(next, !correct));
+    if (cur?.kind === 'card' && !cur.retry) {
+      const soon = (next.due.getTime() - Date.now()) / 60_000 <= REQUEUE_WITHIN_MIN;
+      if (!correct && !retried.current.has(next.id)) {
+        // one more go later, as the other kind of question
+        retried.current.add(next.id);
+        rest.splice(Math.min(4, rest.length), 0, makeCard(next, true, cur.ex));
+      } else if (correct && soon && !reasked.current.has(next.id)) {
+        // a short learning step: ask once more this session, never more than once
+        reasked.current.add(next.id);
+        rest.splice(Math.min(5, rest.length), 0, makeCard(next, false, cur.ex));
+      }
+    }
     setDone((d) => d + 1);
     advance(rest);
   };
@@ -154,6 +173,8 @@ export function Learn({ onClose }: { onClose: () => void }) {
     setIntroTotal(q.filter((x) => x.kind === 'intro').length);
     setIntroDone(0);
     pending.current = [];
+    retried.current.clear();
+    reasked.current.clear();
   };
 
   const finished = queue !== null && !cur && stats.reviews + stats.intros > 0;
@@ -221,7 +242,10 @@ export function Learn({ onClose }: { onClose: () => void }) {
         <>
           <div class="flash q" key={key}>
             <small class="eyebrow">
-              {cur.ex === 'build' ? (isListen ? 'Hear it, then build it' : 'Build it in Chinese') : isListen ? 'Listen and choose' : 'What does this mean?'}
+              {cur.ex === 'build'
+                ? isListen ? 'Hear it, then build it' : 'Build it in Chinese'
+                : cur.ex === 'recall' ? 'Which one is it?' : isListen ? 'Listen and choose' : 'What does this mean?'}
+              {cur.retry ? ' · again' : ''}
             </small>
             {cur.ex === 'build' ? (
               <>
@@ -238,9 +262,9 @@ export function Learn({ onClose }: { onClose: () => void }) {
                 {isListen ? (
                   <button class="big-play" aria-label="Play audio" onClick={() => speakZh(phrase!.hanzi)}><IconSound /></button>
                 ) : (
-                  !result && <div class="stem md">{phrase!.hanzi}</div> // the answer box below shows it once answered
+                  !result && <div class={`stem ${cur.ex === 'recall' || phrase!.hanzi.length > 6 ? 'md' : 'lg'}`}>{cur.ex === 'recall' ? phrase!.en : phrase!.hanzi}</div> // the answer box below shows it once answered
                 )}
-                {!result && <p class="q-prompt sm">{isListen ? 'Tap the meaning of what you hear' : 'Tap the English that matches'}</p>}
+                {!result && <p class="q-prompt sm">{cur.ex === 'recall' ? 'Tap the Chinese that matches' : isListen ? 'Tap the meaning of what you hear' : 'Tap the English that matches'}</p>}
               </>
             )}
 
@@ -250,7 +274,11 @@ export function Learn({ onClose }: { onClose: () => void }) {
                 <div class="hanzi">{phrase!.hanzi}</div>
                 <Pinyin text={phrase!.py} />
                 <p class="en">{phrase!.en}</p>
-                <small>{result.correct ? `You’ll see this again in ${result.label}.` : 'We’ll ask again in a moment.'}</small>
+                <small>
+                  {cur.retry
+                    ? 'Extra practice. It comes back soon.'
+                    : result.correct ? `You’ll see this again in ${result.label}.` : 'We’ll ask once more in a moment.'}
+                </small>
               </div>
             )}
           </div>
@@ -266,13 +294,15 @@ export function Learn({ onClose }: { onClose: () => void }) {
             </>
           ) : (
             <>
-              <div class="opts">
+              <div class={`opts ${cur.ex === 'recall' && cur.choices!.every((c) => [...c.hanzi].length <= 4) ? 'two' : ''}`}>
                 {cur.choices!.map((c, n) => (
                   <button
                     class={`opt ${picked !== null && c.id === phrase!.id ? 'right' : ''} ${picked === n && c.id !== phrase!.id ? 'wrong' : ''}`}
+                    disabled={picked !== null && c.id !== phrase!.id && picked !== n}
                     onClick={() => choose(n)}
                   >
-                    <b>{c.en}</b>
+                    {cur.ex === 'recall' ? <b class="hz">{c.hanzi}</b> : <b>{c.en}</b>}
+                    {picked !== null && cur.ex === 'recall' && <Pinyin text={c.py} />}
                   </button>
                 ))}
               </div>

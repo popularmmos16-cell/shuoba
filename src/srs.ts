@@ -6,26 +6,30 @@ import { PHRASE_BY_ID, PHRASES, type Phrase } from './phrases';
 
 const scheduler = fsrs(generatorParameters({ enable_fuzz: true }));
 
-export type Exercise = 'choose' | 'build';
+// choose: pick the meaning of the Chinese (or of what you hear); recall: pick the Chinese for the meaning; build: put the pieces in order
+export type Exercise = 'choose' | 'recall' | 'build';
 export type Item =
   | { kind: 'intro'; phrase: Phrase }
-  | { kind: 'card'; row: CardRow; ex: Exercise; choices?: Phrase[]; tiles?: string[] };
+  | { kind: 'card'; row: CardRow; ex: Exercise; choices?: Phrase[]; tiles?: string[]; retry?: boolean };
 
 // Questions mark themselves: no self-rating. A miss is "Again", a very slow right answer is "Hard", else "Good".
 export const SLOW_SECONDS = 20;
 export const gradeFor = (correct: boolean, seconds: number): Grade =>
   !correct ? Rating.Again : seconds > SLOW_SECONDS ? Rating.Hard : Rating.Good;
 
-// Recognition first (pick the meaning). Once a card has graduated out of the short learning steps into
-// long-term review, switch to producing it (build the sentence). A card that was just missed goes back to the
-// easy kind (a lapse also drops it out of Review, and a retry is always multiple choice).
-
-export function makeCard(row: CardRow, retry = false): Item {
+// Recognition first (pick the meaning, or the Chinese for a meaning). Once a card has graduated out of the short
+// learning steps into long-term review, switch to producing it (build the sentence). A card that was just missed
+// comes back once, as a multiple-choice question of the other kind (a retry never changes the schedule), so the
+// same question is never repeated word for word and the answer cannot simply be memorised.
+export function makeCard(row: CardRow, retry = false, avoid?: Exercise): Item {
   const phrase = PHRASE_BY_ID.get(row.phraseId)!;
   if (!retry && row.state === State.Review && phrase.words.length >= 2) {
     return { kind: 'card', row, ex: 'build', tiles: scramble(phrase.words) };
   }
-  return { kind: 'card', row, ex: 'choose', choices: shuffle([phrase, ...pickDistractors(PHRASES, phrase, 2)]) };
+  // meaning is the skill that matters: the Chinese-to-English question comes up more often
+  let ex: Exercise = Math.random() < 0.4 ? 'recall' : 'choose';
+  if (avoid === 'choose' || avoid === 'recall') ex = avoid === 'choose' ? 'recall' : 'choose';
+  return { kind: 'card', row, ex, retry, choices: shuffle([phrase, ...pickDistractors(PHRASES, phrase, 3)]) };
 }
 
 export function newRows(phrase: Phrase, now = new Date()): CardRow[] {
@@ -108,8 +112,10 @@ export function newAllowanceToday(cards: CardRow[], perDay: number): number {
   return Math.max(0, perDay - done);
 }
 
+export const MAX_REVIEWS = 30; // a session never starts with more reviews than this
+
 export function buildQueue(cards: CardRow[], quiet: boolean, newCount: number): Item[] {
-  const reviews: Item[] = dueCards(cards, quiet).slice(0, 40).map((row) => makeCard(row));
+  const reviews: Item[] = dueCards(cards, quiet).slice(0, MAX_REVIEWS).map((row) => makeCard(row));
   const intros: Item[] = nextNew(cards, newCount).map((phrase) => ({ kind: 'intro', phrase }));
   return [...reviews, ...intros];
 }

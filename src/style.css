@@ -452,3 +452,6 @@ button:disabled { cursor: default; }
 .reveal-line.bad { background: color-mix(in srgb, var(--t1) 12%, var(--card)); }
 .reveal-line b { font-size: 20px; font-family: "PingFang SC", "Heiti SC", sans-serif; }
 .reveal-line span:last-child { color: var(--muted); }
+
+.opt b, .opt .hz { overflow-wrap: anywhere; }
+.opts:not(.two) .opt .pinyin { font-size: 15px; }
