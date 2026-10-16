@@ -455,3 +455,8 @@ button:disabled { cursor: default; }
 
 .opt b, .opt .hz { overflow-wrap: anywhere; }
 .opts:not(.two) .opt .pinyin { font-size: 15px; }
+
+/* tag pills never break across lines; when the title is long the whole pill wraps to its own line */
+.req { display: inline-block; white-space: nowrap; }
+.game-card .mode-text > b, .vocab-card .mode-text > b { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.game-card .req, .vocab-card .req { margin-left: 0; vertical-align: baseline; }
