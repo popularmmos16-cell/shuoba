@@ -1,11 +1,12 @@
 import { Pinyin } from '../components/Pinyin';
 import { shuffle, TONE_OPTIONS } from '../practice';
 import { PHRASES, type Phrase } from '../phrases';
-import { choicesFor } from '../vocab';
+import { choicesFor, WORDS } from '../vocab';
 import TONES from '../data/tones.json';
 import type { Ctx, Q, Spec, Tally } from './Quizzer';
 import { deal, shortGloss } from './pool';
 
+const HAN = /[一-鿿]/;
 const pickOne = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
 
 const revealOf = (p: Phrase) => (
@@ -15,33 +16,6 @@ const revealOf = (p: Phrase) => (
 );
 
 // ---- question makers ----
-
-// see the characters, pick the meaning
-function readQ(ctx: Ctx): Q {
-  const w = ctx.word();
-  return {
-    eyebrow: 'What does it mean?',
-    stem: w.hanzi,
-    stemClass: [...w.hanzi].length > 4 ? 'sm' : 'lg',
-    options: choicesFor(w, ctx.known, 2).map((o) => ({ label: <b>{o.en}</b>, ok: o.id === w.id })),
-    reveal: revealOf(w),
-    sayAfter: w.hanzi,
-  };
-}
-
-// see the meaning, pick the characters
-function recallQ(ctx: Ctx): Q {
-  const w = ctx.word();
-  const opts = choicesFor(w, ctx.known, 2);
-  return {
-    eyebrow: 'Which one says this?',
-    stem: shortGloss(w),
-    stemClass: 'md',
-    options: opts.map((o) => ({ label: <b class="hz">{o.hanzi}</b>, ok: o.id === w.id })),
-    reveal: revealOf(w),
-    sayAfter: w.hanzi,
-  };
-}
 
 // hear it, pick the characters (the pinyin stands in when sound is off)
 function hearQ(ctx: Ctx): Q {
@@ -58,24 +32,54 @@ function hearQ(ctx: Ctx): Q {
   };
 }
 
-function trueFalseQ(ctx: Ctx): Q {
-  const w = ctx.word();
-  const other = choicesFor(w, ctx.known, 1).find((o) => o.id !== w.id);
-  const truth = !other || Math.random() < 0.5;
-  const shown = truth ? w : other!;
+// three words from one theme and one from another: spot the odd one out
+const THEMES: Record<number, string> = {
+  1: 'People', 2: 'Numbers and money', 3: 'Food and drink', 4: 'Getting around',
+  5: 'Time and daily life', 6: 'Family', 7: 'Shopping', 8: 'Feelings and health',
+};
+const THEMED = WORDS.filter((w) => w.unit in THEMES);
+const knownFirst = (ws: Phrase[], known: Set<string>) => shuffle(ws).sort((a, b) => +known.has(b.id) - +known.has(a.id));
+function oddQ(ctx: Ctx): Q {
+  const unit = pickOne(Object.keys(THEMES).map(Number).filter((u) => THEMED.filter((w) => w.unit === u).length >= 3));
+  const trio = knownFirst(THEMED.filter((w) => w.unit === unit), ctx.known).slice(0, 3);
+  const odd = knownFirst(THEMED.filter((w) => w.unit !== unit && shortGloss(w).length > 2), ctx.known)[0];
   return {
-    eyebrow: 'True or false?',
-    stem: w.hanzi,
-    stemClass: [...w.hanzi].length > 4 ? 'sm' : 'lg',
-    hint: <>means <b>“{shown.en}”</b></>,
-    options: [
-      { label: <b>✓ True</b>, ok: truth },
-      { label: <b>✗ False</b>, ok: !truth },
-    ],
+    eyebrow: 'Which one doesn’t belong?',
+    options: shuffle([odd, ...trio]).map((o) => ({ label: <><b class="hz">{o.hanzi}</b><Pinyin text={o.py} /></>, ok: o === odd })),
     cols: 2,
-    reveal: revealOf(w),
-    sayAfter: w.hanzi,
+    reveal: <><b>{THEMES[unit]}</b> <span>{trio.map(shortGloss).join(', ')}. {odd.hanzi} is “{shortGloss(odd)}”.</span></>,
+    sayAfter: odd.hanzi,
   };
+}
+
+// words that share one character: name it. The character is the clue to what the words have in common.
+const HANZI = (s: string) => [...s].filter((c) => HAN.test(c));
+const BY_CHAR = new Map<string, Phrase[]>();
+for (const w of WORDS) for (const c of new Set(HANZI(w.hanzi))) BY_CHAR.set(c, [...(BY_CHAR.get(c) ?? []), w]);
+const ALL_CHARS = [...BY_CHAR.keys()];
+function threadQ(ctx: Ctx): Q {
+  const groups = [...BY_CHAR].filter(([, ws]) => ws.length >= 2);
+  const mine = groups.filter(([, ws]) => ws.filter((w) => ctx.known.has(w.id)).length >= 2);
+  for (;;) {
+    const [, ws] = pickOne(mine.length >= 5 ? mine : groups);
+    const set = shuffle(ws).slice(0, 3);
+    const shared = HANZI(set[0].hanzi).filter((c) => set.every((w) => w.hanzi.includes(c)));
+    if (shared.length !== 1) continue;
+    const right = shared[0];
+    // the other characters of those same words are the best wrong answers
+    const near = shuffle([...new Set(set.flatMap((w) => HANZI(w.hanzi)))].filter((c) => c !== right));
+    const wrong = [...near, ...shuffle(ALL_CHARS.filter((c) => c !== right && !near.includes(c)))].slice(0, 3);
+    return {
+      eyebrow: 'Which character do they share?',
+      stem: set.map((w) => w.hanzi).join(' · '),
+      stemClass: 'md',
+      hint: set.map(shortGloss).join(' · '),
+      options: shuffle([right, ...wrong]).map((c) => ({ label: <b class="hz">{c}</b>, ok: c === right })),
+      cols: 2,
+      reveal: <><b>{right}</b> <span>{set.map((w) => `${w.hanzi} ${w.py}`).join(' · ')}</span></>,
+      sayAfter: set[0].hanzi,
+    };
+  }
 }
 
 const TONE_POOL = TONES.flatMap((s) => [0, 1, 2, 3].map((t) => ({ s, t })));
@@ -93,7 +97,6 @@ function toneQ(ctx: Ctx): Q {
   };
 }
 
-const HAN = /[一-鿿]/;
 const SENTENCES = PHRASES.filter((p) => p.kind === 'phrase' && p.words.length >= 3 && p.words.some((w) => HAN.test(w)));
 const CHUNKS = [...new Set(SENTENCES.flatMap((p) => p.words.filter((w) => HAN.test(w) && !/[，。？！]/.test(w))))];
 let nextSentence: (() => Phrase) | null = null;
@@ -125,7 +128,6 @@ function gapQ(ctx: Ctx): Q {
 
 // ---- how many stars ----
 const byLives = (goal: number) => (t: Tally) => (t.pos >= goal && t.lives > 0 ? t.lives : 0);
-const triple = (a: number, b: number, c: number) => (n: number) => (n >= c ? 3 : n >= b ? 2 : n >= a ? 1 : 0);
 
 const survive = (goal: number, noun: string): Pick<Spec, 'lives' | 'goal' | 'stars' | 'score' | 'status' | 'line'> => ({
   lives: 3,
@@ -136,57 +138,7 @@ const survive = (goal: number, noun: string): Pick<Spec, 'lives' | 'goal' | 'sta
   line: (t, won) => (won ? `${goal} ${noun} with ${t.lives} ${t.lives === 1 ? 'life' : 'lives'} to spare.` : `You got ${t.pos} of ${goal} ${noun}.`),
 });
 
-const mixed = (...fns: ((c: Ctx) => Q)[]) => (_n: number, ctx: Ctx) => pickOne(fns)(ctx);
-
 export const SPECS: Record<string, Spec> = {
-  blitz: {
-    id: 'blitz', title: 'Speed Blitz', coach: '',
-    make: (_n, ctx) => readQ(ctx),
-    clock: 40, clockBonus: 1, clockPenalty: 2, base: 3, settle: [250, 800],
-    status: (t) => `${t.right} right`,
-    stars: (t) => triple(8, 13, 18)(t.right),
-    score: (t) => t.right,
-    line: (t, won) => (won ? `${t.right} right before time ran out.` : `${t.right} right. Get to 8 for a star.`),
-  },
-  sudden: {
-    id: 'sudden', title: 'Sudden Death', coach: '',
-    make: mixed(readQ, recallQ, hearQ),
-    lives: 1, base: 5,
-    status: (t) => `Streak ${t.right}`,
-    stars: (t) => triple(6, 12, 20)(t.right),
-    score: (t) => t.right,
-    line: (t, won) => (won ? `A streak of ${t.right}. Nicely done.` : `A streak of ${t.right}. Get to 6 for a star.`),
-  },
-  ladder: {
-    id: 'ladder', title: 'Ladder Climb', coach: '',
-    make: mixed(recallQ, readQ),
-    goal: 8, slide: true, maxQ: 22, base: 4,
-    status: (t) => `Rung ${t.pos} / 8`,
-    stars: (t) => (t.pos >= 8 ? (t.asked <= 10 ? 3 : t.asked <= 14 ? 2 : 1) : 0),
-    score: (t) => (t.pos >= 8 ? 40 - t.asked : t.pos),
-    line: (t, won) => (won ? `At the top in ${t.asked} questions.` : `You reached rung ${t.pos} of 8.`),
-  },
-  duel: {
-    id: 'duel', title: 'Robot Race', coach: '',
-    make: mixed(readQ, recallQ),
-    goal: 10, rival: 4.5, base: 4, settle: [450, 1400],
-    status: (t) => `You ${t.pos} · Robot ${t.rival}`,
-    stars: (t) => (t.pos >= 10 ? (t.rival <= 5 ? 3 : t.rival <= 7 ? 2 : 1) : 0),
-    score: (t) => (t.pos >= 10 ? 20 - t.rival : t.pos),
-    line: (t, won) => (won ? `You beat the robot by ${10 - t.rival} steps.` : `The robot got there first. You were ${10 - t.pos} steps away.`),
-  },
-  bomb: {
-    id: 'bomb', title: 'Bomb Defuse', coach: '',
-    make: mixed(readQ, recallQ),
-    fuse: (n) => Math.max(4, 8 - n * 0.3), base: 5, settle: [500, 1500],
-    ...survive(12, 'defused'),
-  },
-  tf: {
-    id: 'tf', title: 'True or False', coach: '',
-    make: (_n, ctx) => trueFalseQ(ctx),
-    base: 3, settle: [450, 1500],
-    ...survive(15, 'right'),
-  },
   listen: {
     id: 'listen', title: 'Sound Match', coach: '',
     make: (_n, ctx) => hearQ(ctx),
@@ -204,5 +156,17 @@ export const SPECS: Record<string, Spec> = {
     make: (_n, ctx) => gapQ(ctx),
     base: 5,
     ...survive(10, 'gaps filled'),
+  },
+  odd: {
+    id: 'odd', title: 'Odd One Out', coach: '',
+    make: (_n, ctx) => oddQ(ctx),
+    base: 4, settle: [800, 2000],
+    ...survive(10, 'odd ones found'),
+  },
+  thread: {
+    id: 'thread', title: 'Common Thread', coach: '',
+    make: (_n, ctx) => threadQ(ctx),
+    base: 5, settle: [900, 2200],
+    ...survive(10, 'threads found'),
   },
 };
