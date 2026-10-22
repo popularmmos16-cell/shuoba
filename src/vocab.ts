@@ -42,7 +42,7 @@ export function applyFirstAnswer(row: WordRow, correct: boolean, today: string):
   return { ...row, streak, due: addDays(today, streak) };
 }
 
-export const maxActive = (perDay: number) => perDay * 3;
+export const MAX_ACTIVE = 20; // words being learned at any one time (not yet mastered)
 export const MAX_DUE = 24; // the most review words in one day, so a few missed days never turn into a mountain
 
 export interface Plan { due: Phrase[]; fresh: Phrase[] }
@@ -57,7 +57,7 @@ export function planToday(rows: WordRow[], today: string, perDay: number): Plan 
     .filter(Boolean);
   const startedToday = rows.filter((r) => r.introduced === today).length;
   const active = rows.filter((r) => !r.mastered).length;
-  const room = Math.max(0, Math.min(perDay - startedToday, maxActive(perDay) - active));
+  const room = Math.max(0, Math.min(perDay - startedToday, MAX_ACTIVE - active));
   const have = new Set(rows.map((r) => r.id));
   const fresh = WORDS.filter((w) => !have.has(w.id)).slice(0, room);
   return { due, fresh };

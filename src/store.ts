@@ -24,7 +24,7 @@ export interface State {
 
 const KEY = 'shuoba.state.v1';
 const DEFAULT: State = {
-  goalMin: 20, quiet: false, newPerDay: 8, typingNew: 5, vocabDone: {}, minutesByDate: {},
+  goalMin: 20, quiet: false, newPerDay: 15, typingNew: 7, vocabDone: {}, minutesByDate: {},
   xp: 0, xpByDate: {}, freezes: 0, frozen: {}, badges: {},
   totals: { right: 0, quests: 0, bestCombo: 0, perfect: 0, games: 0 },
   gamesPlayed: {}, gameBest: {},

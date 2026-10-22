@@ -7,8 +7,8 @@ import { Credits } from '../components/Credits';
 import { disableReminders, enableReminders, isStandalone, pushConfigured, pushSupported, remindersOn, sendTestReminder } from '../push';
 
 const GOALS = [10, 15, 20, 30];
-const NEWS = [4, 6, 8, 12];
-const TYPING = [3, 5, 8, 10];
+const NEWS = [8, 12, 15, 20];
+const TYPING = [5, 7, 10, 12];
 
 async function backupNow(): Promise<string> {
   const blob = new Blob([JSON.stringify(await exportData())], { type: 'application/json' });
