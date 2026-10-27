@@ -67,17 +67,18 @@ if (!shown.length) {
 } else if (family === 'accessoryInline') {
   widget.addText(shown.map((w) => w.hanzi).join(' '));
 } else {
-  widget.spacing = small ? 1 : 6;
+  widget.spacing = small ? 0 : 6;
+  if (small) widget.setPadding(0, 0, 0, 0);
   for (const w of shown) {
     const row = widget.addStack();
     row.layoutHorizontally();
     row.bottomAlignContent();
     row.spacing = 6;
     const h = row.addText(w.hanzi);
-    h.font = Font.semiboldSystemFont(small ? 15 : 28);
+    h.font = Font.semiboldSystemFont(small ? 13 : 28);
     h.lineLimit = 1;
     const t = row.addText(w.py + ' · ' + w.en);
-    t.font = Font.systemFont(small ? 9 : 13);
+    t.font = Font.systemFont(small ? 8 : 13);
     t.minimumScaleFactor = 0.5;
     t.lineLimit = 1;
   }
