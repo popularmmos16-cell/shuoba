@@ -569,3 +569,10 @@ h2 { font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: u
 .wcell { border-radius: 14px; background: var(--card); box-shadow: var(--shadow); font-size: 26px; font-family: "PingFang SC", "Heiti SC", sans-serif; border: 2px solid transparent; transition: transform .12s, background .2s; }
 .wcell.sel { background: linear-gradient(145deg, var(--accent-2), var(--accent)); color: #fff; transform: scale(1.06); }
 .wcell.hit { border-color: var(--t3); background: color-mix(in srgb, var(--t3) 14%, var(--card)); }
+
+.wtable { padding: 6px 16px; }
+.wtable summary { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; cursor: pointer; }
+.wtable table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+.wtable th { text-align: left; font-size: 12px; color: var(--muted); padding: 6px 8px 6px 0; }
+.wtable td { padding: 10px 8px 10px 0; border-top: 1px solid var(--line); vertical-align: top; }
+.wtable td.hanzi { margin: 0; white-space: nowrap; }

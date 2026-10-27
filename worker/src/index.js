@@ -1,4 +1,4 @@
-// Shuōba reminder service: stores push addresses and sends one notification a day at 12:00 Singapore time.
+// Shuōba reminder service: stores push addresses and sends a push every 6 hours (06:00, 12:00, 18:00, 00:00 Singapore time).
 // It holds no progress data. Per subscriber it keeps only the push address and the date they last finished
 // their words (so it can skip the reminder on days they've already studied).
 
@@ -46,13 +46,14 @@ export async function runDaily(env, now = new Date()) {
   for (const { name } of keys) {
     const sub = await env.SUBS.get(name, 'json');
     if (!sub) continue;
-    if (sub.lastDone === today) { out.skipped++; continue; }
+    // Every slot is sent: the app's service worker shows the lock-screen word, and decides at noon whether
+    // today's study reminder is still needed (it knows if the words are done).
     const res = await sendPush(env, sub.endpoint).catch(() => null);
     if (res && res.status < 300) out.sent++;
     else if (res && (res.status === 404 || res.status === 410)) { await env.SUBS.delete(name); out.removed++; }
     else { out.failed++; console.log('push failed', res?.status); }
   }
-  console.log('daily reminder', today, JSON.stringify(out));
+  console.log('scheduled push', today, JSON.stringify(out));
   return out;
 }
 

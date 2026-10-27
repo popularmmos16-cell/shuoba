@@ -16,6 +16,8 @@ import { listenRounds, pinyinRounds, readRounds, recallRounds, toneRounds } from
 import { Toaster } from './components/Game';
 import { applyFreezes, checkProgress, type GameId } from './game';
 import { Game } from './games';
+import { syncLockscreen } from './lockscreen';
+import { dateKey } from './store';
 import { IconChart, IconGear, IconHome, IconSpark } from './components/Icons';
 
 const ROUNDS: Partial<Record<Mode, (pool: Phrase[]) => Round[]>> = {
@@ -49,6 +51,9 @@ export function App() {
   const [screen, setScreen] = useState<null | 'vocab' | 'vocab+' | 'learn'>(null);
   const vocab = useVocabPlan();
   const { cards, loaded } = useCards();
+  useEffect(() => {
+    if (vocab.loaded) syncLockscreen(vocab.rows, vocab.done ? dateKey() : null);
+  }, [vocab.loaded, vocab.rows, vocab.done]);
   useEffect(() => {
     if (!loaded) return;
     applyFreezes(); // a missed day is covered by a streak freeze if one is banked

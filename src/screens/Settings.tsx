@@ -85,7 +85,7 @@ export function Settings() {
 
       <section class="card rise" style="--i:2">
         <b>Daily reminder</b>
-        <p class="muted">A notification at 12:00 noon (Singapore time). It’s skipped on days you’ve already done your words.</p>
+        <p class="muted">A notification at 12:00 noon (Singapore time), skipped on days you’ve already done your words. Every 6 hours (06:00, 12:00, 18:00, 00:00) it also puts one word you’ve learnt on your lock screen, replacing the last one.</p>
         {!pushConfigured() ? (
           <small>Reminders aren’t set up in this build yet.</small>
         ) : !pushSupported() ? (

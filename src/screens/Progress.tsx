@@ -14,6 +14,11 @@ export function Progress() {
   const learning = words.length - mastered;
   const byId = new Map(WORDS.map((w) => [w.id, w]));
   const tricky = words.filter((w) => !w.mastered && w.misses > 0).sort((a, b) => b.misses - a.misses).slice(0, 5);
+  const allWords = words
+    .slice()
+    .sort((a, b) => (a.introduced < b.introduced ? -1 : a.introduced > b.introduced ? 1 : 0))
+    .map((w) => byId.get(w.id))
+    .filter((w) => !!w) as typeof WORDS;
   const days = Array.from({ length: 14 }, (_, i) => {
     const d = new Date();
     d.setDate(d.getDate() - (13 - i));
@@ -64,6 +69,22 @@ export function Progress() {
           ))}
         </section>
       )}
+
+      <details class="card wtable rise" style="--i:3">
+        <summary><b>All words learnt</b><small>{allWords.length}</small></summary>
+        {allWords.length === 0 ? (
+          <p class="muted">Words you learn on the Today tab will be listed here for revision.</p>
+        ) : (
+          <table>
+            <thead><tr><th>Hanzi</th><th>Pinyin</th><th>English</th></tr></thead>
+            <tbody>
+              {allWords.map((w) => (
+                <tr><td class="hanzi sm">{w.hanzi}</td><td>{w.py}</td><td>{w.en}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </details>
 
       <h2 class="rise" style="--i:3">Your phrases</h2>
       {rows.length === 0 ? (

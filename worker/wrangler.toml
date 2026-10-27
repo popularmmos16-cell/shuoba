@@ -4,9 +4,9 @@ compatibility_date = "2026-10-01"
 workers_dev = true
 preview_urls = false
 
-# 12:00 noon in Singapore (UTC+8, no daylight saving) is 04:00 UTC
+# Every 6 hours: 06:00, 12:00, 18:00 and 00:00 in Singapore (UTC+8, no daylight saving) are 22:00, 04:00, 10:00, 16:00 UTC
 [triggers]
-crons = ["0 4 * * *"]
+crons = ["0 22,4,10,16 * * *"]
 
 [[kv_namespaces]]
 binding = "SUBS"
