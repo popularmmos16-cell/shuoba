@@ -36,7 +36,7 @@ export async function syncWidget(rows: WordRow[]): Promise<boolean> {
   }
 }
 
-// Same 6-hour rotation as the lock-screen notification, so the two always show the same word.
+// Four words at a time, moving on to the next four every 6 hours.
 const SCRIPT = `// Shuōba lock-screen word. Made by the app: paste into Scriptable and save.
 const API = '__API__';
 const TOKEN = '__TOKEN__';
@@ -54,20 +54,33 @@ try {
 }
 
 const now = Date.now();
-const w = words.length ? words[Math.floor(now / SLOT) % words.length] : null;
+const SHOWN = 4;
+const count = Math.min(SHOWN, words.length);
+const first = (Math.floor(now / SLOT) * SHOWN) % Math.max(words.length, 1);
+const shown = [];
+for (let i = 0; i < count; i++) shown.push(words[(first + i) % words.length]);
 const family = config.widgetFamily;
+const small = family === 'accessoryRectangular' || family === 'accessoryInline';
 const widget = new ListWidget();
-if (!w) {
+if (!shown.length) {
   widget.addText('Learn words in Shuōba first');
 } else if (family === 'accessoryInline') {
-  widget.addText(w.hanzi + ' ' + w.py);
+  widget.addText(shown.map((w) => w.hanzi).join(' '));
 } else {
-  const h = widget.addText(w.hanzi);
-  h.font = Font.semiboldSystemFont(family === 'accessoryRectangular' ? 26 : 44);
-  const s = widget.addText(w.py + ' · ' + w.en);
-  s.font = Font.systemFont(11);
-  s.minimumScaleFactor = 0.6;
-  s.lineLimit = 2;
+  widget.spacing = small ? 1 : 6;
+  for (const w of shown) {
+    const row = widget.addStack();
+    row.layoutHorizontally();
+    row.bottomAlignContent();
+    row.spacing = 6;
+    const h = row.addText(w.hanzi);
+    h.font = Font.semiboldSystemFont(small ? 15 : 28);
+    h.lineLimit = 1;
+    const t = row.addText(w.py + ' · ' + w.en);
+    t.font = Font.systemFont(small ? 9 : 13);
+    t.minimumScaleFactor = 0.5;
+    t.lineLimit = 1;
+  }
 }
 widget.refreshAfterDate = new Date((Math.floor(now / SLOT) + 1) * SLOT);
 if (config.runsInWidget) Script.setWidget(widget);
