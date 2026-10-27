@@ -17,6 +17,7 @@ import { Toaster } from './components/Game';
 import { applyFreezes, checkProgress, type GameId } from './game';
 import { Game } from './games';
 import { syncLockscreen } from './lockscreen';
+import { syncWidget } from './widget';
 import { dateKey } from './store';
 import { IconChart, IconGear, IconHome, IconSpark } from './components/Icons';
 
@@ -52,7 +53,9 @@ export function App() {
   const vocab = useVocabPlan();
   const { cards, loaded } = useCards();
   useEffect(() => {
-    if (vocab.loaded) syncLockscreen(vocab.rows, vocab.done ? dateKey() : null);
+    if (!vocab.loaded) return;
+    syncLockscreen(vocab.rows, vocab.done ? dateKey() : null);
+    syncWidget(vocab.rows);
   }, [vocab.loaded, vocab.rows, vocab.done]);
   useEffect(() => {
     if (!loaded) return;

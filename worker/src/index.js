@@ -1,7 +1,11 @@
 // Shuōba reminder service: stores push addresses and sends a push every 6 hours (06:00, 12:00, 18:00, 00:00 Singapore time).
-// It holds no progress data. Per subscriber it keeps only the push address and the date they last finished
-// their words (so it can skip the reminder on days they've already studied).
+// Per subscriber it keeps the push address and the date they last finished their words. For the lock-screen
+// widget it also keeps the list of words learnt (hanzi, pinyin, English) under a random token, with no name or
+// other identity attached.
 
+const MAX_WIDGETS = 5; // same idea for widget tokens
+const MAX_WORDS = 3000;
+const TOKEN_RE = /^[A-Za-z0-9_-]{16,64}$/;
 const MAX_SUBSCRIBERS = 5; // personal app: keeps a stranger from filling the list
 const PUSH_HOSTS = [/(^|\.)push\.apple\.com$/, /(^|\.)googleapis\.com$/, /(^|\.)push\.services\.mozilla\.com$/, /(^|\.)notify\.windows\.com$/];
 
@@ -61,7 +65,7 @@ export default {
   async fetch(req, env) {
     const cors = {
       'Access-Control-Allow-Origin': env.ALLOWED_ORIGIN,
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
       Vary: 'Origin',
     };
@@ -70,7 +74,27 @@ export default {
 
     const path = new URL(req.url).pathname;
     if (req.method === 'GET' && path === '/') return reply({ ok: true, service: 'shuoba-push' });
+    if (req.method === 'GET' && path === '/progress') {
+      const t = new URL(req.url).searchParams.get('t') ?? '';
+      const found = TOKEN_RE.test(t) ? await env.SUBS.get('prog:' + t, 'json') : null;
+      return found ? reply({ words: found.words }) : reply({ error: 'not found' }, 404);
+    }
     if (req.method !== 'POST') return reply({ error: 'not found' }, 404);
+
+    if (path === '/progress') {
+      let b;
+      try { b = await req.json(); } catch { return reply({ error: 'bad json' }, 400); }
+      const words = b?.words;
+      const okWord = (w) => w && ['hanzi', 'py', 'en'].every((k) => typeof w[k] === 'string' && w[k].length <= 200);
+      if (!TOKEN_RE.test(b?.token ?? '') || !Array.isArray(words) || words.length > MAX_WORDS || !words.every(okWord)) return reply({ error: 'bad request' }, 400);
+      const key = 'prog:' + b.token;
+      if (!(await env.SUBS.get(key))) {
+        const { keys } = await env.SUBS.list({ prefix: 'prog:' });
+        if (keys.length >= MAX_WIDGETS) return reply({ error: 'widget limit reached' }, 429);
+      }
+      await env.SUBS.put(key, JSON.stringify({ words: words.map(({ hanzi, py, en }) => ({ hanzi, py, en })), updated: sgtDate() }));
+      return reply({ ok: true });
+    }
 
     let body;
     try { body = await req.json(); } catch { return reply({ error: 'bad json' }, 400); }

@@ -12,16 +12,20 @@ export interface LockData {
   doneDate: string | null;
 }
 
-export async function syncLockscreen(rows: WordRow[], doneDate: string | null) {
-  if (!('caches' in window)) return;
+// Words learnt so far in the order they were started, as the lock-screen card and the widget show them.
+export function learntWords(rows: WordRow[]): LockData['words'] {
   const byId = new Map(WORDS.map((w) => [w.id, w]));
-  const words = rows
+  return rows
     .slice()
     .sort((a, b) => (a.introduced < b.introduced ? -1 : a.introduced > b.introduced ? 1 : 0))
     .map((r) => byId.get(r.id))
     .filter((w) => !!w)
     .map((w) => ({ hanzi: w!.hanzi, py: w!.py, en: w!.en.split(';')[0].trim() }));
-  const data: LockData = { words, doneDate };
+}
+
+export async function syncLockscreen(rows: WordRow[], doneDate: string | null) {
+  if (!('caches' in window)) return;
+  const data: LockData = { words: learntWords(rows), doneDate };
   try {
     const cache = await caches.open(LOCK_CACHE);
     await cache.put(new URL(FILE, document.baseURI).href, new Response(JSON.stringify(data), { headers: { 'Content-Type': 'application/json' } }));

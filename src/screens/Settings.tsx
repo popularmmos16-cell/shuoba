@@ -4,6 +4,8 @@ import { exportData, importData } from '../db';
 import { VoiceTest } from '../VoiceTest';
 import { QuietToggle } from '../components/QuietToggle';
 import { Credits } from '../components/Credits';
+import { useWords } from '../db';
+import { syncWidget, widgetScript } from '../widget';
 import { disableReminders, enableReminders, isStandalone, pushConfigured, pushSupported, remindersOn, sendTestReminder } from '../push';
 
 const GOALS = [10, 15, 20, 30];
@@ -36,6 +38,8 @@ export function Settings() {
   const [remind, setRemind] = useState(remindersOn());
   const [rmsg, setRmsg] = useState('');
   const [busy, setBusy] = useState(false);
+  const [wmsg, setWmsg] = useState('');
+  const { words } = useWords();
   const fileRef = useRef<HTMLInputElement>(null);
 
   const onFile = async (e: Event) => {
@@ -141,6 +145,29 @@ export function Settings() {
           </div>
         )}
         {rmsg && <small>{rmsg}</small>}
+      </section>
+
+      <section class="card rise" style="--i:2">
+        <b>Lock-screen widget</b>
+        <p class="muted">Shows one word you’ve learnt on your lock screen, changing every 6 hours. Needs the free Scriptable app. Tap the button, then paste into a new Scriptable script.</p>
+        <div class="row">
+          <button
+            class="primary"
+            onClick={async () => {
+              try {
+                await navigator.clipboard.writeText(widgetScript());
+              } catch {
+                setWmsg('Could not copy. Allow clipboard access and try again.');
+                return;
+              }
+              const ok = await syncWidget(words);
+              setWmsg(ok ? 'Copied. Open Scriptable, tap +, paste, and save.' : 'Copied, but your words did not upload. Check your connection and tap again.');
+            }}
+          >
+            Copy widget script
+          </button>
+        </div>
+        {wmsg && <small>{wmsg}</small>}
       </section>
 
       <section class="card rise" style="--i:2">
