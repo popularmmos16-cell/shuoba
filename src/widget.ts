@@ -16,7 +16,7 @@ export const widgetToken = (): string | null => {
   }
 };
 
-function makeToken(): string {
+export function makeToken(): string {
   const b = crypto.getRandomValues(new Uint8Array(24));
   return btoa(String.fromCharCode(...b)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }

@@ -3,6 +3,7 @@ const ROWS: { what: string; who: string; licence: string; href: string }[] = [
   { what: 'HSK level tags and word list', who: 'Complete HSK Vocabulary by Yanis Zafirópulos (HSK 3.0 lists from elkmovie/hsk30)', licence: 'MIT', href: 'https://github.com/drkameleon/complete-hsk-vocabulary' },
   { what: 'Spoken audio', who: 'Voice 超文 (chaowen) for the Piper speech engine, trained on the OHF-Voice CC0 dataset', licence: 'CC0 data', href: 'https://github.com/OHF-Voice/voice-datasets' },
   { what: 'Spaced-repetition scheduling', who: 'FSRS algorithm, via ts-fsrs, by the Open Spaced Repetition project', licence: 'MIT', href: 'https://github.com/open-spaced-repetition/ts-fsrs' },
+  { what: 'Chat partner (replies, mistake checking and review)', who: 'Qwen3-30B-A3B by Alibaba Cloud and gpt-oss-120b by OpenAI, run on Cloudflare Workers AI', licence: 'Apache 2.0', href: 'https://developers.cloudflare.com/workers-ai/models/' },
   { what: 'App framework and storage', who: 'Preact, idb, Vite', licence: 'MIT / ISC', href: 'https://preactjs.com' },
 ];
 

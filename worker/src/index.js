@@ -3,6 +3,8 @@
 // widget it also keeps the list of words learnt (hanzi, pinyin, English) under a random token, with no name or
 // other identity attached.
 
+import { handleChat } from './chat.js';
+
 const MAX_WIDGETS = 5; // same idea for widget tokens
 const MAX_WORDS = 3000;
 const TOKEN_RE = /^[A-Za-z0-9_-]{16,64}$/;
@@ -80,6 +82,14 @@ export default {
       return found ? reply({ words: found.words }) : reply({ error: 'not found' }, 404);
     }
     if (req.method !== 'POST') return reply({ error: 'not found' }, 404);
+
+    if (path === '/chat' || path === '/review') {
+      if (Number(req.headers.get('content-length') ?? 0) > 40_000) return reply({ error: 'too large' }, 413);
+      let b;
+      try { b = await req.json(); } catch { return reply({ error: 'bad json' }, 400); }
+      const r = await handleChat(path, b, env, sgtDate());
+      return reply(r.body, r.status);
+    }
 
     if (path === '/progress') {
       let b;

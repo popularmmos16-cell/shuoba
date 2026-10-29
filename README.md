@@ -31,7 +31,10 @@ Each day has a compulsory part and optional extras:
    recall, tones by sight, build the sentence. Draws only from phrases already started.
 4. **Games** — `src/games/`, registry in `GAMES` in `src/game.ts`. One game per day on a fixed cycle (`gameOfToday`).
    Most are `Quizzer` configs in `src/games/specs.tsx`; `Match`, `Sprint`, `Echo`, `Typer`, `WordHunt` are custom.
-5. **Reward layer** — `src/game.ts`: XP/levels, combos, daily quests, badges (`BADGES`), streak freezes. It never
+5. **Chat** — `src/chat.ts`, `src/screens/Chat.tsx`, `ChatSession.tsx`, `ChatReview.tsx`. A conversation partner: you pick an
+   AI character, chat in Chinese, and a wrong sentence gets a natural "啊？" instead of a correction. "End & review" shows
+   the transcript with your mistakes marked and corrected. See "Chat partner" below.
+6. **Reward layer** — `src/game.ts`: XP/levels, combos, daily quests, badges (`BADGES`), streak freezes. It never
    changes scheduling, and it all lives in the saved state so it is part of the backup.
 
 ### Source map
@@ -101,7 +104,8 @@ All three depend on the Worker. Its URL and the VAPID public key are in `src/con
   `localStorage`. Settings generates a Scriptable script (the `SCRIPT` template in `widget.ts`) that fetches them.
   Edit that template to change the widget layout, then re-paste it into Scriptable.
 - **Worker** (`worker/src/index.js`, KV namespace `SUBS`, config in `worker/wrangler.toml`): endpoints `/subscribe`,
-  `/unsubscribe`, `/done`, `/test`, `/progress` (GET and POST). It is capped at 5 subscribers and 5 widget tokens.
+  `/unsubscribe`, `/done`, `/test`, `/progress` (GET and POST), and `/chat` and `/review` (see Chat partner). It is capped
+  at 5 subscribers and 5 widget tokens.
 
 ```sh
 cd worker
@@ -114,12 +118,39 @@ npm run deploy
 If you change the cron schedule in `wrangler.toml`, also update `SLOT_MS` in `public/push-sw.js` and the 6-hour `SLOT`
 in the widget script, which assume 6-hour slots. `ALLOWED_ORIGIN` must match the site's origin (CORS).
 
+## Chat partner
+
+Runs on **Cloudflare Workers AI** through the `[ai]` binding in `worker/wrangler.toml` (no API key). All prompts and the
+characters live in `worker/src/chat.js`; the app can only choose a character and send the chat plus the hanzi words you have
+learnt, so it cannot change the prompt.
+
+- `POST /chat`: two calls run side by side. One model (Qwen3-30B, `TALK_MODEL`) writes the character's reply. Another
+  (gpt-oss-120b, `JUDGE_MODEL`) strictly checks your latest message. If it finds a mistake the reply is thrown away and the
+  Worker answers with a "huh?" from a fixed list (a second miss in a row uses another list; a third makes the character
+  gently move on). The mistake's correction is returned as `note` and stored on that message.
+- `POST /review`: the end-of-chat pass over the whole transcript with the judge model. The app merges it with the `note`s
+  (`mergeMistakes` in `src/chat.ts`) so every "huh?" has an explanation.
+- Why two models: in testing the judge never flagged a correct sentence and gave accurate English reasons; Qwen3 was faster
+  and sounded more natural but false-alarmed and sometimes explained rules wrongly. Re-run a batch of correct and wrong
+  sentences through `/chat` after changing a prompt or a model.
+- Qwen3 needs `/no_think` appended to the last user message (`run()` does it), or it returns empty content.
+  gpt-oss takes `reasoning_effort: 'low'` for the quick per-message check.
+- Guardrails: the token must look like a random token; at most 5 devices (`MAX_CHAT_USERS`); 150 calls per device per day
+  (`MAX_PER_DAY`, a review counts 3); history, message and word-list sizes are capped; only hanzi words are ever put in a
+  prompt; the character answers honestly if sincerely asked whether it is an AI. The free Workers AI allowance is 10,000
+  neurons a day; a chat turn costs roughly 20, a review roughly 80. Every call also writes one KV record, and the free KV
+  plan allows 1,000 writes a day (shared with push and widget syncs). Past that, calls fail (nothing is billed) until 00:00 UTC.
+- Chats live only on the phone (`shuoba.chats`, the unfinished one in `shuoba.chat.draft`, the device token in
+  `shuoba.chat`). They are **not** part of the backup file.
+- Voice: replies are read aloud with `speakZh` (browser speech, so the iPhone silent switch mutes them). To speak instead of
+  type, use the dictation key on the iOS Chinese keyboard.
+
 ## Data and backups
 
 - Settings and game state: `localStorage`. Cards, review log and word progress: IndexedDB.
 - Settings → backup exports all of it as one JSON file (`Backup` in `src/db.ts`). If you change the shape of stored
   data, keep old backups importable (see how `words?` is optional) or bump `version`.
-- Device-specific flags (`shuoba.push`, `shuoba.widget`) are deliberately kept out of backups.
+- Device-specific flags (`shuoba.push`, `shuoba.widget`, `shuoba.chat*`) are deliberately kept out of backups.
 
 ## Licences
 

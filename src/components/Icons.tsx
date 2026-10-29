@@ -11,3 +11,4 @@ export const IconCheck = () => (<svg {...base}><path d="m5 12.5 4.500 4.500L19 7
 export const IconSpark = () => (<svg {...base}><path d="M12 3v4M12 17v4M3 12h4M17 12h4" /><path d="m12 8 1.500 3.500L17 13l-3.500 1.500L12 18l-1.500-3.500L7 13l3.500-1.500Z" /></svg>);
 export const IconMute = () => (<svg {...base}><path d="M11 5 6 9H3v6h3l5 4V5Z" /><path d="m16 9 5 6M21 9l-5 6" /></svg>);
 export const IconHeart = () => (<svg {...base} fill="currentColor" stroke="none"><path d="M12 21s-7.500-4.600-9.600-9.300C.9 8.300 2.800 4.500 6.500 4.500c2 0 3.700 1.100 5.500 3.200 1.800-2.100 3.500-3.200 5.500-3.200 3.700 0 5.600 3.800 4.100 7.200C19.500 16.400 12 21 12 21Z" /></svg>);
+export const IconChat = () => (<svg {...base}><path d="M4 5.5h16a1 1 0 0 1 1 1V16a1 1 0 0 1-1 1h-8l-4.500 3.500V17H4a1 1 0 0 1-1-1V6.500a1 1 0 0 1 1-1Z" /><path d="M8 10h8M8 13h5" /></svg>);

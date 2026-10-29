@@ -8,6 +8,10 @@ preview_urls = false
 [triggers]
 crons = ["0 22,4,10,16 * * *"]
 
+# Workers AI runs the chat partner (src/chat.js). No key: the binding is the credential.
+[ai]
+binding = "AI"
+
 [[kv_namespaces]]
 binding = "SUBS"
 id = "23532deb3ae84a148d0a3bc57e27282b"

@@ -19,7 +19,12 @@ import { Game } from './games';
 import { syncLockscreen } from './lockscreen';
 import { syncWidget } from './widget';
 import { dateKey } from './store';
-import { IconChart, IconGear, IconHome, IconSpark } from './components/Icons';
+import { IconChart, IconChat, IconGear, IconHome, IconSpark } from './components/Icons';
+import { Chat } from './screens/Chat';
+import { ChatSession } from './screens/ChatSession';
+import { ChatReview } from './screens/ChatReview';
+import { getDraft, wordsForChat, type PersonaId, type SavedChat } from './chat';
+import { learntWords } from './lockscreen';
 
 const ROUNDS: Partial<Record<Mode, (pool: Phrase[]) => Round[]>> = {
   tones: () => toneRounds(),
@@ -37,10 +42,11 @@ const TITLES: Record<Mode, string> = {
   build: 'Build the sentence',
 };
 
-type Tab = 'home' | 'practice' | 'progress' | 'settings';
+type Tab = 'home' | 'chat' | 'practice' | 'progress' | 'settings';
 
 const TABS: { id: Tab; label: string; icon: () => preact.JSX.Element }[] = [
   { id: 'home', label: 'Today', icon: IconHome },
+  { id: 'chat', label: 'Chat', icon: IconChat },
   { id: 'practice', label: 'Extra', icon: IconSpark },
   { id: 'progress', label: 'Progress', icon: IconChart },
   { id: 'settings', label: 'Settings', icon: IconGear },
@@ -66,11 +72,28 @@ export function App() {
   const pool = [...new Set(cards.map((c) => c.phraseId))].map((id) => PHRASE_BY_ID.get(id)!).filter(Boolean);
   const [game, setGame] = useState<{ id: GameId; run: number } | null>(null);
   const playGame = (id: GameId) => setGame((g) => ({ id, run: (g?.run ?? 0) + 1 }));
+  const [chat, setChat] = useState<{ persona: PersonaId; resume?: boolean; run: number } | { view: SavedChat } | null>(null);
   const [quiz, setQuiz] = useState<{ mode: Mode; rounds: Round[]; run: number } | null>(null);
 
   const startQuiz = (mode: Mode) =>
     setQuiz((q) => ({ mode, rounds: ROUNDS[mode]?.(pool) ?? [], run: (q?.run ?? 0) + 1 }));
 
+  if (chat) {
+    const close = () => setChat(null);
+    if ('view' in chat) return <><Toaster /><ChatReview chat={chat.view} onClose={close} /></>;
+    return (
+      <>
+        <Toaster />
+        <ChatSession
+          key={chat.run}
+          persona={chat.persona}
+          resume={chat.resume ? getDraft()?.msgs : undefined}
+          words={wordsForChat(learntWords(vocab.rows).map((w) => w.hanzi))}
+          onClose={close}
+        />
+      </>
+    );
+  }
   if (game) {
     const close = () => setGame(null);
     const again = () => playGame(game.id);
@@ -105,6 +128,12 @@ export function App() {
             onWords={() => setScreen('vocab')}
             onExtra={() => setTab('practice')}
             onGame={playGame}
+          />}
+        {tab === 'chat' && <Chat
+            wordCount={vocab.rows.length}
+            onStart={(persona) => setChat({ persona, run: Date.now() })}
+            onResume={() => { const d = getDraft(); if (d) setChat({ persona: d.persona, resume: true, run: Date.now() }); }}
+            onOpen={(c) => setChat({ view: c })}
           />}
         {tab === 'practice' && <Practice onPick={startQuiz} onGame={playGame} poolSize={pool.length} />}
         {tab === 'progress' && <Progress />}
