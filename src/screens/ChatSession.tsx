@@ -141,14 +141,16 @@ export function ChatSession({ persona, resume, words, onClose }: { persona: Pers
 
       <form class="chat-in" onSubmit={send}>
         <input
+          ref={(el) => {
+            el?.setAttribute('autocorrect', 'off');
+            el?.setAttribute('autocapitalize', 'off');
+          }}
           value={text}
           onInput={(e) => setText((e.target as HTMLInputElement).value)}
           placeholder={full ? 'Chat is full' : 'Type in Chinese'}
           disabled={full}
           lang="zh-Hans"
           autocomplete="off"
-          autocapitalize="off"
-          autocorrect="off"
           spellcheck={false}
           aria-label="Your message"
         />

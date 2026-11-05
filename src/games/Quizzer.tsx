@@ -191,7 +191,7 @@ export function Quizzer({ spec, onClose, onAgain }: { spec: Spec; onClose: () =>
         {q.replay ? (
           <button class="big-play small" aria-label="Play audio" onClick={() => q.say && speakZh(q.say)}><IconSound /></button>
         ) : (
-          <div class={`stem ${q.stemClass ?? 'lg'}`}>{q.stem}</div>
+          q.stem !== undefined && <div class={`stem ${q.stemClass ?? 'lg'}`}>{q.stem}</div>
         )}
         {q.hint && <p class="gx-hint">{q.hint}</p>}
         {answered && q.reveal && <div class={`reveal-line ${wrong ? 'bad' : 'good'}`}>{q.reveal}</div>}

@@ -4,10 +4,11 @@ import { IconFlame, IconMute, IconPlay, IconSound } from '../components/Icons';
 import { setQuiet } from '../components/QuietToggle';
 import { dateKey, dayDone, fmtMin, streakOf, useStore } from '../store';
 import { Quests, XpBar } from '../components/Game';
-import { DAILY_GAME_XP, gameOfToday, levelOf, xpToday, type GameId } from '../game';
+import { levelOf, xpToday, type GameId } from '../game';
 import { useVocabPlan } from '../useVocab';
 import { phraseOfTheDay, PHRASES } from '../phrases';
 import { speakZh } from '../speak';
+import { WordSheetCard } from './Words';
 import { useCards } from '../db';
 import { dueCards, learnedPhraseIds, newAllowanceToday, unseenPhrases } from '../srs';
 
@@ -21,15 +22,13 @@ function greeting(): [string, string] {
   return ['晚上好', 'Good evening'];
 }
 
-export function Home({ onStart, onWords, onExtra, onGame }: { onStart: () => void; onWords: () => void; onExtra: () => void; onGame: (id: GameId) => void }) {
+export function Home({ onStart, onWords, onExtra, onSheet, onDrill }: { onStart: () => void; onWords: () => void; onExtra: () => void; onGame: (id: GameId) => void; onSheet: () => void; onDrill: (mode: 'calm' | 'blitz') => void }) {
   const s = useStore();
   const vocab = useVocabPlan();
   const { cards } = useCards();
   const today = s.minutesByDate[dateKey()] ?? 0;
   const streak = streakOf(s);
   const [zh, en] = greeting();
-  const game = gameOfToday();
-  const gamePlayed = !!s.gamesPlayed[dateKey()];
   const phrase = phraseOfTheDay();
 
   const due = dueCards(cards, s.quiet).length;
@@ -94,13 +93,9 @@ export function Home({ onStart, onWords, onExtra, onGame }: { onStart: () => voi
         </button>
       </section>
 
-      <button class={`card game-card rise ${gamePlayed ? 'played' : ''}`} style="--i:2" onClick={() => onGame(game.id)}>
-        <span class="glyph">{game.glyph}</span>
-        <span class="mode-text">
-          <b>Today’s game: {game.title} <em class="req">{gamePlayed ? 'won ✓' : `+${DAILY_GAME_XP} XP`}</em></b>
-          <small>{gamePlayed ? 'Beaten today. Play again for fun, or come back tomorrow for a new one.' : game.blurb}</small>
-        </span>
-      </button>
+      <div class="rise" style="--i:2">
+        <WordSheetCard rows={vocab.rows} total={vocab.total} best={s.gameBest.blitz} onAll={onSheet} onDrill={onDrill} />
+      </div>
 
       <section class="card level-card rise" style="--i:2">
         <XpBar xp={s.xp} />
@@ -146,7 +141,7 @@ export function Home({ onStart, onWords, onExtra, onGame }: { onStart: () => voi
 
       <button class="card extra-teaser rise" style="--i:4" onClick={onExtra}>
         <span class="glyph">练</span>
-        <span class="mode-text"><b>Got extra time?</b><small>Optional bonus practice, including silent options</small></span>
+        <span class="mode-text"><b>Games & more practice</b><small>Games, listening and silent practice</small></span>
       </button>
 
       <section class="card phrase rise" style="--i:5">

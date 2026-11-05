@@ -45,6 +45,7 @@ function oddQ(ctx: Ctx): Q {
   const odd = knownFirst(THEMED.filter((w) => w.unit !== unit && shortGloss(w).length > 2), ctx.known)[0];
   return {
     eyebrow: 'Which one doesn’t belong?',
+    hint: 'Three share a theme. Tap the odd one out.',
     options: shuffle([odd, ...trio]).map((o) => ({ label: <><b class="hz">{o.hanzi}</b><Pinyin text={o.py} /></>, ok: o === odd })),
     cols: 2,
     reveal: <><b>{THEMES[unit]}</b> <span>{trio.map(shortGloss).join(', ')}. {odd.hanzi} is “{shortGloss(odd)}”.</span></>,

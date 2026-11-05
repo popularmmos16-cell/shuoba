@@ -14,7 +14,7 @@ export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () 
   const [result, setResult] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
   const done = i >= rounds.length;
-  const r = rounds[Math.min(i, rounds.length - 1)];
+  const r = rounds[Math.min(i, rounds.length - 1)] ?? { phrase: { hanzi: '', en: '', py: '' } as Phrase, tiles: [] as string[] }; // no sentence to build yet
   const a = useAssemble(r.tiles, r.phrase.hanzi);
 
   const check = () => {
@@ -29,6 +29,21 @@ export function Build({ pool, onClose, onRetry }: { pool: Phrase[]; onClose: () 
     setResult(null);
     setI((n) => n + 1);
   };
+
+  if (rounds.length === 0)
+    return (
+      <div class="learn">
+        <header class="learn-top">
+          <button class="icon-btn" aria-label="Close" onClick={onClose}><IconClose /></button>
+        </header>
+        <div class="finish rise">
+          <div class="seal big">排</div>
+          <h1>Nothing to build yet</h1>
+          <p>This exercise needs full sentences. Learn a few in a session first, then come back.</p>
+          <button class="cta solid" onClick={onClose}>Back to Extra</button>
+        </div>
+      </div>
+    );
 
   return (
     <div class="learn">

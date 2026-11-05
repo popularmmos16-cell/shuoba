@@ -40,7 +40,7 @@ export function Quiz({ title, rounds, onClose, onRetry }: { title: string; round
 
       {done ? (
         <div class="finish rise">
-          {score === rounds.length && <Confetti />}
+          {rounds.length > 0 && score === rounds.length && <Confetti />}
           <div class="seal big"><IconCheck /></div>
           <h1>{score} / {rounds.length}</h1>
           <p>{title} done. <b class="gain">+{getSession().xp} XP</b> earned. Extra practice never affects your streak or goal, so there’s no pressure.</p>

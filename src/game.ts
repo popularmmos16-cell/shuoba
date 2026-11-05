@@ -93,6 +93,13 @@ export function learnedOne() {
   checkProgress();
 }
 
+// One answer in the word drill: counts toward the "Drill 20 words" quest.
+export function drilledOne() {
+  const d = day();
+  update({ day: { ...d, drilled: (d.drilled ?? 0) + 1 } });
+  checkProgress();
+}
+
 // Called when a session finishes: a completion bonus, bigger for a clean run.
 export function finishSession(kind: 'words' | 'phrases'): number {
   const answered = session.right + session.wrong;
@@ -114,7 +121,7 @@ const QUESTS: QuestDef[] = [
   { id: 'right', title: 'Answer 15 correctly', goal: 15, xp: 25, progress: (_s, d) => d.right },
   { id: 'combo', title: 'Reach a ×6 combo', goal: 6, xp: 30, progress: (_s, d) => d.best },
   { id: 'new', title: 'Learn 5 new items', goal: 5, xp: 25, progress: (_s, d) => d.learned },
-  { id: 'play', title: 'Beat today’s game', goal: 1, xp: 30, progress: (s, _d, t) => (s.gamesPlayed[t] ? 1 : 0) },
+  { id: 'drill', title: 'Drill 20 words', goal: 20, xp: 30, progress: (_s, d) => d.drilled ?? 0 },
   { id: 'time', title: 'Study for 10 minutes', goal: 10, xp: 25, progress: (s, _d, t) => Math.floor(s.minutesByDate[t] ?? 0) },
 ];
 // whole local days since 1970, so rotations change at local midnight, not at UTC midnight

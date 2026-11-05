@@ -1,3 +1,4 @@
+import { useEffect } from 'preact/hooks';
 import { dateKey, markVocabDone, useStore } from './store';
 import { useWords } from './db';
 import { planToday, remaining, WORDS } from './vocab';
@@ -12,6 +13,10 @@ export function useVocabPlan() {
   const done = !!s.vocabDone[today];
   const mastered = words.filter((w) => w.mastered).length;
   // nothing due and nothing new to teach (e.g. words are waiting for their next day) still counts as done
-  if (loaded && !done && left === 0) markVocabDone(today);
+  const nothingToDo = loaded && !done && left === 0;
+  // marking a day done updates the store, which re-renders other components: do it after render, not during it
+  useEffect(() => {
+    if (nothingToDo) markVocabDone(today);
+  }, [nothingToDo, today]);
   return { plan, left, done: done || (loaded && left === 0), loaded, mastered, total: WORDS.length, rows: words };
 }

@@ -19,7 +19,7 @@ export interface State {
   totals: { right: number; quests: number; bestCombo: number; perfect: number; games?: number };
   gamesPlayed: Record<string, boolean>; // days today's game was beaten
   gameBest: Record<string, number>; // best score per game
-  day: { k: string; right: number; best: number; learned: number; claimed: string[] };
+  day: { k: string; right: number; best: number; learned: number; claimed: string[]; drilled?: number };
 }
 
 const KEY = 'shuoba.state.v1';

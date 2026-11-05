@@ -20,6 +20,8 @@ import { syncLockscreen } from './lockscreen';
 import { syncWidget } from './widget';
 import { dateKey } from './store';
 import { IconChart, IconChat, IconGear, IconHome, IconSpark } from './components/Icons';
+import { Words } from './screens/Words';
+import { Drill, type DrillMode } from './screens/Drill';
 import { Chat } from './screens/Chat';
 import { ChatSession } from './screens/ChatSession';
 import { ChatReview } from './screens/ChatReview';
@@ -55,7 +57,9 @@ const TABS: { id: Tab; label: string; icon: () => preact.JSX.Element }[] = [
 export function App() {
   const [tab, setTab] = useState<Tab>('home');
   // words are compulsory and come first; 'vocab+' continues into the phrase session when finished
-  const [screen, setScreen] = useState<null | 'vocab' | 'vocab+' | 'learn'>(null);
+  const [screen, setScreen] = useState<null | 'vocab' | 'vocab+' | 'learn' | 'words'>(null);
+  const [drill, setDrill] = useState<{ mode: DrillMode; run: number } | null>(null);
+  const startDrill = (mode: DrillMode) => setDrill((d) => ({ mode, run: (d?.run ?? 0) + 1 }));
   const vocab = useVocabPlan();
   const { cards, loaded } = useCards();
   useEffect(() => {
@@ -94,6 +98,9 @@ export function App() {
       </>
     );
   }
+  if (drill)
+    return <><Toaster /><Drill key={drill.run} rows={vocab.rows} mode={drill.mode} onClose={() => setDrill(null)} onAgain={() => startDrill(drill.mode)} /></>;
+  if (screen === 'words') return <><Toaster /><Words rows={vocab.rows} onClose={() => setScreen(null)} onDrill={startDrill} /></>;
   if (game) {
     const close = () => setGame(null);
     const again = () => playGame(game.id);
@@ -128,6 +135,8 @@ export function App() {
             onWords={() => setScreen('vocab')}
             onExtra={() => setTab('practice')}
             onGame={playGame}
+            onSheet={() => setScreen('words')}
+            onDrill={startDrill}
           />}
         {tab === 'chat' && <Chat
             wordCount={vocab.rows.length}

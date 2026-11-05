@@ -41,6 +41,7 @@ export function Vocab({ onClose, onContinue }: { onClose: () => void; onContinue
   const answered = useRef(new Set<string>()); // words whose first answer today has been recorded
   const last = useRef(Date.now());
   const input = useRef<HTMLInputElement>(null);
+  const advancing = useRef(false); // Enter on the focused Continue button fires the key handler and the click
   const today = dateKey();
 
   useEffect(() => {
@@ -66,6 +67,7 @@ export function Vocab({ onClose, onContinue }: { onClose: () => void; onContinue
   }, [key]);
 
   const next = (rest: VItem[]) => {
+    advancing.current = false;
     setText('');
     setFb(null);
     setPicked(null);
@@ -104,7 +106,8 @@ export function Vocab({ onClose, onContinue }: { onClose: () => void; onContinue
   };
 
   const proceed = () => {
-    if (cur?.kind !== 'test' || !fb) return;
+    if (cur?.kind !== 'test' || !fb || advancing.current) return;
+    advancing.current = true;
     tick();
     const correct = fb.correct || fb.overridden;
     const rest = queue!.slice(1);
@@ -151,7 +154,7 @@ export function Vocab({ onClose, onContinue }: { onClose: () => void; onContinue
     <div class="learn">
       <header class="learn-top">
         <button class="icon-btn" aria-label="Close" onClick={onClose}><IconClose /></button>
-        <div class="bar"><i style={{ width: `${(cur ? progress : 1) * 100}%` }} /></div>
+        <div class="bar"><i style={{ width: `${(queue === null ? 0 : cur ? progress : 1) * 100}%` }} /></div>
         <ComboChip />
         <small>{left}</small>
       </header>

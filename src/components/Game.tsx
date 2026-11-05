@@ -25,7 +25,7 @@ export function Toaster() {
   );
 }
 
-const COLORS = ['#ffd45e', '#ff8fb8', '#8f5cf0', '#4cd68a', '#6fa2ff'];
+const COLORS = ['#ff5a41', '#ffb23d', '#f4f0e9', '#46c981', '#6aa5ff'];
 export function Confetti() {
   const bits = Array.from({ length: 28 }, (_, i) => ({
     left: (i * 37) % 100, delay: (i % 7) * 90, dur: 1400 + ((i * 53) % 900), color: COLORS[i % COLORS.length], rot: (i * 47) % 360,

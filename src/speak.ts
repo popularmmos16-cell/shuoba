@@ -26,5 +26,8 @@ export function speakZh(text: string, rate = 0.85) {
   el ??= new Audio();
   el.pause();
   el.src = src;
-  el.play().catch(() => tts(text, rate));
+  el.play().catch((e: unknown) => {
+    // a newer clip replacing this one rejects the old play() with AbortError: that is not a failure
+    if ((e as DOMException)?.name !== 'AbortError') tts(text, rate);
+  });
 }

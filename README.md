@@ -29,12 +29,17 @@ Each day has a compulsory part and optional extras:
    `nextNew()` picks new items from the earliest unfinished unit and only brings in a sentence once its characters are taught.
 3. **Extra practice** — `src/practice.ts`, `src/screens/Practice.tsx`, `Quiz.tsx`, `Build.tsx`. Tone ears, listen, read,
    recall, tones by sight, build the sentence. Draws only from phrases already started.
-4. **Games** — `src/games/`, registry in `GAMES` in `src/game.ts`. One game per day on a fixed cycle (`gameOfToday`).
+4. **Your words** — `src/screens/Words.tsx`, `src/screens/Drill.tsx`. The front-and-centre card on Home is a wall of tiles, one per word
+   you have started: pulsing when due, seal-red when mastered, three pips for the streak. Tap a tile for its detail; "See all" opens the
+   full sheet (list or wall, filters, and a *cover the answers* switch to test yourself). **Drill** (10 questions) and **Blitz** (60 s,
+   personal best in `gameBest.blitz`) run on those words any time: hanzi→meaning, meaning→hanzi, sound→hanzi, weak words more often.
+   Drills earn XP and study time but never change the word schedule. They feed the "Drill 20 words" daily quest.
+5. **Games** — `src/games/`, registry in `GAMES` in `src/game.ts`. One game per day on a fixed cycle (`gameOfToday`).
    Most are `Quizzer` configs in `src/games/specs.tsx`; `Match`, `Sprint`, `Echo`, `Typer`, `WordHunt` are custom.
-5. **Chat** — `src/chat.ts`, `src/screens/Chat.tsx`, `ChatSession.tsx`, `ChatReview.tsx`. A conversation partner: you pick an
+6. **Chat** — `src/chat.ts`, `src/screens/Chat.tsx`, `ChatSession.tsx`, `ChatReview.tsx`. A conversation partner: you pick an
    AI character, chat in Chinese, and a wrong sentence gets a natural "啊？" instead of a correction. "End & review" shows
    the transcript with your mistakes marked and corrected. See "Chat partner" below.
-6. **Reward layer** — `src/game.ts`: XP/levels, combos, daily quests, badges (`BADGES`), streak freezes. It never
+7. **Reward layer** — `src/game.ts`: XP/levels, combos, daily quests, badges (`BADGES`), streak freezes. It never
    changes scheduling, and it all lives in the saved state so it is part of the backup.
 
 ### Source map
@@ -156,6 +161,3 @@ learnt, so it cannot change the prompt.
 
 Code: see `LICENSE`. Content in `src/data/` and `public/audio/`: CC BY-SA 4.0 (`DATA-LICENSE.md`), because it includes
 CC-CEDICT-derived pronunciations. Credits shown in the app live in `src/components/Credits.tsx`.
-
-> Known stale: `DATA-LICENSE.md` and `Credits.tsx` still say the audio comes from Piper / 超文. It is now generated
-> with the macOS Tingting voice (see `tools/gen-audio.py`). Update both when you next touch licences.

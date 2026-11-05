@@ -3,7 +3,11 @@ import TONES from './data/tones.json';
 
 const ROUND_LEN = 10;
 export const MIN_POOL = 4; // enough to offer three answer choices
-const distractors = (pool: Phrase[], p: Phrase) => shuffle(pool.filter((x) => x !== p)).slice(0, 2);
+// two wrong answers, never sharing the right answer's English (or each other's), so only one option can be right
+const distractors = (pool: Phrase[], p: Phrase) => {
+  const seen = new Set([p.en]);
+  return shuffle(pool.filter((x) => x !== p)).filter((x) => !seen.has(x.en) && !!seen.add(x.en)).slice(0, 2);
+};
 
 export interface Round {
   say?: string; // text sent to speech; rounds without it are silent

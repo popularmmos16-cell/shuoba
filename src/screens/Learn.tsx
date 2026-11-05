@@ -203,7 +203,7 @@ export function Learn({ onClose }: { onClose: () => void }) {
     <div class="learn">
       <header class="learn-top">
         <button class="icon-btn" aria-label="Close" onClick={onClose}><IconClose /></button>
-        <div class="bar"><i style={{ width: `${(cur ? progress : 1) * 100}%` }} /></div>
+        <div class="bar"><i style={{ width: `${(queue === null ? 0 : cur ? progress : 1) * 100}%` }} /></div>
         <ComboChip />
         <small>{left}</small>
       </header>

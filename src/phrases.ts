@@ -18,7 +18,7 @@ export const PHRASE_BY_ID = new Map(PHRASES.map((p) => [p.id, p]));
 
 const SENTENCES = PHRASES.filter((p) => p.kind === 'phrase');
 export const phraseOfTheDay = (d = new Date()) =>
-  SENTENCES[Math.floor(d.getTime() / 86_400_000) % SENTENCES.length];
+  SENTENCES[Math.floor((d.getTime() - d.getTimezoneOffset() * 60_000) / 86_400_000) % SENTENCES.length];
 
 const isHan = (c: string) => c >= '\u4e00' && c <= '\u9fff';
 const WORD_GLOSS = new Map(PHRASES.filter((p) => p.kind === 'word').map((p) => [p.hanzi, p.en.split(';')[0].trim()]));

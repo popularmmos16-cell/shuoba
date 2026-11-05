@@ -7,4 +7,4 @@ It includes pronunciation data derived from **CC-CEDICT** (CC BY-SA 4.0, https:/
 the share-alike terms apply. Other sources and credits are listed in the app under Settings → Credits & licences.
 
 - HSK word lists / level tags: Complete HSK Vocabulary (MIT) - https://github.com/drkameleon/complete-hsk-vocabulary
-- Audio: generated with the Piper speech engine and the 超文 (chaowen) voice, trained on the CC0 OHF-Voice dataset.
+- Audio: generated with the macOS text-to-speech tool (`say`) and its Tingting voice (see `tools/gen-audio.py`).
