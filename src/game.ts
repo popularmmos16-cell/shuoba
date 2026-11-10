@@ -100,6 +100,19 @@ export function drilledOne() {
   checkProgress();
 }
 
+// Finishing a story earns XP once per story per day. Reading never changes the word schedule.
+export const STORY_XP = 15;
+export function finishStory(id: string): number {
+  const s = getState();
+  const t = dateKey();
+  if (s.storiesRead?.[id] === t) return 0;
+  update({ storiesRead: { ...s.storiesRead, [id]: t } });
+  addXp(STORY_XP);
+  toast('读', 'Story finished', `+${STORY_XP} XP`);
+  checkProgress();
+  return STORY_XP;
+}
+
 // Called when a session finishes: a completion bonus, bigger for a clean run.
 export function finishSession(kind: 'words' | 'phrases'): number {
   const answered = session.right + session.wrong;

@@ -19,10 +19,13 @@ import { Game } from './games';
 import { syncLockscreen } from './lockscreen';
 import { syncWidget } from './widget';
 import { dateKey } from './store';
-import { IconChart, IconChat, IconGear, IconHome, IconSpark } from './components/Icons';
+import { IconBook, IconChart, IconChat, IconGear, IconHome, IconSpark } from './components/Icons';
 import { Words } from './screens/Words';
 import { Drill, type DrillMode } from './screens/Drill';
 import { Chat } from './screens/Chat';
+import { Read } from './screens/Read';
+import { ReadStory } from './screens/ReadStory';
+import type { Story } from './stories';
 import { ChatSession } from './screens/ChatSession';
 import { ChatReview } from './screens/ChatReview';
 import { getDraft, wordsForChat, type PersonaId, type SavedChat } from './chat';
@@ -44,10 +47,11 @@ const TITLES: Record<Mode, string> = {
   build: 'Build the sentence',
 };
 
-type Tab = 'home' | 'chat' | 'practice' | 'progress' | 'settings';
+type Tab = 'home' | 'read' | 'chat' | 'practice' | 'progress' | 'settings';
 
 const TABS: { id: Tab; label: string; icon: () => preact.JSX.Element }[] = [
   { id: 'home', label: 'Today', icon: IconHome },
+  { id: 'read', label: 'Read', icon: IconBook },
   { id: 'chat', label: 'Chat', icon: IconChat },
   { id: 'practice', label: 'Extra', icon: IconSpark },
   { id: 'progress', label: 'Progress', icon: IconChart },
@@ -58,6 +62,7 @@ export function App() {
   const [tab, setTab] = useState<Tab>('home');
   // words are compulsory and come first; 'vocab+' continues into the phrase session when finished
   const [screen, setScreen] = useState<null | 'vocab' | 'vocab+' | 'learn' | 'words'>(null);
+  const [story, setStory] = useState<Story | null>(null);
   const [drill, setDrill] = useState<{ mode: DrillMode; run: number } | null>(null);
   const startDrill = (mode: DrillMode) => setDrill((d) => ({ mode, run: (d?.run ?? 0) + 1 }));
   const vocab = useVocabPlan();
@@ -98,6 +103,7 @@ export function App() {
       </>
     );
   }
+  if (story) return <><Toaster /><ReadStory key={story.id} story={story} rows={vocab.rows} onClose={() => setStory(null)} /></>;
   if (drill)
     return <><Toaster /><Drill key={drill.run} rows={vocab.rows} mode={drill.mode} onClose={() => setDrill(null)} onAgain={() => startDrill(drill.mode)} /></>;
   if (screen === 'words') return <><Toaster /><Words rows={vocab.rows} onClose={() => setScreen(null)} onDrill={startDrill} /></>;
@@ -138,6 +144,7 @@ export function App() {
             onSheet={() => setScreen('words')}
             onDrill={startDrill}
           />}
+        {tab === 'read' && <Read rows={vocab.rows} onOpen={setStory} />}
         {tab === 'chat' && <Chat
             wordCount={vocab.rows.length}
             onStart={(persona) => setChat({ persona, run: Date.now() })}

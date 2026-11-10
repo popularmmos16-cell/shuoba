@@ -25,6 +25,10 @@ LEAD, TAIL, PEAK = 0.18, 0.12, 0.89  # seconds of silence before/after; target p
 jobs = []
 for p in json.load(open(ROOT / "src/data/phrases.json")):
     jobs.append((p["hanzi"], ROOT / f"public/audio/p/{p['id']}.m4a", 135 if p["kind"] == "word" else 160))
+stories = ROOT / "src/data/stories.json"  # one clip per story sentence: public/audio/s/<story id>-<n>.m4a
+for st in json.load(open(stories)) if stories.exists() else []:
+    for n, s in enumerate(st["sentences"], 1):
+        jobs.append((s["zh"], ROOT / f"public/audio/s/{st['id']}-{n}.m4a", 160))
 for s in json.load(open(ROOT / "src/data/tones.json")):
     for ch in s["chars"]:
         jobs.append((ch, ROOT / f"public/audio/t/{ord(ch):x}.m4a", 120))
