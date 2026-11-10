@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 1.
+kind: set
+title: 人 3|Short sentences: People 3
+你想我吗？|Do you miss me?|tatoeba:4835859:sadhen
+我是中国人。|I am Chinese.|tatoeba:335137:sysko
+你是老师吗？|Are you a teacher?|tatoeba:9975134:GlossaMatik
+我想我可以。|I think I can.|tatoeba:819370:Martha
+她是你的朋友。|She's your friend.|tatoeba:2065337:sadhen
+他是你的朋友。|He's your friend.|tatoeba:2065338:sadhen

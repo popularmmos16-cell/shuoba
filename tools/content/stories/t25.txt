@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 9.
+kind: set
+title: 聊天 1|Short sentences: Everyday conversation 1
+好了，不要再说了。|Okay, let's say no more about it.|tatoeba:2358003:GlossaMatik
+我有很多朋友帮我。|I have a lot of friends to help me.|tatoeba:333352:fucongcong
+在我看来很有意思！|It seems interesting to me.|tatoeba:335070:fucongcong
+我不知道我还有没有。|I don't know if I still have it.|tatoeba:335038:fucongcong
+我不知道，也不想知道。|I don't know, nor do I care.|tatoeba:332786:fucongcong
+我不知道他什么时候会来。|I don't know when he will come.|tatoeba:336663:fucongcong

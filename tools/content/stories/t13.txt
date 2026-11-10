@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 5.
+kind: set
+title: 日常时间 1|Short sentences: Time and daily life 1
+这不是我的工作。|That's not my job.|tatoeba:10260780:GlossaMatik
+你想怎么做就怎么做。|Do as you like.|tatoeba:398887:GlossaMatik
+昨天我十点去睡觉了。|I went to bed at ten yesterday.|tatoeba:674239:sysko
+你今天早上吃了什么？|What did you eat this morning?|tatoeba:2298226:sysko
+你在这里的工作是什么？|What's your job here?|tatoeba:5983594:verdastelo9604
+昨天星期五，所以他就休息了。|Yesterday was Friday, so he took a break.|tatoeba:10002030:GlossaMatik

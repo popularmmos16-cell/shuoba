@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 9.
+kind: set
+title: 聊天 2|Short sentences: Everyday conversation 2
+你能不能给我打折？|Can you give me a discount?|tatoeba:3476975:GlossaMatik
+你去看过医生了吗？|Have you gone to see a doctor?|tatoeba:397553:fucongcong
+我能帮你什么忙吗？|Can I be of any service to you?|tatoeba:403908:GlossaMatik
+我休息一会没问题吧？|Is it okay if I take a break?|tatoeba:419691:GlossaMatik
+你知道她会说英语吗？|Do you know if she can speak English?|tatoeba:461635:fucongcong
+你的周末是怎么过的？|How did you spend your weekend?|tatoeba:472764:fucongcong

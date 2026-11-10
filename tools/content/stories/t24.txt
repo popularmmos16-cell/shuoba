@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 8.
+kind: set
+title: 心情和健康 3|Short sentences: Feelings and health 3
+这真是真的吗？|Is this really real?|tatoeba:5685913:verdastelo9604
+我不会再试了。|I wouldn't try that again.|tatoeba:5862111:verdastelo9604
+那真是太好了。|That's great.|tatoeba:5978354:verdastelo9604
+你看来不大高兴。|You don't look so happy.|tatoeba:5574365:verdastelo9604
+那你会给我什么？|So, what'll you give me?|tatoeba:5663560:verdastelo9604
+你真的什么都不想要？|Don't you really want anything?|tatoeba:9958578:GlossaMatik

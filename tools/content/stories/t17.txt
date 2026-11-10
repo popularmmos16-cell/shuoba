@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 6.
+kind: set
+title: 家人 2|Short sentences: Family 2
+你现在是大人了。|You are now an adult.|tatoeba:471372:fucongcong
+我还要等五分钟。|I'll wait another five minutes.|tatoeba:504639:GlossaMatik
+我还是你的朋友。|I'm still your friend.|tatoeba:5897900:verdastelo9604
+我一直都想去做。|I've always wanted to do that.|tatoeba:6146510:verdastelo9604
+他们什么都不给。|They give nothing.|tatoeba:10019763:GlossaMatik
+我们三个都是学生。|All three of us are students.|tatoeba:410489:GlossaMatik

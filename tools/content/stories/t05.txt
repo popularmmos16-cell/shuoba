@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 2.
+kind: set
+title: 数字和钱 2|Short sentences: Numbers and money 2
+她十七岁了。|She is aged seventeen.|tatoeba:3485499:GlossaMatik
+他是个好人。|He's a good person.|tatoeba:363983:fucongcong
+你十岁了吗？|Are you ten years old?|tatoeba:516981:GlossaMatik
+我十二岁了。|I'm twelve years old.|tatoeba:9959852:GlossaMatik
+我们有一个吗？|Do we have one?|tatoeba:5549988:verdastelo9604
+那不对，对吧？|That isn't true, is it?|tatoeba:9961570:GlossaMatik

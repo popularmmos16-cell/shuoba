@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 8.
+kind: set
+title: 心情和健康 2|Short sentences: Feelings and health 2
+我会等到她来。|I will wait until she comes.|tatoeba:346007:fucongcong
+你真是太好了。|You're really wonderful.|tatoeba:471295:fucongcong
+你累了，不是吗？|You are tired, aren't you?|tatoeba:333191:fucongcong
+你有很多朋友吗？|Do you have many friends?|tatoeba:397549:fucongcong
+他们有了很多孩子。|They have lots of children.|tatoeba:471276:fucongcong
+她是生气了，还是累了。|She is angry, and still tired.|tatoeba:380680:sysko

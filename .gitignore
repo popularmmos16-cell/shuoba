@@ -4,3 +4,5 @@ worker/node_modules
 worker/.wrangler
 worker/.dev.vars
 *.jwk
+tools/story-proxy/.wrangler
+__pycache__

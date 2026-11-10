@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 3.
+kind: set
+title: 吃喝 3|Short sentences: Food and drink 3
+你喝茶了吗？|Have you drank tea?|tatoeba:3378195:GlossaMatik
+你吃饭了吗？|Have you eaten yet?|tatoeba:420108:sysko
+这杯茶很好喝。|This tea is very good.|tatoeba:9991977:GlossaMatik
+有什么喝的吗？|Do you have any drinks?|tatoeba:410500:GlossaMatik
+我们只有茶水。|We only have tea.|tatoeba:419713:GlossaMatik
+我想喝一杯咖啡。|I would like to have a cup of coffee.|tatoeba:819812:fucongcong

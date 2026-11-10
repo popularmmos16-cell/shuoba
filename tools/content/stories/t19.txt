@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 7.
+kind: set
+title: 购物 1|Short sentences: Shopping 1
+这就要看你了。|It's up to you.|tatoeba:347705:sysko
+他一直在做买卖。|He's always trading.|tatoeba:420052:sysko
+你去看医生了吗？|Did you see a doctor?|tatoeba:715810:sysko
+这件衣服很好看的。|This shirt looks great.|tatoeba:9958387:GlossaMatik
+我今天去买衣服了。|I am going to buy clothes today.|tatoeba:1512392:sysko
+请看一下我妹妹在做什么。|Can you have a look at what my little sister is doing?|tatoeba:10460397:GlossaMatik

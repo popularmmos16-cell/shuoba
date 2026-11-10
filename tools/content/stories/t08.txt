@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 3.
+kind: set
+title: 吃喝 2|Short sentences: Food and drink 2
+我不是来了吗？|I came, didn't I?|tatoeba:405506:GlossaMatik
+你不想吃饭吗？|Wouldn't you like to eat?|tatoeba:419698:GlossaMatik
+来跟我喝茶吧。|Come and have tea with me.|tatoeba:6089788:verdastelo9604
+我可以吃这个吗？|Can I eat this?|tatoeba:411609:fucongcong
+你们不想吃饭吗？|Wouldn't you like to eat?|tatoeba:419700:GlossaMatik
+你的一个朋友在我们这里。|We have one of your friends here with us.|tatoeba:5965710:verdastelo9604

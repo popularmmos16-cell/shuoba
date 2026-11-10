@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 6.
+kind: set
+title: 家人 1|Short sentences: Family 1
+我一点都不好。|I am not well at all.|tatoeba:390543:fucongcong
+我什么都不想喝。|I don't want anything to drink.|tatoeba:332566:fucongcong
+我爸爸只有十五岁。|My father is only fifteen years old.|tatoeba:520728:GlossaMatik
+我还是一直想着他。|I still think about him all the time.|tatoeba:5555685:verdastelo9604
+你的朋友怎么还没来？|Why isn't your friend here yet?|tatoeba:420056:sysko
+他是我哥哥，不是我爸爸。|He is my brother, not my father.|tatoeba:345822:fucongcong

@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 5.
+kind: set
+title: 日常时间 2|Short sentences: Time and daily life 2
+你有时间再做吧。|Do it when you have time.|tatoeba:334400:fucongcong
+那你是怎么做的？|What did you do then?|tatoeba:403616:GlossaMatik
+你什么也做不了。|You can't do anything about that.|tatoeba:5701336:verdastelo9604
+你昨天喝茶了吗？|Did you drink tea yesterday?|tatoeba:5965709:verdastelo9604
+没有一个朋友来了。|Not one friend came.|tatoeba:843468:fucongcong
+你今天晚上吃了什么？|What did you have this evening?|tatoeba:2298280:sysko

@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 6.
+kind: set
+title: 家人 3|Short sentences: Family 3
+我还没吃饭。|I still haven't eaten.|tatoeba:2299589:sysko
+我儿子十岁了。|My son is ten years old.|tatoeba:10029668:GlossaMatik
+我想住在这里。|I want to live here.|tatoeba:10260768:GlossaMatik
+我是你的妹妹。|I'm your sister.|tatoeba:2782904:GlossaMatik
+我的姐姐有工作。|My sister has a job.|tatoeba:1819106:sysko
+他们都是好老师。|All of them are good teachers.|tatoeba:333284:fucongcong

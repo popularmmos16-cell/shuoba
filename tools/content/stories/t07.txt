@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 3.
+kind: set
+title: 吃喝 1|Short sentences: Food and drink 1
+请给我一杯茶。|A cup of tea, please.|tatoeba:335003:fucongcong
+我喝了两杯茶。|I had two cups of tea.|tatoeba:3378084:GlossaMatik
+我也喝两杯茶。|I also drink two cups of tea.|tatoeba:3378131:GlossaMatik
+请你给我一杯水。|Please give me a cup of water.|tatoeba:334646:fucongcong
+这个给我来三个。|I'd like three of these.|tatoeba:727503:fucongcong
+这杯咖啡是甜的。|The coffee is sweet.|tatoeba:10648989:GlossaMatik
