@@ -16,6 +16,9 @@ There is no test suite; `npm run build` (type check) is the only automated check
 Pushing to `main` deploys `dist/` to GitHub Pages via `.github/workflows/deploy.yml`.
 `base` is `./`, so the app works from any sub-path.
 
+The app is a PWA with a service worker, so an installed copy updates in two steps: the new version downloads on one launch and takes over on
+the next. After a deploy, close and reopen the Home Screen app twice (or load the site once in Safari) to see it.
+
 ## How the app works
 
 Each day has a compulsory part and optional extras:
@@ -54,13 +57,15 @@ Each day has a compulsory part and optional extras:
 | `src/store.ts` | Settings + game state in `localStorage` (`shuoba.state.v1`); `dateKey()`, streak maths |
 | `src/db.ts` | IndexedDB (`shuoba`, v2) stores `cards`, `log`, `words`; backup export/import (`Backup`, version 1) |
 | `src/phrases.ts` | Types and lookups over `src/data/phrases.json` (**generated**, see Content) |
+| `src/stories.ts` | Types over `src/data/stories.json`, `tokenState()` and `coverage()` (how much of a story you already know) |
 | `src/data/stories.json` | **Generated** from `tools/content/stories/*.txt` by `tools/build-stories.py` |
+| `src/screens/Read.tsx`, `ReadStory.tsx` | The Read tab: the story and reading-set list, and the reader with tap-for-meaning and add-to-words |
 | `src/speak.ts` | Plays `public/audio/**` via `<audio>`; falls back to `speechSynthesis` when no clip exists |
 | `src/data/tones.json` | Tone-pair sets (4 characters each) for the tone exercises |
 | `src/push.ts`, `src/lockscreen.ts`, `src/widget.ts` | Reminders, lock-screen word, Scriptable widget (see below) |
 | `public/push-sw.js` | Push handler, imported into the generated service worker (`workbox.importScripts`) |
 | `worker/` | Cloudflare Worker `shuoba-push` |
-| `tools/` | Python content and audio generators |
+| `tools/` | Content and audio generators (see below). `zhlib.py` holds the pinyin and segmentation code shared by the build scripts |
 
 Dates are **local** `YYYY-MM-DD` strings from `dateKey()` everywhere in the app. The Worker uses Singapore time (UTC+8).
 
@@ -79,7 +84,8 @@ W 行|OK|py=xíng              optional py=... overrides the generated pinyin
 CEDICT=/path/to/cedict_ts.u8 HSK=/path/to/complete.json python3 tools/build-content.py
 ```
 
-Needs `jieba` and `pypinyin`, plus two downloads: CC-CEDICT (`cedict_ts.u8`) and the MIT-licensed
+Needs `jieba` and `pypinyin` (plus `opencc-python-reimplemented` for `build-tatoeba.py`; a virtualenv keeps them out of your system Python),
+and two downloads: CC-CEDICT (`cedict_ts.u8`) and the MIT-licensed
 [Complete HSK Vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary) `complete.json`.
 The script segments sentences into tiles, picks pinyin, applies 不/一 tone sandhi, and prints a warning for any
 sentence that uses a word not yet taught.
@@ -93,31 +99,56 @@ If you add a new unit, also check `THEMES` in `src/games/specs.tsx` (Odd One Out
 
 ### Stories
 
-Story ids come from the file name (`s01.txt`), so adding or editing a story never shifts anything, unlike phrases.
+The Read tab has two kinds of content, both built from files in `tools/content/stories/` by one script:
+
+- **Stories** (`s01.txt` ...): hand-written, cohesive.
+- **Reading sets** (`t01.txt` ...): six unrelated everyday sentences per set, grouped by unit, picked from Tatoeba.
+
+Story ids come from the file name, so adding, editing or deleting one never shifts anything (unlike phrases).
 
 ```
+kind: set                          optional: "set" for a reading set, default "story"
 title: 朋友来我家|A friend comes to my home
 今天我朋友来我家。|Today my friend comes to my home.
+我们喝茶。|We drink tea.|tatoeba:12345:someone     optional third field: a Tatoeba sentence id and its contributor
 ```
+
+Pipeline, in this order (the build scripts take `CEDICT=... HSK=...` as for the phrases):
 
 ```sh
-CEDICT=/path/to/cedict_ts.u8 HSK=/path/to/complete.json python3 tools/build-stories.py
+python3 tools/build-content.py   # only if units.txt changed
+python3 tools/build-stories.py   # tools/content/stories/*.txt -> src/data/stories.json
+python3 tools/gen-audio.py       # renders only the missing clips, including story sentences
 ```
 
-Segmentation and pinyin are done here, at build time. Every word in a story should be a taught word (a `W` line in `units.txt`), because that is
-what makes it addable in the app. The script lists any word outside the curriculum: reword the sentence, or append the word to `units.txt`.
-Grammar words that are never taught as vocabulary (了 吗 呢 ...) are in `FUNCTION_WORDS` and always count as known. Glosses for those and for
-outside words come from `tools/content/glosses.txt` (`hanzi|gloss`, optional) and otherwise the HSK data. `tools/zhlib.py` holds the pinyin and
-segmentation code shared with `build-content.py`.
+`build-stories.py` does the segmentation and pinyin here, at build time, so the phone never segments Chinese. Every word in a story should be a
+taught word (a `W` line in `units.txt`), because that is what makes it addable to the Word wall in the app. The script lists any word outside the
+curriculum: reword the sentence, or append the word to `units.txt`. Grammar words that are never taught as vocabulary (了 吗 呢 ...) are in
+`FUNCTION_WORDS` and always count as known. Their meanings, and the meanings of any outside word, come from `tools/content/glosses.txt`
+(`hanzi|gloss`), then the HSK data. The HSK's first entry is often a rare sense (it gives 也 as "surname Ye"), so add a line to `glosses.txt`
+when a tapped word shows something odd.
 
-`tools/build-tatoeba.py` fills the "Reading sets" (`t01.txt` ...) from Tatoeba sentences (CC BY 2.0 FR, credited per sentence in the app). It only
-picks sentences whose every word is already taught, and is deterministic. Needs the three Tatoeba exports listed at the top of the script.
-Tatoeba's own audio is not used. Skim the sets, and delete any sentence file you do not like before rebuilding.
+How the app uses it: a word is **known** when you have started it (a row in the `words` store) or it is a grammar word. `coverage()` is
+the share of word occurrences in a story that are known; stories are listed easiest first. Tapping a word you have not started offers
+"Add to my words", which creates the same row the Word practice would (`newWordRow`), limited by `MAX_ACTIVE`. Finishing a story gives
+`STORY_XP` once per story per day (`finishStory`), and the day is kept in `storiesRead` in the saved state, which is part of the backup.
 
-`tools/make-stories.mjs` drafts stories with Workers AI into `tools/content/stories/drafts/` (run the local-only proxy in `tools/story-proxy/`,
-never deploy it). **Treat drafts as raw material.** In testing, models could not write natural Chinese from a 200-word vocabulary: the drafts
-were choppy and sometimes wrong, and the AI judge missed real errors. Have someone who reads Chinese check every story before it moves up into
-`tools/content/stories/`.
+**Reading sets from Tatoeba.** `tools/build-tatoeba.py` writes `t01.txt` ... (it deletes and recreates all `t*.txt`, so do not hand-edit those).
+
+```sh
+# unpack these from https://downloads.tatoeba.org/exports/per_language/ into one folder:
+#   cmn/cmn_sentences_detailed.tsv.bz2  cmn/cmn-eng_links.tsv.bz2  eng/eng_sentences.tsv.bz2
+TAT=/path/to/that/folder CEDICT=... HSK=... python3 tools/build-tatoeba.py [--per-unit 3] [--size 6]
+```
+
+It keeps a sentence only when every word is a taught or grammar word, the characters are simplified, and it has no names, quotes, digits or Latin
+letters. Contributors with many sentences are preferred and repeated sentence templates are limited. The result is deterministic. These are
+volunteer-written sentences, so skim them: to drop one, delete its line (or the whole `tNN.txt`) and re-run `build-stories.py`, but re-running
+`build-tatoeba.py` brings every line back. Tatoeba's own audio is not used, because its licences vary per speaker; the app's clips are made with `say`.
+
+**Drafting stories with AI** (`tools/make-stories.mjs`, with the local-only proxy in `tools/story-proxy/`, never to be deployed) works poorly from a
+200-word vocabulary: in testing the drafts were choppy and sometimes ungrammatical, and the AI judge missed real errors. Treat its output
+(`tools/content/stories/drafts/`) as raw material and have someone who reads Chinese check every story before moving it up a folder.
 
 ### Audio
 
@@ -126,8 +157,8 @@ python3 tools/gen-audio.py [--force]
 ```
 
 macOS only (`say` with the Tingting voice, `afconvert`). Renders `public/audio/p/<id>.m4a` for every item and
-`public/audio/t/<hex codepoint>.m4a` for every tone character, and `public/audio/s/<story id>-<n>.m4a` for every story sentence. A clip is redone when it is missing or older than the
-script, so editing the script refreshes everything and an interrupted run resumes. Run it after adding content,
+`public/audio/t/<hex codepoint>.m4a` for every tone character, and `public/audio/s/<story id>-<n>.m4a` for every story sentence.
+A clip is redone when it is missing or older than the script (file time, so a fresh clone may re-render everything), so editing the script refreshes everything and an interrupted run resumes. Run it after adding content,
 then commit the new clips. Clips are files, not browser TTS, because iOS mutes `speechSynthesis` on silent.
 
 ## Reminders, lock-screen word and widget
@@ -188,9 +219,66 @@ learnt, so it cannot change the prompt.
 - Settings and game state: `localStorage`. Cards, review log and word progress: IndexedDB.
 - Settings → backup exports all of it as one JSON file (`Backup` in `src/db.ts`). If you change the shape of stored
   data, keep old backups importable (see how `words?` is optional) or bump `version`.
+- Words added from a story are ordinary rows in the `words` store, and finished stories (`storiesRead`) are in the saved state, so both are in the backup.
 - Device-specific flags (`shuoba.push`, `shuoba.widget`, `shuoba.chat*`) are deliberately kept out of backups.
+
+## Project notes (read this before changing things)
+
+State and decisions that are not obvious from the code.
+
+**Status of the Read tab** (added Nov 2026, merged to `main`). Two hand-written stories (`s01`, `s02`) and 27 Tatoeba reading sets (`t01`-`t27`).
+**Nobody who reads Chinese has reviewed them yet**, and Tatoeba's licence terms were taken from secondary research, not read on tatoeba.org.
+Neither was tested on a real iPhone (sentence audio with the silent switch, offline use). Treat all three as open items.
+
+**Why stories are shipped as data and not generated live.** Spikes run against the deployed Workers AI models (Qwen3-30B and gpt-oss-120b) on a
+60/120/199-word vocabulary showed that models do not stay inside a small vocabulary: first-try coverage was about 66-70%, retries pushed
+coverage up only by making the text choppy ("我有面。我有茶。"), and the AI judge missed real errors (去家吃饭). With a ~90% target and dictionary
+glosses it still passed only ~4 of 15 times. So stories are written or picked offline and checked by a person. If you revisit live generation,
+use gpt-oss (Qwen3 mostly failed and wrote traditional characters), keep the best attempt rather than the last, and check coverage in code.
+
+**Why no open-licensed story library.** Searched GitHub, Hugging Face, Tatoeba lists, Chinese Wikibooks and Wikisource. Graded-reader
+publishers are copyrighted; Tatoeba's lists are study decks; the usable Wikisource tales (Dai Wangshu's Perrault) are 1930s traditional-character
+prose with only ~46-53% of words in the 199-word curriculum. Cohesive stories that fit the curriculum have to be written or adapted for it. Tatoeba
+sentences are the one measured fit (about 1,300 usable sentences fully inside the curriculum).
+
+**Rules that are easy to break**
+- `phrases.json` ids are positional (append only). Story ids are file names and are safe to add or remove.
+- `build-tatoeba.py` deletes and rewrites every `tools/content/stories/t*.txt`. Never hand-edit those; edit by deleting lines and running only `build-stories.py`.
+- Words in a story must be taught words (`W` lines in `units.txt`) so they can be added to the Word wall. Do not make `ReadStory` add words that are not in `WORDS`.
+- Reading must never change the word schedule (like Drill); it only gives XP via `finishStory`.
+- Keep the `tatoeba:<id>:<contributor>` field on Tatoeba sentences: the app's credit line and source links depend on it.
+- `tools/story-proxy/` is an unauthenticated AI passthrough for local authoring only. Never deploy it.
+- Segmentation and pinyin happen at build time (`zhlib.py`, jieba). The app has no segmenter; `Intl.Segmenter` was not tested on iOS Safari.
+- Grammar-word meanings come from `tools/content/glosses.txt`. The HSK data's first sense is often wrong for particles.
+
+**Recreating the build environment.** The content scripts need Python packages and two data files that are not in the repo. A working setup:
+
+```sh
+python3 -m venv .venv-content && .venv-content/bin/pip install jieba pypinyin opencc-python-reimplemented
+# CC-CEDICT: https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.zip  (unzip -> cedict_ts.u8)
+# HSK data:  https://raw.githubusercontent.com/drkameleon/complete-hsk-vocabulary/main/complete.json
+export CEDICT=/path/to/cedict_ts.u8 HSK=/path/to/complete.json
+.venv-content/bin/python tools/build-stories.py
+```
+
+A virtualenv in the repo root would be untracked clutter: add it to `.gitignore` if you use that name. Checking a change to the shared code in `zhlib.py`
+is easy: rebuild with `build-content.py` and confirm `git diff src/data/phrases.json` is empty.
+
+**Checking the UI without a phone.** There is no test suite. To drive the app in a browser, run `npx vite --port 5199 --strictPort`, then use
+Playwright against `http://localhost:5199`; to see Read content you must first seed started words into IndexedDB (database `shuoba`, store `words`,
+rows shaped like `WordRow`). A deployed update only reaches an installed iPhone app after two launches (service worker), so "I don't see it" right after a
+deploy is usually the cache, not a failed deploy: check that the live bundle contains the new text before debugging the code.
+
+**Ideas not done.** Real hand-written stories; a native reviewer; counting how often you meet each word while reading (not tracked today);
+a "saved words" store for words outside the curriculum (would need an IndexedDB version bump and a backup `version` bump); live per-learner
+generation if models improve.
 
 ## Licences
 
 Code: see `LICENSE`. Content in `src/data/` and `public/audio/`: CC BY-SA 4.0 (`DATA-LICENSE.md`), because it includes
 CC-CEDICT-derived pronunciations. Credits shown in the app live in `src/components/Credits.tsx`.
+
+The reading sets are sentences and translations from [Tatoeba](https://tatoeba.org) and its contributors, under CC BY 2.0 FR, which requires
+crediting Tatoeba and the authors. The app does this in three places: the credit line under each set, a link to each source sentence, and the
+Credits screen. Keep the `tatoeba:<id>:<contributor>` field on every sentence you add. This README does not settle licence questions: read
+Tatoeba's own terms before you publish.
