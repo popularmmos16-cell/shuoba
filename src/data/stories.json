@@ -1,0 +1,7433 @@
+[
+ {
+  "id": "s01",
+  "kind": "story",
+  "title": "朋友来我家",
+  "titleEn": "A friend comes to my home",
+  "sentences": [
+   {
+    "zh": "今天我朋友来我家。",
+    "en": "Today my friend comes to my home.",
+    "py": "jīn tiān wǒ péng you lái wǒ jiā",
+    "tokens": [
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "家。",
+      "py": "jiā",
+      "id": "p92"
+     }
+    ]
+   },
+   {
+    "zh": "我们喝茶，吃面。",
+    "en": "We drink tea and eat noodles.",
+    "py": "wǒ men hē chá chī miàn",
+    "tokens": [
+     {
+      "t": "我们",
+      "py": "wǒ men",
+      "id": "p37"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "茶，",
+      "py": "chá",
+      "id": "p115"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "面。",
+      "py": "miàn",
+      "id": "p113"
+     }
+    ]
+   },
+   {
+    "zh": "朋友说面很好吃。",
+    "en": "My friend says the noodles are very tasty.",
+    "py": "péng you shuō miàn hěn hǎo chī",
+    "tokens": [
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "说",
+      "py": "shuō",
+      "id": "p356"
+     },
+     {
+      "t": "面",
+      "py": "miàn",
+      "id": "p113"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "好吃。",
+      "py": "hǎo chī",
+      "id": "p117"
+     }
+    ]
+   },
+   {
+    "zh": "我们也喝咖啡。",
+    "en": "We also drink coffee.",
+    "py": "wǒ men yě hē kā fēi",
+    "tokens": [
+     {
+      "t": "我们",
+      "py": "wǒ men",
+      "id": "p37"
+     },
+     {
+      "t": "也",
+      "py": "yě",
+      "f": 1,
+      "g": "also; too"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "咖啡。",
+      "py": "kā fēi",
+      "id": "p116"
+     }
+    ]
+   },
+   {
+    "zh": "一共喝了两杯。",
+    "en": "We drank two cups in all.",
+    "py": "yí gòng hē le liǎng bēi",
+    "tokens": [
+     {
+      "t": "一共",
+      "py": "yí gòng",
+      "id": "p86"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "两",
+      "py": "liǎng",
+      "id": "p82"
+     },
+     {
+      "t": "杯。",
+      "py": "bēi",
+      "id": "p85"
+     }
+    ]
+   },
+   {
+    "zh": "朋友给我一杯茶。",
+    "en": "My friend gives me a cup of tea.",
+    "py": "péng you gěi wǒ yì bēi chá",
+    "tokens": [
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "给",
+      "py": "gěi",
+      "id": "p91"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "茶。",
+      "py": "chá",
+      "id": "p115"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "s02",
+  "kind": "story",
+  "title": "去哪里",
+  "titleEn": "Where to go",
+  "sentences": [
+   {
+    "zh": "我今天去朋友家。",
+    "en": "Today I go to my friend's home.",
+    "py": "wǒ jīn tiān qù péng you jiā",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "家。",
+      "py": "jiā",
+      "id": "p92"
+     }
+    ]
+   },
+   {
+    "zh": "朋友家很远。",
+    "en": "My friend's home is far.",
+    "py": "péng you jiā hěn yuǎn",
+    "tokens": [
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "家",
+      "py": "jiā",
+      "id": "p92"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "远。",
+      "py": "yuǎn",
+      "id": "p166"
+     }
+    ]
+   },
+   {
+    "zh": "我在车站等。",
+    "en": "I wait at the stop.",
+    "py": "wǒ zài chē zhàn děng",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "车",
+      "py": "chē",
+      "id": "p171"
+     },
+     {
+      "t": "站",
+      "py": "zhàn",
+      "id": "p170"
+     },
+     {
+      "t": "等。",
+      "py": "děng",
+      "id": "p172"
+     }
+    ]
+   },
+   {
+    "zh": "车到站了。",
+    "en": "The bus arrives at the stop.",
+    "py": "chē dào zhàn le",
+    "tokens": [
+     {
+      "t": "车",
+      "py": "chē",
+      "id": "p171"
+     },
+     {
+      "t": "到",
+      "py": "dào",
+      "id": "p168"
+     },
+     {
+      "t": "站",
+      "py": "zhàn",
+      "id": "p170"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ]
+   },
+   {
+    "zh": "我坐公共汽车。",
+    "en": "I take the bus.",
+    "py": "wǒ zuò gōng gòng qì chē",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "坐",
+      "py": "zuò",
+      "id": "p158"
+     },
+     {
+      "t": "公共汽车。",
+      "py": "gōng gòng qì chē",
+      "id": "p159"
+     }
+    ]
+   },
+   {
+    "zh": "我走到朋友家。",
+    "en": "I walk to my friend's home.",
+    "py": "wǒ zǒu dào péng you jiā",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "走",
+      "py": "zǒu",
+      "id": "p165"
+     },
+     {
+      "t": "到",
+      "py": "dào",
+      "id": "p168"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "家。",
+      "py": "jiā",
+      "id": "p92"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "t01",
+  "kind": "set",
+  "title": "人 1",
+  "titleEn": "Short sentences: People 1",
+  "sentences": [
+   {
+    "zh": "我很好。你呢？",
+    "en": "I'm fine. How about you?",
+    "py": "wǒ hěn hǎo nǐ ne",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "好。",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "呢？",
+      "py": "ne",
+      "f": 1,
+      "g": "particle: \"and you?\", or an ongoing action"
+     }
+    ],
+    "src": {
+     "id": 10026182,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你是不是老师？",
+    "en": "Are you a teacher?",
+    "py": "nǐ shì bu shì lǎo shī",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "不",
+      "py": "bu",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "老师？",
+      "py": "lǎo shī",
+      "id": "p43"
+     }
+    ],
+    "src": {
+     "id": 3378183,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你是中国人吗？",
+    "en": "Are you Chinese?",
+    "py": "nǐ shì zhōng guó rén ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "中国",
+      "py": "zhōng guó",
+      "id": "p50"
+     },
+     {
+      "t": "人",
+      "py": "rén",
+      "id": "p41"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 3378212,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你不是我的朋友了。",
+    "en": "You're not my friend anymore.",
+    "py": "nǐ bú shì wǒ de péng you le",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 2383477,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "是我的，不是他的。",
+    "en": "It's mine, not his.",
+    "py": "shì wǒ de bú shì tā de",
+    "tokens": [
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "的，",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "的。",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 400384,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "是的，我也是学生。",
+    "en": "Yes, I'm a student too.",
+    "py": "shì de wǒ yě shì xué sheng",
+    "tokens": [
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "的，",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "也",
+      "py": "yě",
+      "f": 1,
+      "g": "also; too"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "学生。",
+      "py": "xué sheng",
+      "id": "p44"
+     }
+    ],
+    "src": {
+     "id": 2202377,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t02",
+  "kind": "set",
+  "title": "人 2",
+  "titleEn": "Short sentences: People 2",
+  "sentences": [
+   {
+    "zh": "你想我了？",
+    "en": "Did you miss me?",
+    "py": "nǐ xiǎng wǒ le",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "了？",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 334429,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "他对我很好。",
+    "en": "He is good to me.",
+    "py": "tā duì wǒ hěn hǎo",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "对",
+      "py": "duì",
+      "f": 1,
+      "g": "right; correct; towards"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "好。",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     }
+    ],
+    "src": {
+     "id": 3378261,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你是对的吗？",
+    "en": "Were you right?",
+    "py": "nǐ shì duì de ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "对",
+      "py": "duì",
+      "f": 1,
+      "g": "right; correct; towards"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 5640753,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "他不是学生。",
+    "en": "He is not a student.",
+    "py": "tā bú shì xué sheng",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "学生。",
+      "py": "xué sheng",
+      "id": "p44"
+     }
+    ],
+    "src": {
+     "id": 10024460,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "他是我的朋友。",
+    "en": "He is my friend.",
+    "py": "tā shì wǒ de péng you",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "朋友。",
+      "py": "péng you",
+      "id": "p42"
+     }
+    ],
+    "src": {
+     "id": 490784,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我是他的朋友。",
+    "en": "I'm his friend.",
+    "py": "wǒ shì tā de péng you",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "朋友。",
+      "py": "péng you",
+      "id": "p42"
+     }
+    ],
+    "src": {
+     "id": 8120970,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t03",
+  "kind": "set",
+  "title": "人 3",
+  "titleEn": "Short sentences: People 3",
+  "sentences": [
+   {
+    "zh": "你想我吗？",
+    "en": "Do you miss me?",
+    "py": "nǐ xiǎng wǒ ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 4835859,
+     "by": "sadhen"
+    }
+   },
+   {
+    "zh": "我是中国人。",
+    "en": "I am Chinese.",
+    "py": "wǒ shì zhōng guó rén",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "中国",
+      "py": "zhōng guó",
+      "id": "p50"
+     },
+     {
+      "t": "人。",
+      "py": "rén",
+      "id": "p41"
+     }
+    ],
+    "src": {
+     "id": 335137,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "你是老师吗？",
+    "en": "Are you a teacher?",
+    "py": "nǐ shì lǎo shī ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "老师",
+      "py": "lǎo shī",
+      "id": "p43"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 9975134,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我想我可以。",
+    "en": "I think I can.",
+    "py": "wǒ xiǎng wǒ kě yǐ",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "可以。",
+      "py": "kě yǐ",
+      "f": 1,
+      "g": "can; may"
+     }
+    ],
+    "src": {
+     "id": 819370,
+     "by": "Martha"
+    }
+   },
+   {
+    "zh": "她是你的朋友。",
+    "en": "She's your friend.",
+    "py": "tā shì nǐ de péng you",
+    "tokens": [
+     {
+      "t": "她",
+      "py": "tā",
+      "id": "p36"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "朋友。",
+      "py": "péng you",
+      "id": "p42"
+     }
+    ],
+    "src": {
+     "id": 2065337,
+     "by": "sadhen"
+    }
+   },
+   {
+    "zh": "他是你的朋友。",
+    "en": "He's your friend.",
+    "py": "tā shì nǐ de péng you",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "朋友。",
+      "py": "péng you",
+      "id": "p42"
+     }
+    ],
+    "src": {
+     "id": 2065338,
+     "by": "sadhen"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t04",
+  "kind": "set",
+  "title": "数字和钱 1",
+  "titleEn": "Short sentences: Numbers and money 1",
+  "sentences": [
+   {
+    "zh": "那有什么不好？",
+    "en": "What's wrong with that?",
+    "py": "nà yǒu shén me bù hǎo",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "好？",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     }
+    ],
+    "src": {
+     "id": 2367525,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "有什么不对吗？",
+    "en": "Is something wrong?",
+    "py": "yǒu shén me bú duì ma",
+    "tokens": [
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "对",
+      "py": "duì",
+      "f": 1,
+      "g": "right; correct; towards"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 343380,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "这是你的家人吗？",
+    "en": "Is this your family?",
+    "py": "zhè shì nǐ de jiā rén ma",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "家",
+      "py": "jiā",
+      "id": "p92"
+     },
+     {
+      "t": "人",
+      "py": "rén",
+      "id": "p41"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 471395,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "那一位是什么人？",
+    "en": "Who is this person?",
+    "py": "nà yí wèi shì shén me rén",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "一",
+      "py": "yí",
+      "id": "p67"
+     },
+     {
+      "t": "位",
+      "py": "wèi",
+      "id": "p49"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "人？",
+      "py": "rén",
+      "id": "p41"
+     }
+    ],
+    "src": {
+     "id": 374915,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "他是个很好的老师。",
+    "en": "He is a very good teacher.",
+    "py": "tā shì gè hěn hǎo de lǎo shī",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "老师。",
+      "py": "lǎo shī",
+      "id": "p43"
+     }
+    ],
+    "src": {
+     "id": 2118229,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "有的，先生你有几位？",
+    "en": "Yes, there are. How many of you are there, Sir?",
+    "py": "yǒu de xiān sheng nǐ yǒu jǐ wèi",
+    "tokens": [
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "的，",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "先生",
+      "py": "xiān sheng",
+      "id": "p47"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "几",
+      "py": "jǐ",
+      "id": "p79"
+     },
+     {
+      "t": "位？",
+      "py": "wèi",
+      "id": "p49"
+     }
+    ],
+    "src": {
+     "id": 420438,
+     "by": "sysko"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t05",
+  "kind": "set",
+  "title": "数字和钱 2",
+  "titleEn": "Short sentences: Numbers and money 2",
+  "sentences": [
+   {
+    "zh": "她十七岁了。",
+    "en": "She is aged seventeen.",
+    "py": "tā shí qī suì le",
+    "tokens": [
+     {
+      "t": "她",
+      "py": "tā",
+      "id": "p36"
+     },
+     {
+      "t": "十",
+      "py": "shí",
+      "id": "p76"
+     },
+     {
+      "t": "七",
+      "py": "qī",
+      "id": "p73"
+     },
+     {
+      "t": "岁",
+      "py": "suì",
+      "id": "p89"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 3485499,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "他是个好人。",
+    "en": "He's a good person.",
+    "py": "tā shì gè hǎo rén",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "人。",
+      "py": "rén",
+      "id": "p41"
+     }
+    ],
+    "src": {
+     "id": 363983,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你十岁了吗？",
+    "en": "Are you ten years old?",
+    "py": "nǐ shí suì le ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "十",
+      "py": "shí",
+      "id": "p76"
+     },
+     {
+      "t": "岁",
+      "py": "suì",
+      "id": "p89"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 516981,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我十二岁了。",
+    "en": "I'm twelve years old.",
+    "py": "wǒ shí èr suì le",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "十",
+      "py": "shí",
+      "id": "p76"
+     },
+     {
+      "t": "二",
+      "py": "èr",
+      "id": "p68"
+     },
+     {
+      "t": "岁",
+      "py": "suì",
+      "id": "p89"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 9959852,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我们有一个吗？",
+    "en": "Do we have one?",
+    "py": "wǒ men yǒu yí gè ma",
+    "tokens": [
+     {
+      "t": "我们",
+      "py": "wǒ men",
+      "id": "p37"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "一",
+      "py": "yí",
+      "id": "p67"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 5549988,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "那不对，对吧？",
+    "en": "That isn't true, is it?",
+    "py": "nà bú duì duì ba",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "对，",
+      "py": "duì",
+      "f": 1,
+      "g": "right; correct; towards"
+     },
+     {
+      "t": "对",
+      "py": "duì",
+      "f": 1,
+      "g": "right; correct; towards"
+     },
+     {
+      "t": "吧？",
+      "py": "ba",
+      "f": 1,
+      "g": "particle: \"let's\", \"right?\", or a soft suggestion"
+     }
+    ],
+    "src": {
+     "id": 9961570,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t06",
+  "kind": "set",
+  "title": "数字和钱 3",
+  "titleEn": "Short sentences: Numbers and money 3",
+  "sentences": [
+   {
+    "zh": "这个几块？",
+    "en": "How much is this?",
+    "py": "zhè gè jǐ kuài",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "几",
+      "py": "jǐ",
+      "id": "p79"
+     },
+     {
+      "t": "块？",
+      "py": "kuài",
+      "id": "p80"
+     }
+    ],
+    "src": {
+     "id": 10052320,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "那不太好。",
+    "en": "That wasn't very good.",
+    "py": "nà bú tài hǎo",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "太",
+      "py": "tài",
+      "f": 1,
+      "g": "too; very"
+     },
+     {
+      "t": "好。",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     }
+    ],
+    "src": {
+     "id": 5611632,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "我很想家。",
+    "en": "I was so homesick.",
+    "py": "wǒ hěn xiǎng jiā",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "家。",
+      "py": "jiā",
+      "id": "p92"
+     }
+    ],
+    "src": {
+     "id": 6059534,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "那是我的。",
+    "en": "That is mine.",
+    "py": "nà shì wǒ de",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "的。",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 6728904,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你们是几位？",
+    "en": "How many of you are there?",
+    "py": "nǐ men shì jǐ wèi",
+    "tokens": [
+     {
+      "t": "你们",
+      "py": "nǐ men",
+      "id": "p38"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "几",
+      "py": "jǐ",
+      "id": "p79"
+     },
+     {
+      "t": "位？",
+      "py": "wèi",
+      "id": "p49"
+     }
+    ],
+    "src": {
+     "id": 419685,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "这是他们家。",
+    "en": "This is their house.",
+    "py": "zhè shì tā men jiā",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "他们",
+      "py": "tā men",
+      "id": "p39"
+     },
+     {
+      "t": "家。",
+      "py": "jiā",
+      "id": "p92"
+     }
+    ],
+    "src": {
+     "id": 487586,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t07",
+  "kind": "set",
+  "title": "吃喝 1",
+  "titleEn": "Short sentences: Food and drink 1",
+  "sentences": [
+   {
+    "zh": "请给我一杯茶。",
+    "en": "A cup of tea, please.",
+    "py": "qǐng gěi wǒ yì bēi chá",
+    "tokens": [
+     {
+      "t": "请",
+      "py": "qǐng",
+      "f": 1,
+      "g": "please; to invite"
+     },
+     {
+      "t": "给",
+      "py": "gěi",
+      "id": "p91"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "茶。",
+      "py": "chá",
+      "id": "p115"
+     }
+    ],
+    "src": {
+     "id": 335003,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我喝了两杯茶。",
+    "en": "I had two cups of tea.",
+    "py": "wǒ hē le liǎng bēi chá",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "两",
+      "py": "liǎng",
+      "id": "p82"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "茶。",
+      "py": "chá",
+      "id": "p115"
+     }
+    ],
+    "src": {
+     "id": 3378084,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我也喝两杯茶。",
+    "en": "I also drink two cups of tea.",
+    "py": "wǒ yě hē liǎng bēi chá",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "也",
+      "py": "yě",
+      "f": 1,
+      "g": "also; too"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "两",
+      "py": "liǎng",
+      "id": "p82"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "茶。",
+      "py": "chá",
+      "id": "p115"
+     }
+    ],
+    "src": {
+     "id": 3378131,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "请你给我一杯水。",
+    "en": "Please give me a cup of water.",
+    "py": "qǐng nǐ gěi wǒ yì bēi shuǐ",
+    "tokens": [
+     {
+      "t": "请",
+      "py": "qǐng",
+      "f": 1,
+      "g": "please; to invite"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "给",
+      "py": "gěi",
+      "id": "p91"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "水。",
+      "py": "shuǐ",
+      "id": "p114"
+     }
+    ],
+    "src": {
+     "id": 334646,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "这个给我来三个。",
+    "en": "I'd like three of these.",
+    "py": "zhè gè gěi wǒ lái sān gè",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "给",
+      "py": "gěi",
+      "id": "p91"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "三",
+      "py": "sān",
+      "id": "p69"
+     },
+     {
+      "t": "个。",
+      "py": "gè",
+      "id": "p81"
+     }
+    ],
+    "src": {
+     "id": 727503,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "这杯咖啡是甜的。",
+    "en": "The coffee is sweet.",
+    "py": "zhè bēi kā fēi shì tián de",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "咖啡",
+      "py": "kā fēi",
+      "id": "p116"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "甜",
+      "py": "tián",
+      "id": "p124"
+     },
+     {
+      "t": "的。",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 10648989,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t08",
+  "kind": "set",
+  "title": "吃喝 2",
+  "titleEn": "Short sentences: Food and drink 2",
+  "sentences": [
+   {
+    "zh": "我不是来了吗？",
+    "en": "I came, didn't I?",
+    "py": "wǒ bú shì lái le ma",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 405506,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你不想吃饭吗？",
+    "en": "Wouldn't you like to eat?",
+    "py": "nǐ bù xiǎng chī fàn ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "饭",
+      "py": "fàn",
+      "id": "p112"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 419698,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "来跟我喝茶吧。",
+    "en": "Come and have tea with me.",
+    "py": "lái gēn wǒ hē chá ba",
+    "tokens": [
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "跟",
+      "py": "gēn",
+      "f": 1,
+      "g": "with; to follow"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "茶",
+      "py": "chá",
+      "id": "p115"
+     },
+     {
+      "t": "吧。",
+      "py": "ba",
+      "f": 1,
+      "g": "particle: \"let's\", \"right?\", or a soft suggestion"
+     }
+    ],
+    "src": {
+     "id": 6089788,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "我可以吃这个吗？",
+    "en": "Can I eat this?",
+    "py": "wǒ kě yǐ chī zhè gè ma",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "可以",
+      "py": "kě yǐ",
+      "f": 1,
+      "g": "can; may"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 411609,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你们不想吃饭吗？",
+    "en": "Wouldn't you like to eat?",
+    "py": "nǐ men bù xiǎng chī fàn ma",
+    "tokens": [
+     {
+      "t": "你们",
+      "py": "nǐ men",
+      "id": "p38"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "饭",
+      "py": "fàn",
+      "id": "p112"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 419700,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你的一个朋友在我们这里。",
+    "en": "We have one of your friends here with us.",
+    "py": "nǐ de yí gè péng you zài wǒ men zhè lǐ",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "一",
+      "py": "yí",
+      "id": "p67"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "我们",
+      "py": "wǒ men",
+      "id": "p37"
+     },
+     {
+      "t": "这里。",
+      "py": "zhè lǐ",
+      "id": "p130"
+     }
+    ],
+    "src": {
+     "id": 5965710,
+     "by": "verdastelo9604"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t09",
+  "kind": "set",
+  "title": "吃喝 3",
+  "titleEn": "Short sentences: Food and drink 3",
+  "sentences": [
+   {
+    "zh": "你喝茶了吗？",
+    "en": "Have you drank tea?",
+    "py": "nǐ hē chá le ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "茶",
+      "py": "chá",
+      "id": "p115"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 3378195,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你吃饭了吗？",
+    "en": "Have you eaten yet?",
+    "py": "nǐ chī fàn le ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "饭",
+      "py": "fàn",
+      "id": "p112"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 420108,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "这杯茶很好喝。",
+    "en": "This tea is very good.",
+    "py": "zhè bēi chá hěn hǎo hē",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "茶",
+      "py": "chá",
+      "id": "p115"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "喝。",
+      "py": "hē",
+      "id": "p111"
+     }
+    ],
+    "src": {
+     "id": 9991977,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "有什么喝的吗？",
+    "en": "Do you have any drinks?",
+    "py": "yǒu shén me hē de ma",
+    "tokens": [
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 410500,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我们只有茶水。",
+    "en": "We only have tea.",
+    "py": "wǒ men zhǐ yǒu chá shuǐ",
+    "tokens": [
+     {
+      "t": "我们",
+      "py": "wǒ men",
+      "id": "p37"
+     },
+     {
+      "t": "只",
+      "py": "zhǐ",
+      "id": "p90"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "茶",
+      "py": "chá",
+      "id": "p115"
+     },
+     {
+      "t": "水。",
+      "py": "shuǐ",
+      "id": "p114"
+     }
+    ],
+    "src": {
+     "id": 419713,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我想喝一杯咖啡。",
+    "en": "I would like to have a cup of coffee.",
+    "py": "wǒ xiǎng hē yì bēi kā fēi",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "咖啡。",
+      "py": "kā fēi",
+      "id": "p116"
+     }
+    ],
+    "src": {
+     "id": 819812,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t10",
+  "kind": "set",
+  "title": "出行 1",
+  "titleEn": "Short sentences: Getting around 1",
+  "sentences": [
+   {
+    "zh": "这就是我想要的。",
+    "en": "This is what I want.",
+    "py": "zhè jiù shì wǒ xiǎng yào de",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "就",
+      "py": "jiù",
+      "id": "p183"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "的。",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 336501,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你想要一杯茶吗？",
+    "en": "Would you like to have a cup of tea?",
+    "py": "nǐ xiǎng yào yì bēi chá ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "茶",
+      "py": "chá",
+      "id": "p115"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 396136,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "你想再要杯茶吗？",
+    "en": "Would you like another cup of tea?",
+    "py": "nǐ xiǎng zài yào bēi chá ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "再",
+      "py": "zài",
+      "f": 1,
+      "g": "again (still to happen)"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "茶",
+      "py": "chá",
+      "id": "p115"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 405218,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我只要你跟我来。",
+    "en": "I just need you to come with me.",
+    "py": "wǒ zhǐ yào nǐ gēn wǒ lái",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "只",
+      "py": "zhǐ",
+      "id": "p90"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "跟",
+      "py": "gēn",
+      "f": 1,
+      "g": "with; to follow"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "来。",
+      "py": "lái",
+      "id": "p131"
+     }
+    ],
+    "src": {
+     "id": 5663529,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你想要什么喝的吗？",
+    "en": "Would you like something to drink?",
+    "py": "nǐ xiǎng yào shén me hē de ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 334493,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你想要一杯咖啡吗？",
+    "en": "Do you want a cup of coffee?",
+    "py": "nǐ xiǎng yào yì bēi kā fēi ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "咖啡",
+      "py": "kā fēi",
+      "id": "p116"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 414012,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t11",
+  "kind": "set",
+  "title": "出行 2",
+  "titleEn": "Short sentences: Getting around 2",
+  "sentences": [
+   {
+    "zh": "我一个也不要。",
+    "en": "I don't need any of them.",
+    "py": "wǒ yí gè yě bú yào",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "一",
+      "py": "yí",
+      "id": "p67"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "也",
+      "py": "yě",
+      "f": 1,
+      "g": "also; too"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "要。",
+      "py": "yào",
+      "id": "p174"
+     }
+    ],
+    "src": {
+     "id": 400227,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "那就是我想要的。",
+    "en": "That's what I want.",
+    "py": "nà jiù shì wǒ xiǎng yào de",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "就",
+      "py": "jiù",
+      "id": "p183"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "的。",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 6109333,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你的家人在等你。",
+    "en": "Your family's waiting for you.",
+    "py": "nǐ de jiā rén zài děng nǐ",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "家",
+      "py": "jiā",
+      "id": "p92"
+     },
+     {
+      "t": "人",
+      "py": "rén",
+      "id": "p41"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "等",
+      "py": "děng",
+      "id": "p172"
+     },
+     {
+      "t": "你。",
+      "py": "nǐ",
+      "id": "p34"
+     }
+    ],
+    "src": {
+     "id": 6169159,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "我只是想要你来。",
+    "en": "I just want you to come.",
+    "py": "wǒ zhǐ shì xiǎng yào nǐ lái",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "只",
+      "py": "zhǐ",
+      "id": "p90"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "来。",
+      "py": "lái",
+      "id": "p131"
+     }
+    ],
+    "src": {
+     "id": 816467,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我想再要一杯咖啡。",
+    "en": "I'd like to have another cup of coffee.",
+    "py": "wǒ xiǎng zài yào yì bēi kā fēi",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "再",
+      "py": "zài",
+      "f": 1,
+      "g": "again (still to happen)"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "咖啡。",
+      "py": "kā fēi",
+      "id": "p116"
+     }
+    ],
+    "src": {
+     "id": 6206033,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "我去不了，也不想去。",
+    "en": "I cannot go, nor do I want to.",
+    "py": "wǒ qù bù le yě bù xiǎng qù",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "了，",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "也",
+      "py": "yě",
+      "f": 1,
+      "g": "also; too"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "去。",
+      "py": "qù",
+      "id": "p157"
+     }
+    ],
+    "src": {
+     "id": 334780,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t12",
+  "kind": "set",
+  "title": "出行 3",
+  "titleEn": "Short sentences: Getting around 3",
+  "sentences": [
+   {
+    "zh": "你要走了吗？",
+    "en": "Do you want to go?",
+    "py": "nǐ yào zǒu le ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "走",
+      "py": "zǒu",
+      "id": "p165"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 374847,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "这是你要的吗？",
+    "en": "Is this something you want?",
+    "py": "zhè shì nǐ yào de ma",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 5663588,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你等我多久了？",
+    "en": "How long have you been waiting for me?",
+    "py": "nǐ děng wǒ duō jiǔ le",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "等",
+      "py": "děng",
+      "id": "p172"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "多久",
+      "py": "duō jiǔ",
+      "id": "p175"
+     },
+     {
+      "t": "了？",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 10258961,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我们的车走了。",
+    "en": "There goes our bus.",
+    "py": "wǒ men de chē zǒu le",
+    "tokens": [
+     {
+      "t": "我们",
+      "py": "wǒ men",
+      "id": "p37"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "车",
+      "py": "chē",
+      "id": "p171"
+     },
+     {
+      "t": "走",
+      "py": "zǒu",
+      "id": "p165"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 346465,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我想要一杯咖啡。",
+    "en": "I would like to have a cup of coffee.",
+    "py": "wǒ xiǎng yào yì bēi kā fēi",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "杯",
+      "py": "bēi",
+      "id": "p85"
+     },
+     {
+      "t": "咖啡。",
+      "py": "kā fēi",
+      "id": "p116"
+     }
+    ],
+    "src": {
+     "id": 746063,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我在这里等了三十分钟。",
+    "en": "I've been waiting here for thirty minutes.",
+    "py": "wǒ zài zhè lǐ děng le sān shí fēn zhōng",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "这里",
+      "py": "zhè lǐ",
+      "id": "p130"
+     },
+     {
+      "t": "等",
+      "py": "děng",
+      "id": "p172"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "三",
+      "py": "sān",
+      "id": "p69"
+     },
+     {
+      "t": "十",
+      "py": "shí",
+      "id": "p76"
+     },
+     {
+      "t": "分钟。",
+      "py": "fēn zhōng",
+      "id": "p176"
+     }
+    ],
+    "src": {
+     "id": 9955884,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t13",
+  "kind": "set",
+  "title": "日常时间 1",
+  "titleEn": "Short sentences: Time and daily life 1",
+  "sentences": [
+   {
+    "zh": "这不是我的工作。",
+    "en": "That's not my job.",
+    "py": "zhè bú shì wǒ de gōng zuò",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "工作。",
+      "py": "gōng zuò",
+      "id": "p214"
+     }
+    ],
+    "src": {
+     "id": 10260780,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你想怎么做就怎么做。",
+    "en": "Do as you like.",
+    "py": "nǐ xiǎng zěn me zuò jiù zěn me zuò",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "怎么",
+      "py": "zěn me",
+      "id": "p173"
+     },
+     {
+      "t": "做",
+      "py": "zuò",
+      "id": "p221"
+     },
+     {
+      "t": "就",
+      "py": "jiù",
+      "id": "p183"
+     },
+     {
+      "t": "怎么",
+      "py": "zěn me",
+      "id": "p173"
+     },
+     {
+      "t": "做。",
+      "py": "zuò",
+      "id": "p221"
+     }
+    ],
+    "src": {
+     "id": 398887,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "昨天我十点去睡觉了。",
+    "en": "I went to bed at ten yesterday.",
+    "py": "zuó tiān wǒ shí diǎn qù shuì jiào le",
+    "tokens": [
+     {
+      "t": "昨天",
+      "py": "zuó tiān",
+      "id": "p204"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "十",
+      "py": "shí",
+      "id": "p76"
+     },
+     {
+      "t": "点",
+      "py": "diǎn",
+      "id": "p208"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "睡觉",
+      "py": "shuì jiào",
+      "id": "p216"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 674239,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "你今天早上吃了什么？",
+    "en": "What did you eat this morning?",
+    "py": "nǐ jīn tiān zǎo shang chī le shén me",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "早上",
+      "py": "zǎo shang",
+      "id": "p205"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "什么？",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     }
+    ],
+    "src": {
+     "id": 2298226,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "你在这里的工作是什么？",
+    "en": "What's your job here?",
+    "py": "nǐ zài zhè lǐ de gōng zuò shì shén me",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "这里",
+      "py": "zhè lǐ",
+      "id": "p130"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "工作",
+      "py": "gōng zuò",
+      "id": "p214"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "什么？",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     }
+    ],
+    "src": {
+     "id": 5983594,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "昨天星期五，所以他就休息了。",
+    "en": "Yesterday was Friday, so he took a break.",
+    "py": "zuó tiān xīng qī wǔ suǒ yǐ tā jiù xiū xi le",
+    "tokens": [
+     {
+      "t": "昨天",
+      "py": "zuó tiān",
+      "id": "p204"
+     },
+     {
+      "t": "星期",
+      "py": "xīng qī",
+      "id": "p210"
+     },
+     {
+      "t": "五，",
+      "py": "wǔ",
+      "id": "p71"
+     },
+     {
+      "t": "所以",
+      "py": "suǒ yǐ",
+      "f": 1,
+      "g": "so; therefore"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "就",
+      "py": "jiù",
+      "id": "p183"
+     },
+     {
+      "t": "休息",
+      "py": "xiū xi",
+      "id": "p219"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 10002030,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t14",
+  "kind": "set",
+  "title": "日常时间 2",
+  "titleEn": "Short sentences: Time and daily life 2",
+  "sentences": [
+   {
+    "zh": "你有时间再做吧。",
+    "en": "Do it when you have time.",
+    "py": "nǐ yǒu shí jiān zài zuò ba",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "时间",
+      "py": "shí jiān",
+      "id": "p217"
+     },
+     {
+      "t": "再",
+      "py": "zài",
+      "f": 1,
+      "g": "again (still to happen)"
+     },
+     {
+      "t": "做",
+      "py": "zuò",
+      "id": "p221"
+     },
+     {
+      "t": "吧。",
+      "py": "ba",
+      "f": 1,
+      "g": "particle: \"let's\", \"right?\", or a soft suggestion"
+     }
+    ],
+    "src": {
+     "id": 334400,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "那你是怎么做的？",
+    "en": "What did you do then?",
+    "py": "nà nǐ shì zěn me zuò de",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "怎么",
+      "py": "zěn me",
+      "id": "p173"
+     },
+     {
+      "t": "做",
+      "py": "zuò",
+      "id": "p221"
+     },
+     {
+      "t": "的？",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 403616,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你什么也做不了。",
+    "en": "You can't do anything about that.",
+    "py": "nǐ shén me yě zuò bù le",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "也",
+      "py": "yě",
+      "f": 1,
+      "g": "also; too"
+     },
+     {
+      "t": "做",
+      "py": "zuò",
+      "id": "p221"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 5701336,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你昨天喝茶了吗？",
+    "en": "Did you drink tea yesterday?",
+    "py": "nǐ zuó tiān hē chá le ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "昨天",
+      "py": "zuó tiān",
+      "id": "p204"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "茶",
+      "py": "chá",
+      "id": "p115"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 5965709,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "没有一个朋友来了。",
+    "en": "Not one friend came.",
+    "py": "méi yǒu yí gè péng you lái le",
+    "tokens": [
+     {
+      "t": "没有",
+      "py": "méi yǒu",
+      "id": "p220"
+     },
+     {
+      "t": "一",
+      "py": "yí",
+      "id": "p67"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 843468,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你今天晚上吃了什么？",
+    "en": "What did you have this evening?",
+    "py": "nǐ jīn tiān wǎn shang chī le shén me",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "晚上",
+      "py": "wǎn shang",
+      "id": "p207"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "什么？",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     }
+    ],
+    "src": {
+     "id": 2298280,
+     "by": "sysko"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t15",
+  "kind": "set",
+  "title": "日常时间 3",
+  "titleEn": "Short sentences: Time and daily life 3",
+  "sentences": [
+   {
+    "zh": "给我点喝的。",
+    "en": "Give me something to drink.",
+    "py": "gěi wǒ diǎn hē de",
+    "tokens": [
+     {
+      "t": "给",
+      "py": "gěi",
+      "id": "p91"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "点",
+      "py": "diǎn",
+      "id": "p208"
+     },
+     {
+      "t": "喝",
+      "py": "hē",
+      "id": "p111"
+     },
+     {
+      "t": "的。",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 347092,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "吃饭时间到了。",
+    "en": "Time for dinner.",
+    "py": "chī fàn shí jiān dào le",
+    "tokens": [
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "饭",
+      "py": "fàn",
+      "id": "p112"
+     },
+     {
+      "t": "时间",
+      "py": "shí jiān",
+      "id": "p217"
+     },
+     {
+      "t": "到",
+      "py": "dào",
+      "id": "p168"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 336431,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我今天不想起床。",
+    "en": "I don't want to get out of bed today.",
+    "py": "wǒ jīn tiān bù xiǎng qǐ chuáng",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "起床。",
+      "py": "qǐ chuáng",
+      "id": "p93"
+     }
+    ],
+    "src": {
+     "id": 10548825,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你好啊！早上好！",
+    "en": "Hello! Good morning!",
+    "py": "nǐ hǎo a zǎo shang hǎo",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "啊！",
+      "py": "a",
+      "f": 1,
+      "g": "particle that softens or adds feeling"
+     },
+     {
+      "t": "早上",
+      "py": "zǎo shang",
+      "id": "p205"
+     },
+     {
+      "t": "好！",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     }
+    ],
+    "src": {
+     "id": 10552179,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我今天不想工作。",
+    "en": "I don't want to work today.",
+    "py": "wǒ jīn tiān bù xiǎng gōng zuò",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "工作。",
+      "py": "gōng zuò",
+      "id": "p214"
+     }
+    ],
+    "src": {
+     "id": 1140532,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "你早上吃了什么？",
+    "en": "What did you eat in the morning?",
+    "py": "nǐ zǎo shang chī le shén me",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "早上",
+      "py": "zǎo shang",
+      "id": "p205"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "什么？",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     }
+    ],
+    "src": {
+     "id": 2298230,
+     "by": "sysko"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t16",
+  "kind": "set",
+  "title": "家人 1",
+  "titleEn": "Short sentences: Family 1",
+  "sentences": [
+   {
+    "zh": "我一点都不好。",
+    "en": "I am not well at all.",
+    "py": "wǒ yì diǎn dōu bù hǎo",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "点",
+      "py": "diǎn",
+      "id": "p208"
+     },
+     {
+      "t": "都",
+      "py": "dōu",
+      "id": "p260"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "好。",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     }
+    ],
+    "src": {
+     "id": 390543,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我什么都不想喝。",
+    "en": "I don't want anything to drink.",
+    "py": "wǒ shén me dōu bù xiǎng hē",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "都",
+      "py": "dōu",
+      "id": "p260"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "喝。",
+      "py": "hē",
+      "id": "p111"
+     }
+    ],
+    "src": {
+     "id": 332566,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我爸爸只有十五岁。",
+    "en": "My father is only fifteen years old.",
+    "py": "wǒ bà ba zhǐ yǒu shí wǔ suì",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "爸爸",
+      "py": "bà ba",
+      "id": "p242"
+     },
+     {
+      "t": "只",
+      "py": "zhǐ",
+      "id": "p90"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "十",
+      "py": "shí",
+      "id": "p76"
+     },
+     {
+      "t": "五",
+      "py": "wǔ",
+      "id": "p71"
+     },
+     {
+      "t": "岁。",
+      "py": "suì",
+      "id": "p89"
+     }
+    ],
+    "src": {
+     "id": 520728,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我还是一直想着他。",
+    "en": "I still think about him all the time.",
+    "py": "wǒ hái shì yì zhí xiǎng zhe tā",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "还",
+      "py": "hái",
+      "id": "p261"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "一直",
+      "py": "yì zhí",
+      "id": "p178"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "着",
+      "py": "zhe",
+      "f": 1,
+      "g": "particle: an action or state continuing"
+     },
+     {
+      "t": "他。",
+      "py": "tā",
+      "id": "p35"
+     }
+    ],
+    "src": {
+     "id": 5555685,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你的朋友怎么还没来？",
+    "en": "Why isn't your friend here yet?",
+    "py": "nǐ de péng you zěn me hái méi lái",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "怎么",
+      "py": "zěn me",
+      "id": "p173"
+     },
+     {
+      "t": "还",
+      "py": "hái",
+      "id": "p261"
+     },
+     {
+      "t": "没",
+      "py": "méi",
+      "f": 1,
+      "g": "not (have not)"
+     },
+     {
+      "t": "来？",
+      "py": "lái",
+      "id": "p131"
+     }
+    ],
+    "src": {
+     "id": 420056,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "他是我哥哥，不是我爸爸。",
+    "en": "He is my brother, not my father.",
+    "py": "tā shì wǒ gē ge bú shì wǒ bà ba",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "哥哥，",
+      "py": "gē ge",
+      "id": "p244"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "爸爸。",
+      "py": "bà ba",
+      "id": "p242"
+     }
+    ],
+    "src": {
+     "id": 345822,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t17",
+  "kind": "set",
+  "title": "家人 2",
+  "titleEn": "Short sentences: Family 2",
+  "sentences": [
+   {
+    "zh": "你现在是大人了。",
+    "en": "You are now an adult.",
+    "py": "nǐ xiàn zài shì dà rén le",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "现在",
+      "py": "xiàn zài",
+      "id": "p222"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "大",
+      "py": "dà",
+      "id": "p252"
+     },
+     {
+      "t": "人",
+      "py": "rén",
+      "id": "p41"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 471372,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我还要等五分钟。",
+    "en": "I'll wait another five minutes.",
+    "py": "wǒ hái yào děng wǔ fēn zhōng",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "还",
+      "py": "hái",
+      "id": "p261"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "等",
+      "py": "děng",
+      "id": "p172"
+     },
+     {
+      "t": "五",
+      "py": "wǔ",
+      "id": "p71"
+     },
+     {
+      "t": "分钟。",
+      "py": "fēn zhōng",
+      "id": "p176"
+     }
+    ],
+    "src": {
+     "id": 504639,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我还是你的朋友。",
+    "en": "I'm still your friend.",
+    "py": "wǒ hái shì nǐ de péng you",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "还",
+      "py": "hái",
+      "id": "p261"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "朋友。",
+      "py": "péng you",
+      "id": "p42"
+     }
+    ],
+    "src": {
+     "id": 5897900,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "我一直都想去做。",
+    "en": "I've always wanted to do that.",
+    "py": "wǒ yì zhí dōu xiǎng qù zuò",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "一直",
+      "py": "yì zhí",
+      "id": "p178"
+     },
+     {
+      "t": "都",
+      "py": "dōu",
+      "id": "p260"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "做。",
+      "py": "zuò",
+      "id": "p221"
+     }
+    ],
+    "src": {
+     "id": 6146510,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "他们什么都不给。",
+    "en": "They give nothing.",
+    "py": "tā men shén me dōu bù gěi",
+    "tokens": [
+     {
+      "t": "他们",
+      "py": "tā men",
+      "id": "p39"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "都",
+      "py": "dōu",
+      "id": "p260"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "给。",
+      "py": "gěi",
+      "id": "p91"
+     }
+    ],
+    "src": {
+     "id": 10019763,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我们三个都是学生。",
+    "en": "All three of us are students.",
+    "py": "wǒ men sān gè dōu shì xué sheng",
+    "tokens": [
+     {
+      "t": "我们",
+      "py": "wǒ men",
+      "id": "p37"
+     },
+     {
+      "t": "三",
+      "py": "sān",
+      "id": "p69"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "都",
+      "py": "dōu",
+      "id": "p260"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "学生。",
+      "py": "xué sheng",
+      "id": "p44"
+     }
+    ],
+    "src": {
+     "id": 410489,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t18",
+  "kind": "set",
+  "title": "家人 3",
+  "titleEn": "Short sentences: Family 3",
+  "sentences": [
+   {
+    "zh": "我还没吃饭。",
+    "en": "I still haven't eaten.",
+    "py": "wǒ hái méi chī fàn",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "还",
+      "py": "hái",
+      "id": "p261"
+     },
+     {
+      "t": "没",
+      "py": "méi",
+      "f": 1,
+      "g": "not (have not)"
+     },
+     {
+      "t": "吃",
+      "py": "chī",
+      "id": "p110"
+     },
+     {
+      "t": "饭。",
+      "py": "fàn",
+      "id": "p112"
+     }
+    ],
+    "src": {
+     "id": 2299589,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "我儿子十岁了。",
+    "en": "My son is ten years old.",
+    "py": "wǒ ér zi shí suì le",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "儿子",
+      "py": "ér zi",
+      "id": "p249"
+     },
+     {
+      "t": "十",
+      "py": "shí",
+      "id": "p76"
+     },
+     {
+      "t": "岁",
+      "py": "suì",
+      "id": "p89"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 10029668,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我想住在这里。",
+    "en": "I want to live here.",
+    "py": "wǒ xiǎng zhù zài zhè lǐ",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "住",
+      "py": "zhù",
+      "id": "p257"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "这里。",
+      "py": "zhè lǐ",
+      "id": "p130"
+     }
+    ],
+    "src": {
+     "id": 10260768,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我是你的妹妹。",
+    "en": "I'm your sister.",
+    "py": "wǒ shì nǐ de mèi mei",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "妹妹。",
+      "py": "mèi mei",
+      "id": "p247"
+     }
+    ],
+    "src": {
+     "id": 2782904,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我的姐姐有工作。",
+    "en": "My sister has a job.",
+    "py": "wǒ de jiě jie yǒu gōng zuò",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "姐姐",
+      "py": "jiě jie",
+      "id": "p245"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "工作。",
+      "py": "gōng zuò",
+      "id": "p214"
+     }
+    ],
+    "src": {
+     "id": 1819106,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "他们都是好老师。",
+    "en": "All of them are good teachers.",
+    "py": "tā men dōu shì hǎo lǎo shī",
+    "tokens": [
+     {
+      "t": "他们",
+      "py": "tā men",
+      "id": "p39"
+     },
+     {
+      "t": "都",
+      "py": "dōu",
+      "id": "p260"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "老师。",
+      "py": "lǎo shī",
+      "id": "p43"
+     }
+    ],
+    "src": {
+     "id": 333284,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t19",
+  "kind": "set",
+  "title": "购物 1",
+  "titleEn": "Short sentences: Shopping 1",
+  "sentences": [
+   {
+    "zh": "这就要看你了。",
+    "en": "It's up to you.",
+    "py": "zhè jiù yào kàn nǐ le",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "就",
+      "py": "jiù",
+      "id": "p183"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 347705,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "他一直在做买卖。",
+    "en": "He's always trading.",
+    "py": "tā yì zhí zài zuò mǎi mài",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "一直",
+      "py": "yì zhí",
+      "id": "p178"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "做",
+      "py": "zuò",
+      "id": "p221"
+     },
+     {
+      "t": "买",
+      "py": "mǎi",
+      "id": "p281"
+     },
+     {
+      "t": "卖。",
+      "py": "mài",
+      "id": "p282"
+     }
+    ],
+    "src": {
+     "id": 420052,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "你去看医生了吗？",
+    "en": "Did you see a doctor?",
+    "py": "nǐ qù kàn yī shēng le ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "医生",
+      "py": "yī shēng",
+      "id": "p259"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 715810,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "这件衣服很好看的。",
+    "en": "This shirt looks great.",
+    "py": "zhè jiàn yī fu hěn hǎo kàn de",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "件",
+      "py": "jiàn",
+      "id": "p297"
+     },
+     {
+      "t": "衣服",
+      "py": "yī fu",
+      "id": "p283"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "的。",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 9958387,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我今天去买衣服了。",
+    "en": "I am going to buy clothes today.",
+    "py": "wǒ jīn tiān qù mǎi yī fu le",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "买",
+      "py": "mǎi",
+      "id": "p281"
+     },
+     {
+      "t": "衣服",
+      "py": "yī fu",
+      "id": "p283"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 1512392,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "请看一下我妹妹在做什么。",
+    "en": "Can you have a look at what my little sister is doing?",
+    "py": "qǐng kàn yí xià wǒ mèi mei zài zuò shén me",
+    "tokens": [
+     {
+      "t": "请",
+      "py": "qǐng",
+      "f": 1,
+      "g": "please; to invite"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "一下",
+      "py": "yí xià",
+      "id": "p184"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "妹妹",
+      "py": "mèi mei",
+      "id": "p247"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "做",
+      "py": "zuò",
+      "id": "p221"
+     },
+     {
+      "t": "什么。",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     }
+    ],
+    "src": {
+     "id": 10460397,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t20",
+  "kind": "set",
+  "title": "购物 2",
+  "titleEn": "Short sentences: Shopping 2",
+  "sentences": [
+   {
+    "zh": "我没看到人。",
+    "en": "I didn't see anybody.",
+    "py": "wǒ méi kàn dào rén",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "没",
+      "py": "méi",
+      "f": 1,
+      "g": "not (have not)"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "到",
+      "py": "dào",
+      "id": "p168"
+     },
+     {
+      "t": "人。",
+      "py": "rén",
+      "id": "p41"
+     }
+    ],
+    "src": {
+     "id": 2383440,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "看来他很好。",
+    "en": "It seems that he is fine.",
+    "py": "kàn lái tā hěn hǎo",
+    "tokens": [
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "好。",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     }
+    ],
+    "src": {
+     "id": 5624894,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "我有一双鞋。",
+    "en": "I have a pair of shoes.",
+    "py": "wǒ yǒu yì shuāng xié",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "一",
+      "py": "yì",
+      "id": "p67"
+     },
+     {
+      "t": "双",
+      "py": "shuāng",
+      "id": "p298"
+     },
+     {
+      "t": "鞋。",
+      "py": "xié",
+      "id": "p284"
+     }
+    ],
+    "src": {
+     "id": 819697,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "给我你的手机。",
+    "en": "Give me your phone.",
+    "py": "gěi wǒ nǐ de shǒu jī",
+    "tokens": [
+     {
+      "t": "给",
+      "py": "gěi",
+      "id": "p91"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "手机。",
+      "py": "shǒu jī",
+      "id": "p293"
+     }
+    ],
+    "src": {
+     "id": 5983656,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "来，再试试看。",
+    "en": "Come on, try again.",
+    "py": "lái zài shì shì kàn",
+    "tokens": [
+     {
+      "t": "来，",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "再",
+      "py": "zài",
+      "f": 1,
+      "g": "again (still to happen)"
+     },
+     {
+      "t": "试",
+      "py": "shì",
+      "id": "p290"
+     },
+     {
+      "t": "试",
+      "py": "shì",
+      "id": "p290"
+     },
+     {
+      "t": "看。",
+      "py": "kàn",
+      "id": "p296"
+     }
+    ],
+    "src": {
+     "id": 794047,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你的车什么颜色？",
+    "en": "What colour is your car?",
+    "py": "nǐ de chē shén me yán sè",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "车",
+      "py": "chē",
+      "id": "p171"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "颜色？",
+      "py": "yán sè",
+      "id": "p285"
+     }
+    ],
+    "src": {
+     "id": 9961391,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t21",
+  "kind": "set",
+  "title": "购物 3",
+  "titleEn": "Short sentences: Shopping 3",
+  "sentences": [
+   {
+    "zh": "我想看看。",
+    "en": "I want to have a little look.",
+    "py": "wǒ xiǎng kàn kàn",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "看。",
+      "py": "kàn",
+      "id": "p296"
+     }
+    ],
+    "src": {
+     "id": 332819,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我想看你。",
+    "en": "I want to see you.",
+    "py": "wǒ xiǎng kàn nǐ",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "你。",
+      "py": "nǐ",
+      "id": "p34"
+     }
+    ],
+    "src": {
+     "id": 679449,
+     "by": "sysko"
+    }
+   },
+   {
+    "zh": "我要买什么？",
+    "en": "What should I buy?",
+    "py": "wǒ yào mǎi shén me",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "买",
+      "py": "mǎi",
+      "id": "p281"
+     },
+     {
+      "t": "什么？",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     }
+    ],
+    "src": {
+     "id": 423156,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "他在看我们。",
+    "en": "He's looking at us.",
+    "py": "tā zài kàn wǒ men",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "我们。",
+      "py": "wǒ men",
+      "id": "p37"
+     }
+    ],
+    "src": {
+     "id": 5663542,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "他去了商店。",
+    "en": "He went to the store.",
+    "py": "tā qù le shāng diàn",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "商店。",
+      "py": "shāng diàn",
+      "id": "p294"
+     }
+    ],
+    "src": {
+     "id": 785849,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我没有手机了。",
+    "en": "I don't have a cellphone anymore.",
+    "py": "wǒ méi yǒu shǒu jī le",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "没有",
+      "py": "méi yǒu",
+      "id": "p220"
+     },
+     {
+      "t": "手机",
+      "py": "shǒu jī",
+      "id": "p293"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 2113917,
+     "by": "sysko"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t22",
+  "kind": "set",
+  "title": "心情和健康 1",
+  "titleEn": "Short sentences: Feelings and health 1",
+  "sentences": [
+   {
+    "zh": "你还是去看病吧。",
+    "en": "You'd better see a doctor.",
+    "py": "nǐ hái shì qù kàn bìng ba",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "还",
+      "py": "hái",
+      "id": "p261"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "病",
+      "py": "bìng",
+      "id": "p325"
+     },
+     {
+      "t": "吧。",
+      "py": "ba",
+      "f": 1,
+      "g": "particle: \"let's\", \"right?\", or a soft suggestion"
+     }
+    ],
+    "src": {
+     "id": 395058,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我想他会来的吧。",
+    "en": "I think he'll come.",
+    "py": "wǒ xiǎng tā huì lái de ba",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "会",
+      "py": "huì",
+      "id": "p335"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "吧。",
+      "py": "ba",
+      "f": 1,
+      "g": "particle: \"let's\", \"right?\", or a soft suggestion"
+     }
+    ],
+    "src": {
+     "id": 405729,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你不想去就别去。",
+    "en": "You don't have to go unless you want to.",
+    "py": "nǐ bù xiǎng qù jiù bié qù",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "就",
+      "py": "jiù",
+      "id": "p183"
+     },
+     {
+      "t": "别",
+      "py": "bié",
+      "id": "p333"
+     },
+     {
+      "t": "去。",
+      "py": "qù",
+      "id": "p157"
+     }
+    ],
+    "src": {
+     "id": 9970711,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我很高兴你今天来了。",
+    "en": "I'm glad you came today.",
+    "py": "wǒ hěn gāo xìng nǐ jīn tiān lái le",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "高兴",
+      "py": "gāo xìng",
+      "id": "p319"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 9969232,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "他一直很担心他的女儿。",
+    "en": "He's always worrying about his daughter.",
+    "py": "tā yì zhí hěn dān xīn tā de nǚ ér",
+    "tokens": [
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "一直",
+      "py": "yì zhí",
+      "id": "p178"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "担心",
+      "py": "dān xīn",
+      "id": "p328"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "女儿。",
+      "py": "nǚ ér",
+      "id": "p250"
+     }
+    ],
+    "src": {
+     "id": 332983,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "今天早上很冷，不是吗？",
+    "en": "It's very cold this morning, isn't it?",
+    "py": "jīn tiān zǎo shang hěn lěng bú shì ma",
+    "tokens": [
+     {
+      "t": "今天",
+      "py": "jīn tiān",
+      "id": "p203"
+     },
+     {
+      "t": "早上",
+      "py": "zǎo shang",
+      "id": "p205"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "冷，",
+      "py": "lěng",
+      "id": "p321"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 414225,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t23",
+  "kind": "set",
+  "title": "心情和健康 2",
+  "titleEn": "Short sentences: Feelings and health 2",
+  "sentences": [
+   {
+    "zh": "我会等到她来。",
+    "en": "I will wait until she comes.",
+    "py": "wǒ huì děng dào tā lái",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "会",
+      "py": "huì",
+      "id": "p335"
+     },
+     {
+      "t": "等",
+      "py": "děng",
+      "id": "p172"
+     },
+     {
+      "t": "到",
+      "py": "dào",
+      "id": "p168"
+     },
+     {
+      "t": "她",
+      "py": "tā",
+      "id": "p36"
+     },
+     {
+      "t": "来。",
+      "py": "lái",
+      "id": "p131"
+     }
+    ],
+    "src": {
+     "id": 346007,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你真是太好了。",
+    "en": "You're really wonderful.",
+    "py": "nǐ zhēn shì tài hǎo le",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "真",
+      "py": "zhēn",
+      "id": "p332"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "太",
+      "py": "tài",
+      "f": 1,
+      "g": "too; very"
+     },
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 471295,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你累了，不是吗？",
+    "en": "You are tired, aren't you?",
+    "py": "nǐ lèi le bú shì ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "累",
+      "py": "lèi",
+      "id": "p331"
+     },
+     {
+      "t": "了，",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 333191,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你有很多朋友吗？",
+    "en": "Do you have many friends?",
+    "py": "nǐ yǒu hěn duō péng you ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "多",
+      "py": "duō",
+      "id": "p336"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 397549,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "他们有了很多孩子。",
+    "en": "They have lots of children.",
+    "py": "tā men yǒu le hěn duō hái zi",
+    "tokens": [
+     {
+      "t": "他们",
+      "py": "tā men",
+      "id": "p39"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "多",
+      "py": "duō",
+      "id": "p336"
+     },
+     {
+      "t": "孩子。",
+      "py": "hái zi",
+      "id": "p248"
+     }
+    ],
+    "src": {
+     "id": 471276,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "她是生气了，还是累了。",
+    "en": "She is angry, and still tired.",
+    "py": "tā shì shēng qì le hái shì lèi le",
+    "tokens": [
+     {
+      "t": "她",
+      "py": "tā",
+      "id": "p36"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "生气",
+      "py": "shēng qì",
+      "id": "p329"
+     },
+     {
+      "t": "了，",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "还",
+      "py": "hái",
+      "id": "p261"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "累",
+      "py": "lèi",
+      "id": "p331"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 380680,
+     "by": "sysko"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t24",
+  "kind": "set",
+  "title": "心情和健康 3",
+  "titleEn": "Short sentences: Feelings and health 3",
+  "sentences": [
+   {
+    "zh": "这真是真的吗？",
+    "en": "Is this really real?",
+    "py": "zhè zhēn shì zhēn de ma",
+    "tokens": [
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "真",
+      "py": "zhēn",
+      "id": "p332"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "真",
+      "py": "zhēn",
+      "id": "p332"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 5685913,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "我不会再试了。",
+    "en": "I wouldn't try that again.",
+    "py": "wǒ bú huì zài shì le",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "会",
+      "py": "huì",
+      "id": "p335"
+     },
+     {
+      "t": "再",
+      "py": "zài",
+      "f": 1,
+      "g": "again (still to happen)"
+     },
+     {
+      "t": "试",
+      "py": "shì",
+      "id": "p290"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 5862111,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "那真是太好了。",
+    "en": "That's great.",
+    "py": "nà zhēn shì tài hǎo le",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "真",
+      "py": "zhēn",
+      "id": "p332"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "太",
+      "py": "tài",
+      "f": 1,
+      "g": "too; very"
+     },
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 5978354,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你看来不大高兴。",
+    "en": "You don't look so happy.",
+    "py": "nǐ kàn lái bú dà gāo xìng",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "大",
+      "py": "dà",
+      "id": "p252"
+     },
+     {
+      "t": "高兴。",
+      "py": "gāo xìng",
+      "id": "p319"
+     }
+    ],
+    "src": {
+     "id": 5574365,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "那你会给我什么？",
+    "en": "So, what'll you give me?",
+    "py": "nà nǐ huì gěi wǒ shén me",
+    "tokens": [
+     {
+      "t": "那",
+      "py": "nà",
+      "id": "p84"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "会",
+      "py": "huì",
+      "id": "p335"
+     },
+     {
+      "t": "给",
+      "py": "gěi",
+      "id": "p91"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "什么？",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     }
+    ],
+    "src": {
+     "id": 5663560,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你真的什么都不想要？",
+    "en": "Don't you really want anything?",
+    "py": "nǐ zhēn de shén me dōu bù xiǎng yào",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "真",
+      "py": "zhēn",
+      "id": "p332"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "都",
+      "py": "dōu",
+      "id": "p260"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "要？",
+      "py": "yào",
+      "id": "p174"
+     }
+    ],
+    "src": {
+     "id": 9958578,
+     "by": "GlossaMatik"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t25",
+  "kind": "set",
+  "title": "聊天 1",
+  "titleEn": "Short sentences: Everyday conversation 1",
+  "sentences": [
+   {
+    "zh": "好了，不要再说了。",
+    "en": "Okay, let's say no more about it.",
+    "py": "hǎo le bú yào zài shuō le",
+    "tokens": [
+     {
+      "t": "好",
+      "py": "hǎo",
+      "f": 1,
+      "g": "good; well; OK"
+     },
+     {
+      "t": "了，",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "要",
+      "py": "yào",
+      "id": "p174"
+     },
+     {
+      "t": "再",
+      "py": "zài",
+      "f": 1,
+      "g": "again (still to happen)"
+     },
+     {
+      "t": "说",
+      "py": "shuō",
+      "id": "p356"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 2358003,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我有很多朋友帮我。",
+    "en": "I have a lot of friends to help me.",
+    "py": "wǒ yǒu hěn duō péng you bāng wǒ",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "多",
+      "py": "duō",
+      "id": "p336"
+     },
+     {
+      "t": "朋友",
+      "py": "péng you",
+      "id": "p42"
+     },
+     {
+      "t": "帮",
+      "py": "bāng",
+      "id": "p361"
+     },
+     {
+      "t": "我。",
+      "py": "wǒ",
+      "id": "p33"
+     }
+    ],
+    "src": {
+     "id": 333352,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "在我看来很有意思！",
+    "en": "It seems interesting to me.",
+    "py": "zài wǒ kàn lái hěn yǒu yì si",
+    "tokens": [
+     {
+      "t": "在",
+      "py": "zài",
+      "f": 1,
+      "g": "at; in; (doing something)"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "很",
+      "py": "hěn",
+      "f": 1,
+      "g": "very; quite"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "意思！",
+      "py": "yì si",
+      "id": "p368"
+     }
+    ],
+    "src": {
+     "id": 335070,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我不知道我还有没有。",
+    "en": "I don't know if I still have it.",
+    "py": "wǒ bù zhī dào wǒ hái yǒu méi yǒu",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "知道",
+      "py": "zhī dào",
+      "id": "p363"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "还",
+      "py": "hái",
+      "id": "p261"
+     },
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "没有。",
+      "py": "méi yǒu",
+      "id": "p220"
+     }
+    ],
+    "src": {
+     "id": 335038,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我不知道，也不想知道。",
+    "en": "I don't know, nor do I care.",
+    "py": "wǒ bù zhī dào yě bù xiǎng zhī dào",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "知道，",
+      "py": "zhī dào",
+      "id": "p363"
+     },
+     {
+      "t": "也",
+      "py": "yě",
+      "f": 1,
+      "g": "also; too"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "知道。",
+      "py": "zhī dào",
+      "id": "p363"
+     }
+    ],
+    "src": {
+     "id": 332786,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我不知道他什么时候会来。",
+    "en": "I don't know when he will come.",
+    "py": "wǒ bù zhī dào tā shén me shí hou huì lái",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "知道",
+      "py": "zhī dào",
+      "id": "p363"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "什么时候",
+      "py": "shén me shí hou",
+      "id": "p373"
+     },
+     {
+      "t": "会",
+      "py": "huì",
+      "id": "p335"
+     },
+     {
+      "t": "来。",
+      "py": "lái",
+      "id": "p131"
+     }
+    ],
+    "src": {
+     "id": 336663,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t26",
+  "kind": "set",
+  "title": "聊天 2",
+  "titleEn": "Short sentences: Everyday conversation 2",
+  "sentences": [
+   {
+    "zh": "你能不能给我打折？",
+    "en": "Can you give me a discount?",
+    "py": "nǐ néng bu néng gěi wǒ dǎ zhé",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "能",
+      "py": "néng",
+      "id": "p378"
+     },
+     {
+      "t": "不",
+      "py": "bu",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "能",
+      "py": "néng",
+      "id": "p378"
+     },
+     {
+      "t": "给",
+      "py": "gěi",
+      "id": "p91"
+     },
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "打折？",
+      "py": "dǎ zhé",
+      "id": "p292"
+     }
+    ],
+    "src": {
+     "id": 3476975,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你去看过医生了吗？",
+    "en": "Have you gone to see a doctor?",
+    "py": "nǐ qù kàn guò yī shēng le ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "去",
+      "py": "qù",
+      "id": "p157"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "过",
+      "py": "guò",
+      "id": "p377"
+     },
+     {
+      "t": "医生",
+      "py": "yī shēng",
+      "id": "p259"
+     },
+     {
+      "t": "了",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 397553,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我能帮你什么忙吗？",
+    "en": "Can I be of any service to you?",
+    "py": "wǒ néng bāng nǐ shén me máng ma",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "能",
+      "py": "néng",
+      "id": "p378"
+     },
+     {
+      "t": "帮",
+      "py": "bāng",
+      "id": "p361"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "忙",
+      "py": "máng",
+      "id": "p218"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 403908,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "我休息一会没问题吧？",
+    "en": "Is it okay if I take a break?",
+    "py": "wǒ xiū xi yí huì méi wèn tí ba",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "休息",
+      "py": "xiū xi",
+      "id": "p219"
+     },
+     {
+      "t": "一",
+      "py": "yí",
+      "id": "p67"
+     },
+     {
+      "t": "会",
+      "py": "huì",
+      "id": "p335"
+     },
+     {
+      "t": "没",
+      "py": "méi",
+      "f": 1,
+      "g": "not (have not)"
+     },
+     {
+      "t": "问题",
+      "py": "wèn tí",
+      "id": "p362"
+     },
+     {
+      "t": "吧？",
+      "py": "ba",
+      "f": 1,
+      "g": "particle: \"let's\", \"right?\", or a soft suggestion"
+     }
+    ],
+    "src": {
+     "id": 419691,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "你知道她会说英语吗？",
+    "en": "Do you know if she can speak English?",
+    "py": "nǐ zhī dào tā huì shuō yīng yǔ ma",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "知道",
+      "py": "zhī dào",
+      "id": "p363"
+     },
+     {
+      "t": "她",
+      "py": "tā",
+      "id": "p36"
+     },
+     {
+      "t": "会",
+      "py": "huì",
+      "id": "p335"
+     },
+     {
+      "t": "说",
+      "py": "shuō",
+      "id": "p356"
+     },
+     {
+      "t": "英语",
+      "py": "yīng yǔ",
+      "id": "p366"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 461635,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "你的周末是怎么过的？",
+    "en": "How did you spend your weekend?",
+    "py": "nǐ de zhōu mò shì zěn me guò de",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "周末",
+      "py": "zhōu mò",
+      "id": "p211"
+     },
+     {
+      "t": "是",
+      "py": "shì",
+      "id": "p40"
+     },
+     {
+      "t": "怎么",
+      "py": "zěn me",
+      "id": "p173"
+     },
+     {
+      "t": "过",
+      "py": "guò",
+      "id": "p377"
+     },
+     {
+      "t": "的？",
+      "py": "de",
+      "id": "p46"
+     }
+    ],
+    "src": {
+     "id": 472764,
+     "by": "fucongcong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "t27",
+  "kind": "set",
+  "title": "聊天 3",
+  "titleEn": "Short sentences: Everyday conversation 3",
+  "sentences": [
+   {
+    "zh": "我快看不到你了。",
+    "en": "I can barely see you.",
+    "py": "wǒ kuài kàn bú dào nǐ le",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "快",
+      "py": "kuài",
+      "id": "p360"
+     },
+     {
+      "t": "看",
+      "py": "kàn",
+      "id": "p296"
+     },
+     {
+      "t": "不",
+      "py": "bú",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "到",
+      "py": "dào",
+      "id": "p168"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "了。",
+      "py": "le",
+      "f": 1,
+      "g": "marks a finished action or a change (not \"to finish\")"
+     }
+    ],
+    "src": {
+     "id": 6583892,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你什么都没跟他说？",
+    "en": "You didn't tell him anything?",
+    "py": "nǐ shén me dōu méi gēn tā shuō",
+    "tokens": [
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "什么",
+      "py": "shén me",
+      "f": 1,
+      "g": "what; anything"
+     },
+     {
+      "t": "都",
+      "py": "dōu",
+      "id": "p260"
+     },
+     {
+      "t": "没",
+      "py": "méi",
+      "f": 1,
+      "g": "not (have not)"
+     },
+     {
+      "t": "跟",
+      "py": "gēn",
+      "f": 1,
+      "g": "with; to follow"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "说？",
+      "py": "shuō",
+      "id": "p356"
+     }
+    ],
+    "src": {
+     "id": 502756,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我能用你的电话吗？",
+    "en": "Is it okay if I use your phone?",
+    "py": "wǒ néng yòng nǐ de diàn huà ma",
+    "tokens": [
+     {
+      "t": "我",
+      "py": "wǒ",
+      "id": "p33"
+     },
+     {
+      "t": "能",
+      "py": "néng",
+      "id": "p378"
+     },
+     {
+      "t": "用",
+      "py": "yòng",
+      "id": "p367"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "的",
+      "py": "de",
+      "id": "p46"
+     },
+     {
+      "t": "电话",
+      "py": "diàn huà",
+      "id": "p87"
+     },
+     {
+      "t": "吗？",
+      "py": "ma",
+      "f": 1,
+      "g": "question particle: turns a statement into a yes/no question"
+     }
+    ],
+    "src": {
+     "id": 733154,
+     "by": "GlossaMatik"
+    }
+   },
+   {
+    "zh": "有个问题你没有想到。",
+    "en": "There's a problem there that you don't see.",
+    "py": "yǒu gè wèn tí nǐ méi yǒu xiǎng dào",
+    "tokens": [
+     {
+      "t": "有",
+      "py": "yǒu",
+      "id": "p83"
+     },
+     {
+      "t": "个",
+      "py": "gè",
+      "id": "p81"
+     },
+     {
+      "t": "问题",
+      "py": "wèn tí",
+      "id": "p362"
+     },
+     {
+      "t": "你",
+      "py": "nǐ",
+      "id": "p34"
+     },
+     {
+      "t": "没有",
+      "py": "méi yǒu",
+      "id": "p220"
+     },
+     {
+      "t": "想",
+      "py": "xiǎng",
+      "f": 1,
+      "g": "to want to; to think"
+     },
+     {
+      "t": "到。",
+      "py": "dào",
+      "id": "p168"
+     }
+    ],
+    "src": {
+     "id": 501366,
+     "by": "fucongcong"
+    }
+   },
+   {
+    "zh": "我们不知道他来不来。",
+    "en": "We do not know if he is coming or not.",
+    "py": "wǒ men bù zhī dào tā lái bu lái",
+    "tokens": [
+     {
+      "t": "我们",
+      "py": "wǒ men",
+      "id": "p37"
+     },
+     {
+      "t": "不",
+      "py": "bù",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "知道",
+      "py": "zhī dào",
+      "id": "p363"
+     },
+     {
+      "t": "他",
+      "py": "tā",
+      "id": "p35"
+     },
+     {
+      "t": "来",
+      "py": "lái",
+      "id": "p131"
+     },
+     {
+      "t": "不",
+      "py": "bu",
+      "f": 1,
+      "g": "not; no"
+     },
+     {
+      "t": "来。",
+      "py": "lái",
+      "id": "p131"
+     }
+    ],
+    "src": {
+     "id": 5543500,
+     "by": "verdastelo9604"
+    }
+   },
+   {
+    "zh": "你们这帮人真没意思。",
+    "en": "You people are no fun at all.",
+    "py": "nǐ men zhè bāng rén zhēn méi yì si",
+    "tokens": [
+     {
+      "t": "你们",
+      "py": "nǐ men",
+      "id": "p38"
+     },
+     {
+      "t": "这",
+      "py": "zhè",
+      "f": 1,
+      "g": "this"
+     },
+     {
+      "t": "帮",
+      "py": "bāng",
+      "id": "p361"
+     },
+     {
+      "t": "人",
+      "py": "rén",
+      "id": "p41"
+     },
+     {
+      "t": "真",
+      "py": "zhēn",
+      "id": "p332"
+     },
+     {
+      "t": "没",
+      "py": "méi",
+      "f": 1,
+      "g": "not (have not)"
+     },
+     {
+      "t": "意思。",
+      "py": "yì si",
+      "id": "p368"
+     }
+    ],
+    "src": {
+     "id": 5945141,
+     "by": "verdastelo9604"
+    }
+   }
+  ]
+ }
+]

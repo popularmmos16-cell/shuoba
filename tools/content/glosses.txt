@@ -1,0 +1,37 @@
+# Meanings shown for grammar words (and any word outside the curriculum) in stories. Format: hanzi|gloss
+# Overrides the first HSK dictionary entry, which is often a rare sense (也 -> "surname Ye").
+了|marks a finished action or a change (not "to finish")
+吗|question particle: turns a statement into a yes/no question
+呢|particle: "and you?", or an ongoing action
+吧|particle: "let's", "right?", or a soft suggestion
+啊|particle that softens or adds feeling
+过|has done it before (experience)
+着|particle: an action or state continuing
+都|all; both
+也|also; too
+很|very; quite
+不|not; no
+没|not (have not)
+没有|do not have; did not
+就|then; just; right away
+还|still; also; yet
+但是|but
+因为|because
+所以|so; therefore
+这|this
+什么|what; anything
+请|please; to invite
+想|to want to; to think
+要|to want; will; need to
+会|will; can (a learned skill)
+能|can; to be able to
+可以|can; may
+太|too; very
+又|again (already happened)
+再|again (still to happen)
+跟|with; to follow
+和|and; with
+在|at; in; (doing something)
+对|right; correct; towards
+到|to arrive; to; until
+好|good; well; OK

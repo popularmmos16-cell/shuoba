@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 2.
+kind: set
+title: 数字和钱 3|Short sentences: Numbers and money 3
+这个几块？|How much is this?|tatoeba:10052320:GlossaMatik
+那不太好。|That wasn't very good.|tatoeba:5611632:verdastelo9604
+我很想家。|I was so homesick.|tatoeba:6059534:verdastelo9604
+那是我的。|That is mine.|tatoeba:6728904:verdastelo9604
+你们是几位？|How many of you are there?|tatoeba:419685:GlossaMatik
+这是他们家。|This is their house.|tatoeba:487586:fucongcong

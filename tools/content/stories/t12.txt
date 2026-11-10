@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 4.
+kind: set
+title: 出行 3|Short sentences: Getting around 3
+你要走了吗？|Do you want to go?|tatoeba:374847:sysko
+这是你要的吗？|Is this something you want?|tatoeba:5663588:verdastelo9604
+你等我多久了？|How long have you been waiting for me?|tatoeba:10258961:GlossaMatik
+我们的车走了。|There goes our bus.|tatoeba:346465:fucongcong
+我想要一杯咖啡。|I would like to have a cup of coffee.|tatoeba:746063:fucongcong
+我在这里等了三十分钟。|I've been waiting here for thirty minutes.|tatoeba:9955884:GlossaMatik

@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 4.
+kind: set
+title: 出行 2|Short sentences: Getting around 2
+我一个也不要。|I don't need any of them.|tatoeba:400227:sysko
+那就是我想要的。|That's what I want.|tatoeba:6109333:verdastelo9604
+你的家人在等你。|Your family's waiting for you.|tatoeba:6169159:verdastelo9604
+我只是想要你来。|I just want you to come.|tatoeba:816467:fucongcong
+我想再要一杯咖啡。|I'd like to have another cup of coffee.|tatoeba:6206033:verdastelo9604
+我去不了，也不想去。|I cannot go, nor do I want to.|tatoeba:334780:fucongcong

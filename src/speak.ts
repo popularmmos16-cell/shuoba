@@ -1,11 +1,13 @@
 import { isQuiet } from './store';
 import { PHRASES } from './phrases';
 import TONES from './data/tones.json';
+import { STORIES, sentenceClip } from './stories';
 
 // Recorded clips play through an <audio> element, which iOS lets through even when the ringer is on silent.
 // The browser's speech engine does not, so it is only the fallback for text without a clip.
 const CLIPS = new Map<string, string>();
 PHRASES.forEach((p) => CLIPS.set(p.hanzi, `./audio/p/${p.id}.m4a`));
+STORIES.forEach((st) => st.sentences.forEach((s, n) => CLIPS.set(s.zh, sentenceClip(st, n))));
 TONES.forEach((s) => s.chars.forEach((c) => CLIPS.set(c, `./audio/t/${c.codePointAt(0)!.toString(16)}.m4a`)));
 
 let el: HTMLAudioElement | null = null; // one shared element, so iOS keeps it unlocked after the first tap

@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 2.
+kind: set
+title: 数字和钱 1|Short sentences: Numbers and money 1
+那有什么不好？|What's wrong with that?|tatoeba:2367525:GlossaMatik
+有什么不对吗？|Is something wrong?|tatoeba:343380:fucongcong
+这是你的家人吗？|Is this your family?|tatoeba:471395:fucongcong
+那一位是什么人？|Who is this person?|tatoeba:374915:sysko
+他是个很好的老师。|He is a very good teacher.|tatoeba:2118229:sysko
+有的，先生你有几位？|Yes, there are. How many of you are there, Sir?|tatoeba:420438:sysko

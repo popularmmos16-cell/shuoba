@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 9.
+kind: set
+title: 聊天 3|Short sentences: Everyday conversation 3
+我快看不到你了。|I can barely see you.|tatoeba:6583892:verdastelo9604
+你什么都没跟他说？|You didn't tell him anything?|tatoeba:502756:fucongcong
+我能用你的电话吗？|Is it okay if I use your phone?|tatoeba:733154:GlossaMatik
+有个问题你没有想到。|There's a problem there that you don't see.|tatoeba:501366:fucongcong
+我们不知道他来不来。|We do not know if he is coming or not.|tatoeba:5543500:verdastelo9604
+你们这帮人真没意思。|You people are no fun at all.|tatoeba:5945141:verdastelo9604

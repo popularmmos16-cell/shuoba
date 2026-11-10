@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 8.
+kind: set
+title: 心情和健康 1|Short sentences: Feelings and health 1
+你还是去看病吧。|You'd better see a doctor.|tatoeba:395058:GlossaMatik
+我想他会来的吧。|I think he'll come.|tatoeba:405729:fucongcong
+你不想去就别去。|You don't have to go unless you want to.|tatoeba:9970711:GlossaMatik
+我很高兴你今天来了。|I'm glad you came today.|tatoeba:9969232:GlossaMatik
+他一直很担心他的女儿。|He's always worrying about his daughter.|tatoeba:332983:fucongcong
+今天早上很冷，不是吗？|It's very cold this morning, isn't it?|tatoeba:414225:fucongcong

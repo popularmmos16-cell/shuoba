@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 7.
+kind: set
+title: 购物 2|Short sentences: Shopping 2
+我没看到人。|I didn't see anybody.|tatoeba:2383440:sysko
+看来他很好。|It seems that he is fine.|tatoeba:5624894:verdastelo9604
+我有一双鞋。|I have a pair of shoes.|tatoeba:819697:fucongcong
+给我你的手机。|Give me your phone.|tatoeba:5983656:verdastelo9604
+来，再试试看。|Come on, try again.|tatoeba:794047:fucongcong
+你的车什么颜色？|What colour is your car?|tatoeba:9961391:GlossaMatik

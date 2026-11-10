@@ -36,10 +36,14 @@ Each day has a compulsory part and optional extras:
    Drills earn XP and study time but never change the word schedule. They feed the "Drill 20 words" daily quest.
 5. **Games** — `src/games/`, registry in `GAMES` in `src/game.ts`. One game per day on a fixed cycle (`gameOfToday`).
    Most are `Quizzer` configs in `src/games/specs.tsx`; `Match`, `Sprint`, `Echo`, `Typer`, `WordHunt` are custom.
-6. **Chat** — `src/chat.ts`, `src/screens/Chat.tsx`, `ChatSession.tsx`, `ChatReview.tsx`. A conversation partner: you pick an
+6. **Read** — `src/stories.ts`, `src/screens/Read.tsx`, `ReadStory.tsx`. Short graded stories (a sixth tab). Each story shows how much of it you
+   already know (words you have started, plus a few grammar words), underlines the words you have not met, and lets you tap any word for its
+   pinyin, meaning and audio and add it to your Word wall (`newWordRow`, capped by `MAX_ACTIVE`). Reading earns a little XP once per story per
+   day (`finishStory`) and never changes the word schedule. Stories are written offline and shipped as data. See "Stories" below.
+7. **Chat** — `src/chat.ts`, `src/screens/Chat.tsx`, `ChatSession.tsx`, `ChatReview.tsx`. A conversation partner: you pick an
    AI character, chat in Chinese, and a wrong sentence gets a natural "啊？" instead of a correction. "End & review" shows
    the transcript with your mistakes marked and corrected. See "Chat partner" below.
-7. **Reward layer** — `src/game.ts`: XP/levels, combos, daily quests, badges (`BADGES`), streak freezes. It never
+8. **Reward layer** — `src/game.ts`: XP/levels, combos, daily quests, badges (`BADGES`), streak freezes. It never
    changes scheduling, and it all lives in the saved state so it is part of the backup.
 
 ### Source map
@@ -50,6 +54,7 @@ Each day has a compulsory part and optional extras:
 | `src/store.ts` | Settings + game state in `localStorage` (`shuoba.state.v1`); `dateKey()`, streak maths |
 | `src/db.ts` | IndexedDB (`shuoba`, v2) stores `cards`, `log`, `words`; backup export/import (`Backup`, version 1) |
 | `src/phrases.ts` | Types and lookups over `src/data/phrases.json` (**generated**, see Content) |
+| `src/data/stories.json` | **Generated** from `tools/content/stories/*.txt` by `tools/build-stories.py` |
 | `src/speak.ts` | Plays `public/audio/**` via `<audio>`; falls back to `speechSynthesis` when no clip exists |
 | `src/data/tones.json` | Tone-pair sets (4 characters each) for the tone exercises |
 | `src/push.ts`, `src/lockscreen.ts`, `src/widget.ts` | Reminders, lock-screen word, Scriptable widget (see below) |
@@ -86,6 +91,34 @@ appending to a unit other than the last one also shifts the ids of the units aft
 
 If you add a new unit, also check `THEMES` in `src/games/specs.tsx` (Odd One Out only uses themed units 1–8).
 
+### Stories
+
+Story ids come from the file name (`s01.txt`), so adding or editing a story never shifts anything, unlike phrases.
+
+```
+title: 朋友来我家|A friend comes to my home
+今天我朋友来我家。|Today my friend comes to my home.
+```
+
+```sh
+CEDICT=/path/to/cedict_ts.u8 HSK=/path/to/complete.json python3 tools/build-stories.py
+```
+
+Segmentation and pinyin are done here, at build time. Every word in a story should be a taught word (a `W` line in `units.txt`), because that is
+what makes it addable in the app. The script lists any word outside the curriculum: reword the sentence, or append the word to `units.txt`.
+Grammar words that are never taught as vocabulary (了 吗 呢 ...) are in `FUNCTION_WORDS` and always count as known. Glosses for those and for
+outside words come from `tools/content/glosses.txt` (`hanzi|gloss`, optional) and otherwise the HSK data. `tools/zhlib.py` holds the pinyin and
+segmentation code shared with `build-content.py`.
+
+`tools/build-tatoeba.py` fills the "Reading sets" (`t01.txt` ...) from Tatoeba sentences (CC BY 2.0 FR, credited per sentence in the app). It only
+picks sentences whose every word is already taught, and is deterministic. Needs the three Tatoeba exports listed at the top of the script.
+Tatoeba's own audio is not used. Skim the sets, and delete any sentence file you do not like before rebuilding.
+
+`tools/make-stories.mjs` drafts stories with Workers AI into `tools/content/stories/drafts/` (run the local-only proxy in `tools/story-proxy/`,
+never deploy it). **Treat drafts as raw material.** In testing, models could not write natural Chinese from a 200-word vocabulary: the drafts
+were choppy and sometimes wrong, and the AI judge missed real errors. Have someone who reads Chinese check every story before it moves up into
+`tools/content/stories/`.
+
 ### Audio
 
 ```sh
@@ -93,7 +126,7 @@ python3 tools/gen-audio.py [--force]
 ```
 
 macOS only (`say` with the Tingting voice, `afconvert`). Renders `public/audio/p/<id>.m4a` for every item and
-`public/audio/t/<hex codepoint>.m4a` for every tone character. A clip is redone when it is missing or older than the
+`public/audio/t/<hex codepoint>.m4a` for every tone character, and `public/audio/s/<story id>-<n>.m4a` for every story sentence. A clip is redone when it is missing or older than the
 script, so editing the script refreshes everything and an interrupted run resumes. Run it after adding content,
 then commit the new clips. Clips are files, not browser TTS, because iOS mutes `speechSynthesis` on silent.
 

@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 5.
+kind: set
+title: 日常时间 3|Short sentences: Time and daily life 3
+给我点喝的。|Give me something to drink.|tatoeba:347092:fucongcong
+吃饭时间到了。|Time for dinner.|tatoeba:336431:fucongcong
+我今天不想起床。|I don't want to get out of bed today.|tatoeba:10548825:GlossaMatik
+你好啊！早上好！|Hello! Good morning!|tatoeba:10552179:GlossaMatik
+我今天不想工作。|I don't want to work today.|tatoeba:1140532:sysko
+你早上吃了什么？|What did you eat in the morning?|tatoeba:2298230:sysko

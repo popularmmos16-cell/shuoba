@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 1.
+kind: set
+title: 人 1|Short sentences: People 1
+我很好。你呢？|I'm fine. How about you?|tatoeba:10026182:GlossaMatik
+你是不是老师？|Are you a teacher?|tatoeba:3378183:GlossaMatik
+你是中国人吗？|Are you Chinese?|tatoeba:3378212:GlossaMatik
+你不是我的朋友了。|You're not my friend anymore.|tatoeba:2383477:sysko
+是我的，不是他的。|It's mine, not his.|tatoeba:400384:sysko
+是的，我也是学生。|Yes, I'm a student too.|tatoeba:2202377:GlossaMatik

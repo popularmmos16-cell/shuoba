@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 1.
+kind: set
+title: 人 2|Short sentences: People 2
+你想我了？|Did you miss me?|tatoeba:334429:fucongcong
+他对我很好。|He is good to me.|tatoeba:3378261:GlossaMatik
+你是对的吗？|Were you right?|tatoeba:5640753:verdastelo9604
+他不是学生。|He is not a student.|tatoeba:10024460:GlossaMatik
+他是我的朋友。|He is my friend.|tatoeba:490784:GlossaMatik
+我是他的朋友。|I'm his friend.|tatoeba:8120970:GlossaMatik

@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 7.
+kind: set
+title: 购物 3|Short sentences: Shopping 3
+我想看看。|I want to have a little look.|tatoeba:332819:fucongcong
+我想看你。|I want to see you.|tatoeba:679449:sysko
+我要买什么？|What should I buy?|tatoeba:423156:GlossaMatik
+他在看我们。|He's looking at us.|tatoeba:5663542:verdastelo9604
+他去了商店。|He went to the store.|tatoeba:785849:fucongcong
+我没有手机了。|I don't have a cellphone anymore.|tatoeba:2113917:sysko

@@ -1,0 +1,9 @@
+# Tatoeba sentences (CC BY 2.0 FR). Picked by build-tatoeba.py from words taught up to unit 4.
+kind: set
+title: 出行 1|Short sentences: Getting around 1
+这就是我想要的。|This is what I want.|tatoeba:336501:fucongcong
+你想要一杯茶吗？|Would you like to have a cup of tea?|tatoeba:396136:sysko
+你想再要杯茶吗？|Would you like another cup of tea?|tatoeba:405218:fucongcong
+我只要你跟我来。|I just need you to come with me.|tatoeba:5663529:verdastelo9604
+你想要什么喝的吗？|Would you like something to drink?|tatoeba:334493:fucongcong
+你想要一杯咖啡吗？|Do you want a cup of coffee?|tatoeba:414012:fucongcong
